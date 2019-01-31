@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>C and R Friends</title>
+</head>
+<body>
+        <div id= "main">
+        <h1> Create and Read Friends </h1>
+        <form action='/create_friend' method='POST'>
+            {% for i in friends %}
+                <p> First Name: {{i["first_name"]}}, Last Name: {{i["last_name"]}}, Occupation: {{i["occupation"]}} </p>
+            {% endfor %}
+            
+            <div class= "table">
+            First Name: 
+            <input type="text" id="first_name" name="first_name" >
+            Last Name:
+            <input type="text" id="last_name" name="last_name">
+            Occupation:
+            <input type="text" id="occupation" name="occupation">
+
+            <input type='submit' value='Click this button!'>
+            
+            </div>
+        </form>
+        </div>
+      
+        
+</body>
+
+</html>

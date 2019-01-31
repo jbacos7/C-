@@ -1,0 +1,31 @@
+@model WeddingPlanner2.Models.WeddingViewModel
+
+    <h1>Add a New Wedding </h1> 
+    <form asp-controller="User" asp-action="CreateWedding" method="POST">
+        <input type= "hidden" value= "@TempData["UserId"]" name= "UserId">
+        
+        <label asp-for="WedderOne"> </label>
+        <input asp-for="WedderOne">
+        <span asp-validation-for="WedderOne"> </span>
+        <br>
+        
+        <label asp-for="WedderTwo"> </label>
+        <input asp-for="WedderTwo">
+        <span asp-validation-for="WedderTwo"> </span>
+        <br>
+
+        <label asp-for="Date"> </label>
+        <input type= "date" asp-for="Date"> 
+        <span asp-validation-for="Date"> </span>
+        <br>
+
+        <label asp-for="Address"> </label>
+        <input asp-for="Address">
+        <span asp-validation-for="Address"> </span>
+        <br>
+
+        <input type= "submit" value= "SUBMIT">
+    </form>
+<a href="Logout">Logout</a>
+<a href="/weddingdashboard"> Back to Dashboard </a>
+

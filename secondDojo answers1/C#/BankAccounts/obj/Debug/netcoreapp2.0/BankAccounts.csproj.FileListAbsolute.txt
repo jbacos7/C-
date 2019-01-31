@@ -1,0 +1,11 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/BankAccounts/bin/Debug/netcoreapp2.0/BankAccounts.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/BankAccounts/bin/Debug/netcoreapp2.0/BankAccounts.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/BankAccounts/bin/Debug/netcoreapp2.0/BankAccounts.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/BankAccounts/bin/Debug/netcoreapp2.0/BankAccounts.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/BankAccounts/bin/Debug/netcoreapp2.0/BankAccounts.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/BankAccounts/obj/Debug/netcoreapp2.0/BankAccounts.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/BankAccounts/obj/Debug/netcoreapp2.0/BankAccounts.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/BankAccounts/obj/Debug/netcoreapp2.0/BankAccounts.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/BankAccounts/obj/Debug/netcoreapp2.0/BankAccounts.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/BankAccounts/obj/Debug/netcoreapp2.0/BankAccounts.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/BankAccounts/obj/Debug/netcoreapp2.0/BankAccounts.csprojResolveAssemblyReference.cache

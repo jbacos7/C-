@@ -1,0 +1,11 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/Basic13/bin/Debug/netcoreapp2.0/Basic13.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Basic13/bin/Debug/netcoreapp2.0/Basic13.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Basic13/bin/Debug/netcoreapp2.0/Basic13.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Basic13/bin/Debug/netcoreapp2.0/Basic13.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/Basic13/bin/Debug/netcoreapp2.0/Basic13.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/Basic13/obj/Debug/netcoreapp2.0/Basic13.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/Basic13/obj/Debug/netcoreapp2.0/Basic13.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/Basic13/obj/Debug/netcoreapp2.0/Basic13.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/Basic13/obj/Debug/netcoreapp2.0/Basic13.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/Basic13/obj/Debug/netcoreapp2.0/Basic13.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/Basic13/obj/Debug/netcoreapp2.0/Basic13.csprojResolveAssemblyReference.cache

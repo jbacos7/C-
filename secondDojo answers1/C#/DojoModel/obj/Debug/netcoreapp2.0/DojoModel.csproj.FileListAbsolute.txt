@@ -1,0 +1,11 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoModel/bin/Debug/netcoreapp2.0/DojoModel.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoModel/bin/Debug/netcoreapp2.0/DojoModel.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoModel/bin/Debug/netcoreapp2.0/DojoModel.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoModel/bin/Debug/netcoreapp2.0/DojoModel.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoModel/bin/Debug/netcoreapp2.0/DojoModel.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoModel/obj/Debug/netcoreapp2.0/DojoModel.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoModel/obj/Debug/netcoreapp2.0/DojoModel.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoModel/obj/Debug/netcoreapp2.0/DojoModel.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoModel/obj/Debug/netcoreapp2.0/DojoModel.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoModel/obj/Debug/netcoreapp2.0/DojoModel.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoModel/obj/Debug/netcoreapp2.0/DojoModel.csprojResolveAssemblyReference.cache

@@ -1,0 +1,21 @@
+@using ProductsCategories.Models
+
+
+
+<h1>View All Categories </h1>
+
+<h3> List of current products and categories: </h3>
+
+@foreach (var cat in Model)
+    
+    {
+        <p> ******************** </p>
+        <li> <tr>Category name : @cat.CatName ------- </li>
+        <p> ******************** </p>
+
+
+        <a asp-controller="Home" asp-action="ShowC" method="get"></a>
+    }
+
+    <p> <button> <a href= "/category"> Go to Category Page </a> </button> </p>
+    <p> <button> <a href= "/"> Go to Homepage  </a> </button> </p>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .main h1 {
+        text-align: center;
+        color: darkblue;
+    }
+</style>
+
+<head>
+    <title>Show Wishes </title>
+</head>
+
+<body>
+    <h1> Wish Dashboard</h1>
+    <h2> Welcome, {{user.first_name}} ! Let's make some wishes.</h2>
+    <h3> Your wish list: </h3>
+    <!-- {{ wishes }} -->
+    <form action='/show' method='GET'>
+        <input type='hidden' value= {{id}} name='id'>
+        <button>
+            <a href="/add"> Make a New Wish </a>
+        </button>
+        <br>
+        <br>
+        <!-- <input type="submit" value="MAKE A NEW WISH"> -->
+
+        <tr>
+            <table>
+                <tr>
+                    <th> Item </th>
+                    <th> Description </th>
+                    <th> Created At </th>
+                    <th> Remove Item</th>
+                    <th> Edit Item </th>
+                    <th> Granted Item </th>
+                    <th> Item ID Number </th>
+                    <th> User ID Number </th>
+
+                </tr>
+                {% csrf_token %}
+                {% for wish in wishes %}
+                    {% if wish.granted == False %}
+                        <tr>
+                            <th> {{wish.item}}</th>
+                            <th> {{wish.description}}</th>
+                            <th> {{wish.created_at}} </th>
+                            <td>
+                                <a href='{{wish.id}}/destroy'> Delete</a>
+                            </td>
+                            <td>
+                                <a href="{{wish.id}}/edit">Edit </a>
+                            </td>
+                            <td>
+                                <a href='{{wish.id}}/grantwish'> Grant Wish</a>
+                                <!-- <input type=submit value="Granted!"> -->
+                                </a>
+                            </td>
+                            <th> {{ wish.id }}</th>
+                            <th> {{ wish.item_id.id }}</th>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+                </table>
+
+                <h3> Granted wishes: </h3>
+                <table>
+                    <tr>
+                        <th> Item </th>
+                        <th> Description </th>
+                        <th> Wisher </th>
+                        <!-- <th> Item ID </th> -->
+                        <th> Date Added </th>
+                        <th> Date Granted </th>
+                    </tr>
+
+                    {% for wish in allwishes %}
+                    {% if wish.granted == True %}
+                        <tr>
+                            <th> {{wish.item}}</th>
+                            <th> {{wish.description}}</th>
+                            <th> {{wish.item_id.first_name}} </th>
+                            <!-- <th> {{wish.item_id}} </th> -->
+                            <th> {{wish.created_at}} </th>
+                            <th> {{wish.updated_at}} </th>
+
+                            <td>
+                                <a href='{{wish.id}}/destroy'> Delete</a>
+                            </td>
+                            <td>
+                                <!-- <a href="{{wish.id}}/edit">Edit </a> -->
+                            </td>
+                            <td>
+                                <!-- <input type=submit value="Granted!"> -->
+                                </a>
+                            </td>
+                            <!-- <th> {{ wish.id }}</th>
+                            <th> {{ wish.item_id.id }}</th> -->
+                        </tr>
+                    {% endif %}
+                    {% endfor %}
+                    <a href='{{wish.id}}/stats'> View Your Stats</a>
+
+                </table>
+            <form action='/destroy' method='POST'></form>
+            <input type='hidden' value={{id}} name='id'>
+
+        </tr>
+        <form action="/", method="POST">
+            {% csrf_token %}
+            <button>
+                <a href='/logout'> Log Out</a>
+            </button>
+        </form>
+    </form>
+</body>
+
+</html>

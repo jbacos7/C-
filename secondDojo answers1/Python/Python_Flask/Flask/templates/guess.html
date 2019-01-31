@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html= "en">
+<head>
+    <title>Great Number Game</title>
+</head>
+<body>
+    <form action='/guess' method='POST'>
+
+    <h1>Welcome to the Great Number Game!</h1>
+    <p>I am thinking of a number between 1 and 100.....</p>
+    <p>Take a guess!!! {%- for msg in errors %}</p>
+    <p><input type= "text" name= "num"> <br>Guess a number here!</p>
+
+    <a href= '/guess'><button value='zero'>Click to submit</button></a>
+
+    <!-- <p>{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+    {% endif %}
+    {% endwith %} -->
+
+</body>
+</html>

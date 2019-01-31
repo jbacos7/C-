@@ -1,0 +1,995 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf100
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red46\green174\blue187;
+\red47\green180\blue29;}
+{\*\expandedcolortbl;;\csgray\c0;\csgray\c100000;\cssrgb\c20196\c73240\c78250;
+\cssrgb\c20238\c73898\c14947;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 \CocoaLigature0 Last login: Sun Aug 12 21:10:31 on ttys000\
+Amandas-MacBook-Pro:~ amandasitko$ cd desktop\
+Amandas-MacBook-Pro:desktop amandasitko$ cd myenvironments\
+Amandas-MacBook-Pro:myenvironments amandasitko$ cd djangopy3env\
+Amandas-MacBook-Pro:djangopy3env amandasitko$ cd bin\
+Amandas-MacBook-Pro:bin amandasitko$ source activate\
+(djangoPy3Env) Amandas-MacBook-Pro:bin amandasitko$ cd ..\
+(djangoPy3Env) Amandas-MacBook-Pro:djangopy3env amandasitko$ cd ..\
+(djangoPy3Env) Amandas-MacBook-Pro:myenvironments amandasitko$ cd ..\
+(djangoPy3Env) Amandas-MacBook-Pro:desktop amandasitko$ cd cd_assignments\
+(djangoPy3Env) Amandas-MacBook-Pro:cd_assignments amandasitko$ cd django\
+(djangoPy3Env) Amandas-MacBook-Pro:django amandasitko$ django-admin startproject likes_books\
+(djangoPy3Env) Amandas-MacBook-Pro:django amandasitko$ cd likes_books\
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ mkdir apps\
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ cd apps\
+(djangoPy3Env) Amandas-MacBook-Pro:apps amandasitko$ touch __init__.py\
+(djangoPy3Env) Amandas-MacBook-Pro:apps amandasitko$ django-admin startapp likes_books\
+(djangoPy3Env) Amandas-MacBook-Pro:apps amandasitko$ cd apps/likes_books\
+-bash: cd: apps/likes_books: No such file or directory\
+(djangoPy3Env) Amandas-MacBook-Pro:apps amandasitko$ cd apps\
+-bash: cd: apps: No such file or directory\
+(djangoPy3Env) Amandas-MacBook-Pro:apps amandasitko$ cd ..\
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ touch urls.py\
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ python manage.py makemigrations\
+\
+No changes detected\
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ \
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ python manage.py migrate\
+
+\f1\b \cf4 Operations to perform:
+\f0\b0 \cf2 \
+
+\f1\b   Apply all migrations: 
+\f0\b0 admin, auth, contenttypes, sessions\
+
+\f1\b \cf4 Running migrations:
+\f0\b0 \cf2 \
+  Rendering model states...
+\f1\b \cf5  DONE
+\f0\b0 \cf2 \
+  Applying contenttypes.0001_initial...
+\f1\b \cf5  OK
+\f0\b0 \cf2 \
+  Applying auth.0001_initial...
+\f1\b \cf5  OK
+\f0\b0 \cf2 \
+  Applying admin.0001_initial...
+\f1\b \cf5  OK
+\f0\b0 \cf2 \
+  Applying admin.0002_logentry_remove_auto_add...
+\f1\b \cf5  OK
+\f0\b0 \cf2 \
+  Applying contenttypes.0002_remove_content_type_name...
+\f1\b \cf5  OK
+\f0\b0 \cf2 \
+  Applying auth.0002_alter_permission_name_max_length...
+\f1\b \cf5  OK
+\f0\b0 \cf2 \
+  Applying auth.0003_alter_user_email_max_length...
+\f1\b \cf5  OK
+\f0\b0 \cf2 \
+  Applying auth.0004_alter_user_username_opts...
+\f1\b \cf5  OK
+\f0\b0 \cf2 \
+  Applying auth.0005_alter_user_last_login_null...
+\f1\b \cf5  OK
+\f0\b0 \cf2 \
+  Applying auth.0006_require_contenttypes_0002...
+\f1\b \cf5  OK
+\f0\b0 \cf2 \
+  Applying auth.0007_alter_validators_add_error_messages...
+\f1\b \cf5  OK
+\f0\b0 \cf2 \
+  Applying auth.0008_alter_user_username_max_length...
+\f1\b \cf5  OK
+\f0\b0 \cf2 \
+  Applying sessions.0001_initial...
+\f1\b \cf5  OK
+\f0\b0 \cf2 \
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ python manage.py runserver\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+August 13, 2018 - 18:59:47\
+Django version 1.10, using settings 'likes_books.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+[13/Aug/2018 19:05:18] "GET / HTTP/1.1" 200 30\
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x10a84df28>\
+Traceback (most recent call last):\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run\
+    autoreload.raise_last_exception()\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception\
+    six.reraise(*_exception)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise\
+    raise value.with_traceback(tb)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate\
+    app_config.import_models(all_models)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/amandasitko/Desktop/CD_Assignments/Django/likes_books/apps/likes_books/models.py", line 4\
+    from __future__ import unicode_literals\
+    ^\
+SyntaxError: from __future__ imports must occur at the beginning of the file\
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x102c72f28>\
+Traceback (most recent call last):\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run\
+    autoreload.raise_last_exception()\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception\
+    six.reraise(*_exception)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise\
+    raise value.with_traceback(tb)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate\
+    app_config.import_models(all_models)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/amandasitko/Desktop/CD_Assignments/Django/likes_books/apps/likes_books/models.py", line 4\
+    from __future__ import unicode_literals\
+    ^\
+SyntaxError: from __future__ imports must occur at the beginning of the file\
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x110c0ef28>\
+Traceback (most recent call last):\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run\
+    autoreload.raise_last_exception()\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception\
+    six.reraise(*_exception)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise\
+    raise value.with_traceback(tb)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate\
+    app_config.import_models(all_models)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/amandasitko/Desktop/CD_Assignments/Django/likes_books/apps/likes_books/models.py", line 4\
+    from __future__ import unicode_literals\
+    ^\
+SyntaxError: from __future__ imports must occur at the beginning of the file\
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x105007f28>\
+Traceback (most recent call last):\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run\
+    autoreload.raise_last_exception()\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception\
+    six.reraise(*_exception)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise\
+    raise value.with_traceback(tb)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate\
+    app_config.import_models(all_models)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/amandasitko/Desktop/CD_Assignments/Django/likes_books/apps/likes_books/models.py", line 4\
+    from __future__ import unicode_literals\
+    ^\
+SyntaxError: from __future__ imports must occur at the beginning of the file\
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x1050b6f28>\
+Traceback (most recent call last):\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run\
+    autoreload.raise_last_exception()\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception\
+    six.reraise(*_exception)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise\
+    raise value.with_traceback(tb)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate\
+    app_config.import_models(all_models)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/amandasitko/Desktop/CD_Assignments/Django/likes_books/apps/likes_books/models.py", line 4\
+    from __future__ import unicode_literals\
+    ^\
+SyntaxError: from __future__ imports must occur at the beginning of the file\
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x10fd50f28>\
+Traceback (most recent call last):\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run\
+    autoreload.raise_last_exception()\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception\
+    six.reraise(*_exception)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise\
+    raise value.with_traceback(tb)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate\
+    app_config.import_models(all_models)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/amandasitko/Desktop/CD_Assignments/Django/likes_books/apps/likes_books/models.py", line 4\
+    from __future__ import unicode_literals\
+    ^\
+SyntaxError: from __future__ imports must occur at the beginning of the file\
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x108f31f28>\
+Traceback (most recent call last):\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run\
+    autoreload.raise_last_exception()\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception\
+    six.reraise(*_exception)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise\
+    raise value.with_traceback(tb)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate\
+    app_config.import_models(all_models)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/amandasitko/Desktop/CD_Assignments/Django/likes_books/apps/likes_books/models.py", line 4\
+    from __future__ import unicode_literals\
+    ^\
+SyntaxError: from __future__ imports must occur at the beginning of the file\
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x104cc8f28>\
+Traceback (most recent call last):\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run\
+    autoreload.raise_last_exception()\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception\
+    six.reraise(*_exception)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise\
+    raise value.with_traceback(tb)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate\
+    app_config.import_models(all_models)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/amandasitko/Desktop/CD_Assignments/Django/likes_books/apps/likes_books/models.py", line 4\
+    from __future__ import unicode_literals\
+    ^\
+SyntaxError: from __future__ imports must occur at the beginning of the file\
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x10fc87f28>\
+Traceback (most recent call last):\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run\
+    autoreload.raise_last_exception()\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception\
+    six.reraise(*_exception)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise\
+    raise value.with_traceback(tb)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate\
+    app_config.import_models(all_models)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/amandasitko/Desktop/CD_Assignments/Django/likes_books/apps/likes_books/models.py", line 17\
+    return "<User object: \{\} \{\}>".format(self.name, self.desc, self.)\
+                                                                    ^\
+SyntaxError: invalid syntax\
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x10f076f28>\
+Traceback (most recent call last):\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run\
+    autoreload.raise_last_exception()\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception\
+    six.reraise(*_exception)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise\
+    raise value.with_traceback(tb)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate\
+    app_config.import_models(all_models)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/amandasitko/Desktop/CD_Assignments/Django/likes_books/apps/likes_books/models.py", line 17\
+    return "<User object: \{\} \{\}>".format(self.name, self.desc, self.uploader, self. )\
+                                                                                    ^\
+SyntaxError: invalid syntax\
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x108383f28>\
+Traceback (most recent call last):\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run\
+    autoreload.raise_last_exception()\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception\
+    six.reraise(*_exception)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise\
+    raise value.with_traceback(tb)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate\
+    app_config.import_models(all_models)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/amandasitko/Desktop/CD_Assignments/Django/likes_books/apps/likes_books/models.py", line 4\
+    from __future__ import unicode_literals\
+    ^\
+SyntaxError: from __future__ imports must occur at the beginning of the file\
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x105798f28>\
+Traceback (most recent call last):\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run\
+    autoreload.raise_last_exception()\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception\
+    six.reraise(*_exception)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise\
+    raise value.with_traceback(tb)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate\
+    app_config.import_models(all_models)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/amandasitko/Desktop/CD_Assignments/Django/likes_books/apps/likes_books/models.py", line 4\
+    from __future__ import unicode_literals\
+    ^\
+SyntaxError: from __future__ imports must occur at the beginning of the file\
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x1051adf28>\
+Traceback (most recent call last):\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run\
+    autoreload.raise_last_exception()\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception\
+    six.reraise(*_exception)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise\
+    raise value.with_traceback(tb)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate\
+    app_config.import_models(all_models)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/amandasitko/Desktop/CD_Assignments/Django/likes_books/apps/likes_books/models.py", line 4\
+    from __future__ import unicode_literals\
+    ^\
+SyntaxError: from __future__ imports must occur at the beginning of the file\
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x108982f28>\
+Traceback (most recent call last):\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run\
+    autoreload.raise_last_exception()\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception\
+    six.reraise(*_exception)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise\
+    raise value.with_traceback(tb)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate\
+    app_config.import_models(all_models)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/amandasitko/Desktop/CD_Assignments/Django/likes_books/apps/likes_books/models.py", line 4\
+    from __future__ import unicode_literals\
+    ^\
+SyntaxError: from __future__ imports must occur at the beginning of the file\
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x11038bf28>\
+Traceback (most recent call last):\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run\
+    autoreload.raise_last_exception()\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception\
+    six.reraise(*_exception)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise\
+    raise value.with_traceback(tb)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate\
+    app_config.import_models(all_models)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/amandasitko/Desktop/CD_Assignments/Django/likes_books/apps/likes_books/models.py", line 4\
+    from __future__ import unicode_literals\
+    ^\
+SyntaxError: from __future__ imports must occur at the beginning of the file\
+Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x108c19f28>\
+Traceback (most recent call last):\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 113, in inner_run\
+    autoreload.raise_last_exception()\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 249, in raise_last_exception\
+    six.reraise(*_exception)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise\
+    raise value.with_traceback(tb)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/autoreload.py", line 226, in wrapper\
+    fn(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate\
+    app_config.import_models(all_models)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/amandasitko/Desktop/CD_Assignments/Django/likes_books/apps/likes_books/models.py", line 4\
+    from __future__ import unicode_literals\
+    ^\
+SyntaxError: from __future__ imports must occur at the beginning of the file\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+August 13, 2018 - 19:16:47\
+Django version 1.10, using settings 'likes_books.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+^C(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitkoquit ()\
+> qui()\
+-bash: syntax error near unexpected token `qui'\
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ quit()\
+> cd ..\
+-bash: syntax error near unexpected token `cd'\
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ python manage.py makemigrations\
+
+\f1\b \cf4 Migrations for 'likes_books':
+\f0\b0 \cf2 \
+  
+\f1\b apps/likes_books/migrations/0001_initial.py
+\f0\b0 :\
+    - Create model Book\
+    - Create model User\
+    - Add field liked_users to book\
+    - Add field uploader to book\
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ python manage.py migrate\
+
+\f1\b \cf4 Operations to perform:
+\f0\b0 \cf2 \
+
+\f1\b   Apply all migrations: 
+\f0\b0 admin, auth, contenttypes, likes_books, sessions\
+
+\f1\b \cf4 Running migrations:
+\f0\b0 \cf2 \
+  Rendering model states...
+\f1\b \cf5  DONE
+\f0\b0 \cf2 \
+  Applying likes_books.0001_initial...
+\f1\b \cf5  OK
+\f0\b0 \cf2 \
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ python manage.py runserver\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+August 13, 2018 - 19:17:54\
+Django version 1.10, using settings 'likes_books.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+^[[A^[[A^C(djangoPy3Env) Amandas-MacBook-Pro:likes_books ama\
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ python manage.py shell\
+Python 3.7.0 (default, Jul 23 2018, 20:22:55) \
+[Clang 9.1.0 (clang-902.0.39.2)] on darwin\
+Type "help", "copyright", "credits" or "license" for more information.\
+(InteractiveConsole)\
+>>> from apps.likes_books.models import *\
+>>> User.objects.create(first_name= "Amanda", last_name="Malamis", email= "sdlkfj@slkfj.com")\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+  File "/Users/amandasitko/Desktop/CD_Assignments/Django/likes_books/apps/likes_books/models.py", line 14, in __repr__\
+    return "<User object: \{\} \{\} \{\} \{\}>".format(self.first_name, self.last_name, self.email, self.notes)\
+AttributeError: 'User' object has no attribute 'notes'\
+>>> User.objects.create(first_name= "Amanda", last_name="Malamis", email= "sdlkfj@slkfj.com")\
+KeyboardInterrupt\
+>>> User.objects.create(first_name= "Amanda", last_name="Malamis", email= "sdlkfj@slkfj.com")\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+  File "/Users/amandasitko/Desktop/CD_Assignments/Django/likes_books/apps/likes_books/models.py", line 14, in __repr__\
+    return "<User object: \{\} \{\} \{\} \{\}>".format(self.first_name, self.last_name, self.email)\
+AttributeError: 'User' object has no attribute 'notes'\
+>>> quit()\
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ python manage.py makemigrations\
+No changes detected\
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ python manage.py migrate\
+
+\f1\b \cf4 Operations to perform:
+\f0\b0 \cf2 \
+
+\f1\b   Apply all migrations: 
+\f0\b0 admin, auth, contenttypes, likes_books, sessions\
+
+\f1\b \cf4 Running migrations:
+\f0\b0 \cf2 \
+  No migrations to apply.\
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ python manage.py shell\
+Python 3.7.0 (default, Jul 23 2018, 20:22:55) \
+[Clang 9.1.0 (clang-902.0.39.2)] on darwin\
+Type "help", "copyright", "credits" or "license" for more information.\
+(InteractiveConsole)\
+>>>  from apps.likes_books.models import *\
+  File "<console>", line 1\
+    from apps.likes_books.models import *\
+    ^\
+IndentationError: unexpected indent\
+>>> from apps.likes_books. models import *\
+>>> User.objects.create(first_name= "Amanda", last_name="Malamis", email= "sdlkfj@slkfj.com")\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+  File "/Users/amandasitko/Desktop/CD_Assignments/Django/likes_books/apps/likes_books/models.py", line 14, in __repr__\
+    return "<User object: \{\} \{\} \{\} \{\}>".format(self.first_name, self.last_name, self.email)\
+IndexError: tuple index out of range\
+>>> quit()\
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ python manage.py makemigrations\
+No changes detected\
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ python manage.py migrate\
+
+\f1\b \cf4 Operations to perform:
+\f0\b0 \cf2 \
+
+\f1\b   Apply all migrations: 
+\f0\b0 admin, auth, contenttypes, likes_books, sessions\
+
+\f1\b \cf4 Running migrations:
+\f0\b0 \cf2 \
+  No migrations to apply.\
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ python manage.py shell\
+Python 3.7.0 (default, Jul 23 2018, 20:22:55) \
+[Clang 9.1.0 (clang-902.0.39.2)] on darwin\
+Type "help", "copyright", "credits" or "license" for more information.\
+(InteractiveConsole)\
+>>> from apps.likes_books. models import *\
+>>> User.objects.create(first_name= "Amanda", last_name="Malamis", email= "sdlkfj@slkfj.com")\
+<User object: Amanda Malamis sdlkfj@slkfj.com>\
+>>> User.objects.create(first_name= "Ama", last_name="Mals", email= "sdj@slj.com")\
+<User object: Ama Mals sdj@slj.com>\
+>>> User.objects.create(first_name= "Evan", last_name="Sitko", email= "sdj@ssd.com")\
+<User object: Evan Sitko sdj@ssd.com>\
+>>> Book.objects.create(name= "Da Vinci Code", desc="sldkfjsd")\
+Traceback (most recent call last):\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/backends/utils.py", line 64, in execute\
+    return self.cursor.execute(sql, params)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 337, in execute\
+    return Database.Cursor.execute(self, query, params)\
+sqlite3.IntegrityError: NOT NULL constraint failed: likes_books_book.uploader_id\
+\
+The above exception was the direct cause of the following exception:\
+\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method\
+    return getattr(self.get_queryset(), name)(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/query.py", line 399, in create\
+    obj.save(force_insert=True, using=self.db)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/base.py", line 796, in save\
+    force_update=force_update, update_fields=update_fields)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/base.py", line 824, in save_base\
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/base.py", line 908, in _save_table\
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/base.py", line 947, in _do_insert\
+    using=using, raw=raw)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method\
+    return getattr(self.get_queryset(), name)(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/query.py", line 1043, in _insert\
+    return query.get_compiler(using=using).execute_sql(return_id)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1054, in execute_sql\
+    cursor.execute(sql, params)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/backends/utils.py", line 79, in execute\
+    return super(CursorDebugWrapper, self).execute(sql, params)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/backends/utils.py", line 64, in execute\
+    return self.cursor.execute(sql, params)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/utils.py", line 94, in __exit__\
+    six.reraise(dj_exc_type, dj_exc_value, traceback)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise\
+    raise value.with_traceback(tb)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/backends/utils.py", line 64, in execute\
+    return self.cursor.execute(sql, params)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 337, in execute\
+    return Database.Cursor.execute(self, query, params)\
+django.db.utils.IntegrityError: NOT NULL constraint failed: likes_books_book.uploader_id\
+>>> u1=User.objects.get(id=1)\
+>>> b1=Book.objects.get(id=1)\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method\
+    return getattr(self.get_queryset(), name)(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/query.py", line 385, in get\
+    self.model._meta.object_name\
+apps.likes_books.models.DoesNotExist: Book matching query does not exist.\
+>>> u2=User.objects.get(id=2)\
+>>> u3=User.objects.get(id=3)\
+>>> u1\
+<User object: Amanda Malamis sdlkfj@slkfj.com>\
+>>> u3\
+<User object: Amanda Malamis sdlkfj@slkfj.com>\
+>>> u2\
+<User object: Amanda Malamis sdlkfj@slkfj.com>\
+>>> u1\
+<User object: Amanda Malamis sdlkfj@slkfj.com>\
+>>> u3\
+<User object: Amanda Malamis sdlkfj@slkfj.com>\
+>>> b1=Book.objects.get(id=1)\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method\
+    return getattr(self.get_queryset(), name)(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/query.py", line 385, in get\
+    self.model._meta.object_name\
+apps.likes_books.models.DoesNotExist: Book matching query does not exist.\
+>>> Book.objects.create(name= "Da Vinci Code", desc="sldkfjsd")\
+Traceback (most recent call last):\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/backends/utils.py", line 64, in execute\
+    return self.cursor.execute(sql, params)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 337, in execute\
+    return Database.Cursor.execute(self, query, params)\
+sqlite3.IntegrityError: NOT NULL constraint failed: likes_books_book.uploader_id\
+\
+The above exception was the direct cause of the following exception:\
+\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method\
+    return getattr(self.get_queryset(), name)(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/query.py", line 399, in create\
+    obj.save(force_insert=True, using=self.db)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/base.py", line 796, in save\
+    force_update=force_update, update_fields=update_fields)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/base.py", line 824, in save_base\
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/base.py", line 908, in _save_table\
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/base.py", line 947, in _do_insert\
+    using=using, raw=raw)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method\
+    return getattr(self.get_queryset(), name)(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/query.py", line 1043, in _insert\
+    return query.get_compiler(using=using).execute_sql(return_id)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1054, in execute_sql\
+    cursor.execute(sql, params)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/backends/utils.py", line 79, in execute\
+    return super(CursorDebugWrapper, self).execute(sql, params)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/backends/utils.py", line 64, in execute\
+    return self.cursor.execute(sql, params)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/utils.py", line 94, in __exit__\
+    six.reraise(dj_exc_type, dj_exc_value, traceback)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/utils/six.py", line 685, in reraise\
+    raise value.with_traceback(tb)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/backends/utils.py", line 64, in execute\
+    return self.cursor.execute(sql, params)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 337, in execute\
+    return Database.Cursor.execute(self, query, params)\
+django.db.utils.IntegrityError: NOT NULL constraint failed: likes_books_book.uploader_id\
+>>> this_uploader= Book.objects.get(id=1)\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method\
+    return getattr(self.get_queryset(), name)(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/query.py", line 385, in get\
+    self.model._meta.object_name\
+apps.likes_books.models.DoesNotExist: Book matching query does not exist.\
+>>> quit()\
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ python manage.py makemigrations\
+
+\f1\b \cf4 Migrations for 'likes_books':
+\f0\b0 \cf2 \
+  
+\f1\b apps/likes_books/migrations/0002_remove_book_liked_users.py
+\f0\b0 :\
+    - Remove field liked_users from book\
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ python manage.py migrate\
+
+\f1\b \cf4 Operations to perform:
+\f0\b0 \cf2 \
+
+\f1\b   Apply all migrations: 
+\f0\b0 admin, auth, contenttypes, likes_books, sessions\
+
+\f1\b \cf4 Running migrations:
+\f0\b0 \cf2 \
+  Rendering model states...
+\f1\b \cf5  DONE
+\f0\b0 \cf2 \
+  Applying likes_books.0002_remove_book_liked_users...
+\f1\b \cf5  OK
+\f0\b0 \cf2 \
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ python manage.py shell\
+Python 3.7.0 (default, Jul 23 2018, 20:22:55) \
+[Clang 9.1.0 (clang-902.0.39.2)] on darwin\
+Type "help", "copyright", "credits" or "license" for more information.\
+(InteractiveConsole)\
+>>> u1\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+NameError: name 'u1' is not defined\
+>>> u1= User.objects.get(id=1)\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+NameError: name 'User' is not defined\
+>>> User.objects.create(first_name= "Amanda", last_name="Malamis", email= "sdlkfj@slkfj.com")\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+NameError: name 'User' is not defined\
+>>> quit()\
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ python manage.py makemigrations\
+Did you rename book.uploader to book.users_id (a ForeignKey)? [y/N] y\
+
+\f1\b \cf4 Migrations for 'likes_books':
+\f0\b0 \cf2 \
+  
+\f1\b apps/likes_books/migrations/0003_auto_20180813_1950.py
+\f0\b0 :\
+    - Create model Like\
+    - Rename field uploader on book to users_id\
+    - Add field book_id to like\
+    - Add field user_id to like\
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ python manage.py migrate\
+
+\f1\b \cf4 Operations to perform:
+\f0\b0 \cf2 \
+
+\f1\b   Apply all migrations: 
+\f0\b0 admin, auth, contenttypes, likes_books, sessions\
+
+\f1\b \cf4 Running migrations:
+\f0\b0 \cf2 \
+  Rendering model states...
+\f1\b \cf5  DONE
+\f0\b0 \cf2 \
+  Applying likes_books.0003_auto_20180813_1950...
+\f1\b \cf5  OK
+\f0\b0 \cf2 \
+(djangoPy3Env) Amandas-MacBook-Pro:likes_books amandasitko$ python manage.py shell\
+Python 3.7.0 (default, Jul 23 2018, 20:22:55) \
+[Clang 9.1.0 (clang-902.0.39.2)] on darwin\
+Type "help", "copyright", "credits" or "license" for more information.\
+(InteractiveConsole)\
+>>> from apps.likes_books.models import *\
+>>> User.objects.all()\
+<QuerySet [<User object: Amanda Malamis sdlkfj@slkfj.com>, <User object: Amanda Malamis sdlkfj@slkfj.com>, <User object: Amanda Malamis sdlkfj@slkfj.com>, <User object: Amanda Malamis sdlkfj@slkfj.com>, <User object: Ama Mals sdj@slj.com>, <User object: Evan Sitko sdj@ssd.com>]>\
+>>> Book.objects.create(name= "da vinci code", desc= "slkdfjsd", user_id=User.objects.get(id=1))\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method\
+    return getattr(self.get_queryset(), name)(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/query.py", line 397, in create\
+    obj = self.model(**kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/base.py", line 555, in __init__\
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])\
+TypeError: 'user_id' is an invalid keyword argument for this function\
+>>> u1\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+NameError: name 'u1' is not defined\
+>>> b1=Book.objects.get(id=1)\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method\
+    return getattr(self.get_queryset(), name)(*args, **kwargs)\
+  File "/Users/amandasitko/Desktop/MyEnvironments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/query.py", line 385, in get\
+    self.model._meta.object_name\
+apps.likes_books.models.DoesNotExist: Book matching query does not exist.\
+>>> Book.objects.create(name= "da vinci code", desc= "slkdfjsd", users_id=b1)\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+NameError: name 'b1' is not defined\
+>>> Books.objects.create(name="dsf;kds", desc="sdfksd", users_id=User.objects.get(id=1))\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+NameError: name 'Books' is not defined\
+>>> Book.objects.create(name="dsf;kds", desc="sdfksd", users_id=User.objects.get(id=1))\
+<User object: dsf;kds sdfksd User object>\
+>>> Book.objects.create(name="Adele", desc="la laad", users_id=User.objects.get(id=2))\
+<User object: Adele la laad User object>\
+>>> Book.objects.create(name="Origins", desc="wohooo", users_id=User.objects.get(id=3))\
+<User object: Origins wohooo User object>\
+>>> u1= Users.objects.get(id=1)\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+NameError: name 'Users' is not defined\
+>>> u1= User.objects.get(id=1)\
+>>> u2= User.objects.get(id=2)\
+>>> u3= User.objects.get(id=3)\
+>>> b1= Book.objects.get(id=1)\
+>>> b2= Book.objects.get(id=2)\
+>>> b3= Book.objects.get(id=3)\
+>>> Like.objects.create(user_id=u1, book_id=b1)\
+<User object: User object Book object>\
+>>> Like.objects.create(user_id=u2, book_id=b2)\
+<User object: User object Book object>\
+>>> Like.objects.create(user_id=u3, book_id=b3)\
+<User object: User object Book object>\
+>>> u1.Book\
+<django.db.models.fields.related_descriptors.create_reverse_many_to_one_manager.<locals>.RelatedManager object at 0x103fae7b8>\
+>>> b1.User\
+<django.db.models.fields.related_descriptors.create_reverse_many_to_one_manager.<locals>.RelatedManager object at 0x103fae710>\
+>>> \
+}

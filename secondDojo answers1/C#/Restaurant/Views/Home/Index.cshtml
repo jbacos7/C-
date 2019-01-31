@@ -1,0 +1,56 @@
+
+@using Restaurant.Models
+@model User
+<head>
+        <style>
+            .main
+                {
+                width: 100%;
+                background-color: darkslategrey;
+                text-align: center;
+                color: navajowhite;
+                }
+            h1, h5, h6, p {
+                text-align: 35%;
+                color: white;
+                }
+            input {
+                color: green;
+                text-align: 35%;
+            }
+        
+        </style>
+    <title> Restaurant </title>
+</head>
+
+<div class= main> 
+
+
+<h1>Welcome to the Restaurant Reviewer:</h1>
+<h2> Add a new review here: </h2>
+
+
+<form asp-action="AddReview" asp-controller="Home" method="POST">
+    <span asp-validation-for="ReviewerName"></span>
+    <label asp-for="ReviewerName"> Reviewer Name : </label><input asp-for="ReviewerName"><br><br>
+
+    <span asp-validation-for="RestaurantName"></span>
+    <label asp-for="RestaurantName"> Restaurant Name : </label><input asp-for="RestaurantName"><br><br>
+
+    <span asp-validation-for="Review"></span>
+    <label asp-for="Review"></label> Review : <textarea asp-for="Review"></textarea><br><br>
+
+    <span asp-validation-for="Date"></span>
+    <label asp-for="Date">Date of Visit : </label><input asp-for="Date" type="date"><br><br>
+
+    <span asp-validation-for="Stars"></span>
+    <label asp-for="Stars"> Star Rating : </label><select asp-for="Stars"><br>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select><br>
+
+    <input type="submit" value="Submit Review">
+</form>

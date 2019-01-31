@@ -1,0 +1,35 @@
+@using FormSubmission.Models
+@model SurveyViewModel
+
+<head>
+        <style>
+            .main
+                {
+                width: 600px;
+                height: 400px;
+                background-color: lightblue;
+                }
+            h1, h2, p {
+                text-align: center;
+                color: purple;
+                background-color: sky
+                }
+            
+        </style>
+    <title> Success </title>
+</head>
+
+<body>
+    <div class='main'>
+        <h1> Your Successful Registration : </h1>
+        <p> First Name: @ViewBag.FirstName </p>
+        <p> Last Name: @ViewBag.LastName </p>
+        <p> Age: @ViewBag.Age </p>
+        <p> Email: @ViewBag.Email </p>
+        <p> Password: @ViewBag.Password </p><br>
+        
+        <p> <button> <a href='/'> Go Back </a> </button> </p>
+    </div>
+</body>
+
+</html>

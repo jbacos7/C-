@@ -1,0 +1,11 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/Puzzles/bin/Debug/netcoreapp2.0/Puzzles.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Puzzles/bin/Debug/netcoreapp2.0/Puzzles.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Puzzles/bin/Debug/netcoreapp2.0/Puzzles.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Puzzles/bin/Debug/netcoreapp2.0/Puzzles.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/Puzzles/bin/Debug/netcoreapp2.0/Puzzles.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/Puzzles/obj/Debug/netcoreapp2.0/Puzzles.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/Puzzles/obj/Debug/netcoreapp2.0/Puzzles.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/Puzzles/obj/Debug/netcoreapp2.0/Puzzles.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/Puzzles/obj/Debug/netcoreapp2.0/Puzzles.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/Puzzles/obj/Debug/netcoreapp2.0/Puzzles.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/Puzzles/obj/Debug/netcoreapp2.0/Puzzles.csprojResolveAssemblyReference.cache

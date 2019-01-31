@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Edit</title>
+</head>
+<style>
+        body{
+            background-color: palegoldenrod;
+        }
+</style>
+<body>
+    <h1> Edit Account Information</h1>
+    User to edit: {{user.first_name}}  {{user.last_name}} <br>
+    Email: {{user.email}}
+    <form action='{{user.id}}/edit' method='GET'>
+        {% csrf_token %}
+        <p> Let's edit your info! </p>
+        <input type= 'hidden' value= {{id}} name='id'>
+    </form>
+
+    <form action= '/{{user.id}}/updateuser' method= "POST">
+        {% csrf_token %}
+        <!-- {% if messages %} 
+            {% for message in messages %}
+                <h3> {{ message }} </h3>
+            {% endfor %} 
+        {% endif %} -->
+
+        First name:
+        <input type= 'text' name='first_name' value= '{{user.first_name}}'> <br>
+        Last name:
+        <input type= 'text' name='last_name' value= '{{user.last_name}}'> <br>
+        Email:
+        <input type= 'text' name='email' value= '{{user.email}}'> <br>
+        <input type="submit" value="Update">
+    </form>
+    <button><a href= '/show'> Cancel </a></button>
+    <button><a href="/" > Log Out </a></button>

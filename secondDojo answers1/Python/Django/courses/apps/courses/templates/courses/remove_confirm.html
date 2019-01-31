@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Courses</title>
+</head>
+
+<body>
+    <h1> Remove A Course</h1>
+    <p> Are you sure you want to remove the following course? </p>
+        {% csrf_token %} 
+        <p>Course Name:{{i.name}}</p>
+        <p>Course Description:{{i.description}}</p>
+
+        <a href= "/"> No </a>
+        <a href='{{i.id}}/remove_confirm'> Yes</a>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/RazorFun/bin/Debug/netcoreapp2.0/RazorFun.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/RazorFun/bin/Debug/netcoreapp2.0/RazorFun.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/RazorFun/bin/Debug/netcoreapp2.0/RazorFun.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/RazorFun/bin/Debug/netcoreapp2.0/RazorFun.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/RazorFun/bin/Debug/netcoreapp2.0/RazorFun.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/RazorFun/obj/Debug/netcoreapp2.0/RazorFun.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/RazorFun/obj/Debug/netcoreapp2.0/RazorFun.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/RazorFun/obj/Debug/netcoreapp2.0/RazorFun.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/RazorFun/obj/Debug/netcoreapp2.0/RazorFun.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/RazorFun/obj/Debug/netcoreapp2.0/RazorFun.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/RazorFun/obj/Debug/netcoreapp2.0/RazorFun.csprojResolveAssemblyReference.cache

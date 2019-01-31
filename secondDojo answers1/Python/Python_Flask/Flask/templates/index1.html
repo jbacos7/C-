@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My First Template</title>
+</head>
+
+<body>
+  <style>
+    body {
+      background-color: LightBlue;
+    }
+
+    h1 {
+      color: maroon;
+      margin-left: 300px;
+    }
+
+    div {
+      width: 200px;
+      height: 200px;
+      border: 5px solid black;
+      padding: 10px;
+      margin: 10px;
+      background-color: blue;
+      display: inline-block;
+    }
+  </style>
+
+    <h1>Hello and WELCOME! </h1>
+    <div class= "box"></div>
+    <div class= "box"></div>
+    <div class= "box"></div>
+    <!-- <h3>My flask template with embedded Python-like code</h3> -->
+    <!-- this will output the value of our phrase variable -->
+    <!-- <p>Phrase: {{ phrase }}</p> -->
+    <!-- this will output the value of our times variable -->
+    <!-- <p>this works! Times: {{ times }}</p> -->
+    <!-- here is an example of embedding a for-loop in our code -->
+    <!-- {% for x in range(0,times): %} -->
+    <!-- <p>{{ phrase }}</p> -->
+    {% endfor %}
+    <!-- here is an example of embedding an if statement in our code -->
+    {% if phrase == "hello" %}
+    <p>The phrase says hello</p>
+    {% endif %}
+  </body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+</head>
+<body>
+        <div id= main>
+        <h1> Registration Form</h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                <h3> {{ message }} </h3>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form action='/create' method='POST'>
+                <h2>Please fill out the following information:</h2>
+                <div class= boxes>
+                First Name:
+                <textarea name='first_name'></textarea>
+                <br>
+                Last Name:
+                <textarea name='last_name'></textarea>
+                <br>
+                Email address:
+                <textarea name='email'></textarea>
+                <br>
+                Password:
+                <textarea name='password1'></textarea>
+                <br>
+                Password confirmation:
+                <textarea name='password2'></textarea>
+                <br>
+               
+                </div>
+                <input type='submit' value='Click to submit!'>
+               
+        </form>
+        </div>
+      
+        
+</body>
+
+</html>

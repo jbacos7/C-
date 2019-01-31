@@ -1,0 +1,30 @@
+@model ProdViewModels
+
+<h1>Welcome! </h1>
+
+
+<form asp-controller="Home" asp-action="productaction" method="POST">
+    <h1>New Products</h1>
+    <h2> Enter new products here. </h2>
+    <p>
+        <span asp-validation-for="Name"></span>
+        <label asp-for="Name"> Name : </label><input asp-for="Name"><br><br>
+    </p>
+    <p>
+        <span asp-validation-for="Description"></span>
+        <label asp-for="Description"> Description : </label><input asp-for="Description"><br><br>
+    </p>
+    <p>
+        <span asp-validation-for="Price"></span>
+        <label asp-for="Price"></label>  Price: <input asp-for="Price"><br><br>
+    </p>
+    <button>SUBMIT</button>
+</form>
+
+    <p> <button> <a href= "/category"> Go to Category Page </a> </button> </p>
+
+
+@if (ViewBag.message != null)
+{
+    <p>@ViewBag.message</p>
+}

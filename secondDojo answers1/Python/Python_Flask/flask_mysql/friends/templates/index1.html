@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>C and R Friends</title>
+</head>
+<body>
+        <div id= main>
+        <h1> Create and Read Friends </h1>
+        {% for i in friends %}
+            <p> {{friends [first_name]}} </p>
+                <h3> {{ message }} </h3>
+        {% endfor %}
+        <form action='/create' method='POST'>
+            <input type="text" id="first_name" name="first_name">
+            <input type="text" id="last_name" name="last_name">
+            <input type="text" id="occupation" name="occupation">
+
+            <input type='submit' value='Click this button!'>
+               
+        </form>
+        </div>
+      
+        
+</body>
+
+</html>

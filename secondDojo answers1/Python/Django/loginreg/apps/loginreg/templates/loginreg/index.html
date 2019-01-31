@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Login and Registration </title>
+</head>
+<style>
+   
+</style>
+
+<body>
+    <form action='/register' method='POST'>
+        {% csrf_token %}
+            {% if messages %}
+                {% for message in messages %}
+                    <h3> {{ message }} </h3>
+                {% endfor %}
+            {% endif %}
+            <h1> Please enter your registration or login information. </h1>
+            <h2> New User Registration: </h2>
+            <p>First name: </p><br>
+            <input type="text" id="first_name" name="first_name" >
+            <p> Last name: </p><br>
+            <input type="text" id="last_name" name="last_name" >
+            <p> Email: </p><br>
+            <input type="text" id="email" name="email" >
+            <p> Password: </p><br>
+            <input type="text" id="password" name="password" >
+            <p> Password confirmation: </p><br>
+            <input type="text" id="pwconf" name="pwconf" ><br>
+            <input type='submit' value='Click to register.'>
+
+    </form>
+
+    <form action='/login' method='POST'>
+        <div id= "lower">
+            {% csrf_token %}
+            <h3> Login: </h3>
+            <p> Email: </p><br>
+            <input type="text" id="email" name="email" >
+            <p> Password: </p><br>
+            <input type="text" id="password" name="password" >
+
+            <h4> <p>
+            <input type='submit' value='Click to login.'>
+            </p>
+            </h4>
+        </div>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+
+@using RandomPasscode.Models
+@model SurveyViewModel
+<head>
+        <style>
+            .main
+                {
+                width: 600px;
+                height: 400px;
+                background-color: lightblue;
+                }
+            h1, h2, p {
+                text-align: center;
+                color: purple;
+                background-color: lightblue;
+                }
+            button{
+                color: orangered;
+                margin-left: 35%;
+                display: inline-block;
+            }
+            
+        </style>
+    <title> Random Passcode </title>
+</head>
+
+<body>
+<div class='main'>
+
+@{
+    ViewData["Random Passcode Generator"] = "Index";
+}
+
+<h1> Passcode </h1>
+    <p name="count">This is random passcode number : @ViewBag.CountNumber </p>
+    <div>
+        <form action="" method="get">
+            <p>@ViewBag.newcode</p>
+            <button type="submit"> Generate Another Number </button>
+        </form>
+
+</div>
+
+</body>
+

@@ -1,0 +1,48 @@
+<html lang="en">
+<style>
+    h1, h2, h3, p
+    {
+        color: darkblue;
+        text-align: center;
+        padding: 5px;
+        vertical-align: top;
+    }
+
+    body{
+        background-color: palegoldenrod;
+    }
+
+    table, form {
+        color: purple;
+        text-align: center;
+    }
+
+    button {
+        background-color: darkseagreen;
+        color: white;
+        margin: 10px;
+        padding: 10px;
+    }
+    
+</style>
+<head>
+    <title> Login / Registration </title>
+</head>
+    <h1>Login</h1>
+    <form action="Login" method="POST">
+        <h2>Already have an account? Login here.</h2>
+        <p> <label for="loginemail">Email</label>
+            <input type="text" name="loginemail" id="loginemail"/>
+        </p>
+        <p>
+            <label for="loginpw">Password</label>
+            <input type="password" name="loginpw" id="loginpw"/>
+        </p>
+            <button>SUBMIT</button>
+        </form>
+    <p> <button> <a href= "/"> Register Here </a> </button> </p>
+
+@if (ViewBag.message != null)
+{
+  <p>@ViewBag.message</p>
+}

@@ -1,0 +1,11 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/LostWoods/bin/Debug/netcoreapp2.0/LostWoods.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/LostWoods/bin/Debug/netcoreapp2.0/LostWoods.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/LostWoods/bin/Debug/netcoreapp2.0/LostWoods.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/LostWoods/bin/Debug/netcoreapp2.0/LostWoods.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/LostWoods/bin/Debug/netcoreapp2.0/LostWoods.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/LostWoods/obj/Debug/netcoreapp2.0/LostWoods.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/LostWoods/obj/Debug/netcoreapp2.0/LostWoods.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/LostWoods/obj/Debug/netcoreapp2.0/LostWoods.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/LostWoods/obj/Debug/netcoreapp2.0/LostWoods.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/LostWoods/obj/Debug/netcoreapp2.0/LostWoods.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/LostWoods/obj/Debug/netcoreapp2.0/LostWoods.csprojResolveAssemblyReference.cache

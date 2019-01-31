@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Semi-Restful Users</title>
+</head>
+
+<body>
+        <h1> Add A New User: </h1>
+        <form action='/add' method='POST'>
+            {% csrf_token %}
+            First Name: <input type="text" name="first_name"><br>
+            Last Name: <input type="text" name="last_name"><br>
+            Email: <input type="text" name="email"><br>
+            <a href="/" > Go Back </a>
+            <input type="submit" value="Submit">
+            
+        </form>
+        
+</body>
+</html>

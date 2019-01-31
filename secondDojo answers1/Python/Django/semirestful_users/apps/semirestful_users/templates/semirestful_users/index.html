@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Semi-Restful Users</title>
+</head>
+
+<body>
+    <div class=main>
+        <h1> Users</h1>
+        <table>
+            <tr>
+                <th> First Name </th>
+                <th> Last Name </th>
+                <th> Email </th>
+                <th> Edit </th>
+                <th> Show </th>
+                <th> Created At  </th>
+                <th> Delete </th>
+            </tr>
+            {% for i in user %}
+            <tr>
+                {% csrf_token %}
+                <th> {{i.first_name}}</th>
+                <th> {{i.last_name}} </th>
+                <th> {{i.email}}</th>
+                <th> <a href= "{{i.id}}/edit">Edit </a></th>
+                <th> <a href= "{{i.id}}/show"> Show</a></th>
+                <th> {{i.created_at}} </th>
+                <th> <a href= '{{i.id}}/destroy'> Delete</a></th>
+            </tr>
+            {% endfor %}
+        </table>
+        <button> <a href= "/new"> Create a New User </a></button><br><br>
+
+        <form action='/destroy' method='POST'></form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+
+
+
+<h2>Welcome to the activity  : @ViewBag.ThisAct.ActName</h2>
+<h2> Created by  : @ViewBag.ThisAct.UserId </h2>
+@ViewBag.ThisAct.User.User.FirstName
+
+<h3>Date : @ViewBag.ThisAct.Date</h3>
+<h3>Description : @ViewBag.ThisAct.Description</h3>
+<h4> Time: @ViewBag.ThisAct.ActTime</h4>
+<h5> Duration: @ViewBag.ThisAct.ActDuration </h5>
+
+
+<h4> Guests participating :</h4>
+
+<ul>
+
+  @foreach (var x in @ViewBag.ThisAct.Joins)
+  {
+    <li>@x.User.FirstName @x.User.LastName</li>
+  }
+
+</ul>
+
+
+
+<a asp-controller="User" asp-action="Dashboard">Back to Dashboard</a>
+<a asp-controller="User" asp-action="Logout">Logout</a>

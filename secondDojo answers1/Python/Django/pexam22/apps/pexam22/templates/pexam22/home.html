@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table {
+            height: min-content;
+            margin: 25px 25px;
+            margin-bottom: 25px;
+
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            color: black;
+        }
+        td, th {
+            width: max-content;
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 3px 3px;
+        }
+
+        th:nth-child(even) {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 3px;
+        }
+        th:nth-child(odd) {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 3px;
+        }
+        tr:nth-child(even) {
+            background-color: #eeeeee;
+        }
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        #wrapper{
+            height: 750px;
+            width: 1000px;
+            margin: 0 auto;
+            border: solid black;
+            background-color: rgb(90, 90, 90);
+            color: white;
+        }
+        #header{
+            height: 75px;
+            width: 1000px;
+            padding-top: 45px;
+            margin-top: 0px;
+            border-bottom: solid black;
+            background-color: rgb(142, 0, 0);
+            color: white;
+        }
+
+        h1, h2{
+            height: min-content;
+            width: max-content;
+            margin: auto 0;
+            margin-left: 25px;
+        }
+        h1{margin-top: -15px;}
+        h2{margin-bottom: 5px;}
+        .actions{
+            display: inline-block;
+            margin-right: 5px;
+        }
+        .a{
+            margin-left: 950px;
+            margin-top: 0px;
+            text-decoration: none;
+            color: white;
+        }
+        .button{
+            margin-left: 25px;
+            margin-bottom: 25px;
+        }
+        .at{
+            text-decoration: underline;
+            color: white;
+            font-size: 15px;
+        }
+        .ru{width: 175px;}
+        
+        /* h1{margin-top: 25px;} */
+    </style>
+</head>
+<body>
+    {% csrf_token %}
+    <div id = "wrapper">
+        <div id="header">
+            <a class="a" href="/logout">Logout</a>
+            <h1>Welcome, {{ user.fn }} {{ user.ln }}</h1>
+        </div>
+        <div id="users_Jobs">
+            <table>
+                <br><h2>Your Trips -<span><a class="at" href="/addTripGoTo"> Add Trip</a></span></h2>
+                <tr id="tableHead">
+                    <th>Destination</th>
+                    <th>Description</th>
+                    <th>Travel Start Date</th>
+                    <th>Travel End Date</th>
+                    <th>Creators ID</th>
+                    <th>Your ID</th>
+                    <th>Trip Action</th>
+
+                </tr>
+                    {% for trip in all_user_Trips %}
+                        {% if trip.user_id.id == user.id %}
+                            <tr>
+                                <th><a href="trips/{{ jt.job_id.id }}">{{ trip.job_id.dest }}</a></th>
+                                <th>{{ trip.job_id.desc }}</th>
+                                <th>{{ trip.job_id.dtf }}</th>
+                                <th>{{ trip.job_id.dtt }}</th>
+                                <th>{{ trip.job_id.creator.id }}</th>
+                                <th>{{ user.id }}</th>
+                                <th>
+                                    <a class="actions" href="/cancel/{{ job.id }}">Cancel</a>
+                                    {% if trip.user_id.id == user.id %}
+                                    <p class="actions">|</p>
+                                    <a class="actions" href="/deleteJob/{{ trip.job_id.id }}">Delete</a>
+                                    {% endif %}
+                                </th>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+
+            </table>
+        </div>
+        <br><h2>Others Trips</h2>
+        <div id="users_Jobs">
+            <table>
+                <tr id="tableHead">
+                    <th>Destination</th>
+                    <th>Description</th>
+                    <th>Travel Start Date</th>
+                    <th>Travel End Date</th>
+                    <th>Creators ID</th>
+                    <th>Your ID</th>
+                    <th>Trip Action</th>
+                    <th></th>
+
+                </tr>
+                {% for trips in all_user_Trips %}
+                    {% if trips.user_id.id != user.id %}
+                        {% if trips.user_id.id != user.id %}
+                        <tr>
+                            <th><a href="trips/{{ jt.job_id.id }}">{{ trips.job_id.dest }}</a></th>
+                            <th>{{ trips.job_id.desc }}</th>
+                            <th>{{ trips.job_id.dtf }}</th>
+                            <th>{{ trips.job_id.dtt }}</th>
+                            <th>{{ trips.job_id.creator.id }}</th>
+                            <th>{{ user.id }}</th>
+                            <th><a href="/JoinTrip/{{ trips.job_id.id }}">Join</a></th>
+                            <th></th>
+                            {% if trips.user_id.id == user.id %}
+                                <p class="actions">|</p>
+                                <a class="actions" href="/deleteTrip/{{ trip.job_id.id }}">Delete</a>
+                            {% endif %}
+                            </th>
+                        </tr>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    
+</body>
+</html>

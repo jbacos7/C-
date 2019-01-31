@@ -1,0 +1,32 @@
+h2{
+    text-align: center;
+}
+p{
+    font-size: 16px;
+    color: blue;
+    text-align: center;
+}
+
+.line{
+    color: black;
+    height:3px; 
+    margin-left: 100px;
+    background: black;
+}
+
+input{
+    background-color: skyblue;
+    border: solid black 10px;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 450px;
+}
+
+.w3-container{
+    color: green;
+    text-align: center;
+}

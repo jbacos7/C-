@@ -1,0 +1,34 @@
+@using DojoModel.Models
+@model SurveyViewModel
+
+<head>
+        <style>
+            .main
+                {
+                width: 600px;
+                height: 400px;
+                background-color: lightblue;
+                }
+            h1, h2, p {
+                text-align: center;
+                color: purple;
+                background-color: sky
+                }
+            
+        </style>
+    <title> Completed Survey </title>
+</head>
+
+<body>
+    <div class='main'>
+        <h1> Thanks for taking the survey! </h1>
+        <p> Name: @ViewBag.Name </p>
+        <p> Location: @ViewBag.Location </p>
+        <p> Language: @ViewBag.Language </p>
+        <p> Comment: @ViewBag.Comment </p><br>
+        
+        <p> <button> <a href='/'> Go Back </a> </button> </p>
+    </div>
+</body>
+
+</html>

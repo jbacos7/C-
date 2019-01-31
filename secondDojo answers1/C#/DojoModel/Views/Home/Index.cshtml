@@ -1,0 +1,30 @@
+
+@using DojoModel.Models
+@model SurveyViewModel
+
+
+<h1> Dojo Model Assignment </h1>
+<form asp-action="Process" asp-controller="Home" method="POST">
+    <span asp-validation-for="Name"> </span>
+    <label asp-for="Name">Name </label>
+    <input asp-for="Name"> <br><br>
+
+    <span asp-validation-for="Location"> </span>
+    <label asp-for="Location">Location </label>
+    <select asp-for="Location">
+        <option value="Paris"> Paris </option>
+        <option value="Santorini"> Santorini </option>
+        <option value="Milkyway"> Milkyway </option>
+        <option value="Rome"> Rome </option>
+        <option value="Marseille"> Marseille </option>
+    </select> <br><br>
+
+    <span asp-validation-for="Language">  </span> 
+    <label asp-for="Language"></label>
+    <input asp-for="Language"> <br> <br>
+
+    Comment (optional): <textarea name="Comment">  </textarea> <br> <br>
+
+    <input type='submit' value='Click to submit !'>
+
+</form>

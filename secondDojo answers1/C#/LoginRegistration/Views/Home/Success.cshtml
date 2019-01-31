@@ -1,0 +1,33 @@
+@using LoginRegistration.Models
+
+<html lang="en">
+<style>
+    body{
+        background-color: palegoldenrod;
+        color: darkblue;
+        text-align: center;
+    }
+
+    button {
+        background-color: darkseagreen;
+        color: white;
+        margin: 10px;
+        padding: 10px;
+    }
+    
+</style>
+<head>
+    <title> Login / Registration </title>
+</head>
+    <body>
+    <h2> Success! </h2>
+    Welcome, @ViewBag.Loggedinuser 
+     
+        <form asp-controller="Home" asp-action="Success" method="GET">
+
+        <button><a href="/">Go back </a></button>
+
+        </form>
+    </body>
+
+<a href="Logout">Logout</a>

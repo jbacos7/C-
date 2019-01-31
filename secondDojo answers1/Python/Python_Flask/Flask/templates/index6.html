@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Magic Number Game </title>
+</head>
+<body>
+    <style>
+        h1, p{
+            text-align: center;
+            color: rgb(128, 0, 128);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        button{
+            text-align: center;
+            padding: 15px;
+            background-color: lavenderblush;
+            font-size: 16px;
+        }
+        div{
+            margin-left: 200px;
+            height: 200px;
+            width: {{num}}% ;
+        }
+
+    </style>
+
+    <form action='/' method='POST'>
+        <h1> Welcome to the Great Number Game! {{ session['num'] }}</h1>
+        <div>
+            <p>{{ result }} <p>
+        </div>
+        <p> I am thinking of a number between 1 and 100..... </p>
+        <p> Take a guess!!! </p>
+    
+    
+        <p><input type= 'text' name= 'guess'>
+        <input class= 'button' type= 'submit' value= 'submit'>
+    </form>
+
+</body>
+</html>

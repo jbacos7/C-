@@ -1,0 +1,32 @@
+/Users/amandasitko/WeddingPlanner2/bin/Debug/netcoreapp2.0/WeddingPlanner2.deps.json
+/Users/amandasitko/WeddingPlanner2/bin/Debug/netcoreapp2.0/WeddingPlanner2.runtimeconfig.json
+/Users/amandasitko/WeddingPlanner2/bin/Debug/netcoreapp2.0/WeddingPlanner2.runtimeconfig.dev.json
+/Users/amandasitko/WeddingPlanner2/bin/Debug/netcoreapp2.0/WeddingPlanner2.dll
+/Users/amandasitko/WeddingPlanner2/bin/Debug/netcoreapp2.0/WeddingPlanner2.pdb
+/Users/amandasitko/WeddingPlanner2/obj/Debug/netcoreapp2.0/WeddingPlanner2.csproj.CoreCompileInputs.cache
+/Users/amandasitko/WeddingPlanner2/obj/Debug/netcoreapp2.0/WeddingPlanner2.AssemblyInfoInputs.cache
+/Users/amandasitko/WeddingPlanner2/obj/Debug/netcoreapp2.0/WeddingPlanner2.AssemblyInfo.cs
+/Users/amandasitko/WeddingPlanner2/obj/Debug/netcoreapp2.0/WeddingPlanner2.dll
+/Users/amandasitko/WeddingPlanner2/obj/Debug/netcoreapp2.0/WeddingPlanner2.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/WeddingPlanner2/bin/Debug/netcoreapp2.0/WeddingPlanner2.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/WeddingPlanner2/bin/Debug/netcoreapp2.0/WeddingPlanner2.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/WeddingPlanner2/bin/Debug/netcoreapp2.0/WeddingPlanner2.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/WeddingPlanner2/bin/Debug/netcoreapp2.0/WeddingPlanner2.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/WeddingPlanner2/bin/Debug/netcoreapp2.0/WeddingPlanner2.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/WeddingPlanner2/obj/Debug/netcoreapp2.0/WeddingPlanner2.csprojResolveAssemblyReference.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/WeddingPlanner2/obj/Debug/netcoreapp2.0/WeddingPlanner2.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/WeddingPlanner2/obj/Debug/netcoreapp2.0/WeddingPlanner2.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/WeddingPlanner2/obj/Debug/netcoreapp2.0/WeddingPlanner2.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/WeddingPlanner2/obj/Debug/netcoreapp2.0/WeddingPlanner2.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/WeddingPlanner2/obj/Debug/netcoreapp2.0/WeddingPlanner2.pdb
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\WeddingPlanner2\bin\Debug\netcoreapp2.0\WeddingPlanner2.deps.json
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\WeddingPlanner2\bin\Debug\netcoreapp2.0\WeddingPlanner2.runtimeconfig.json
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\WeddingPlanner2\bin\Debug\netcoreapp2.0\WeddingPlanner2.runtimeconfig.dev.json
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\WeddingPlanner2\bin\Debug\netcoreapp2.0\WeddingPlanner2.dll
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\WeddingPlanner2\bin\Debug\netcoreapp2.0\WeddingPlanner2.pdb
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\WeddingPlanner2\obj\Debug\netcoreapp2.0\WeddingPlanner2.csprojAssemblyReference.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\WeddingPlanner2\obj\Debug\netcoreapp2.0\WeddingPlanner2.csproj.CoreCompileInputs.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\WeddingPlanner2\obj\Debug\netcoreapp2.0\WeddingPlanner2.AssemblyInfoInputs.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\WeddingPlanner2\obj\Debug\netcoreapp2.0\WeddingPlanner2.AssemblyInfo.cs
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\WeddingPlanner2\obj\Debug\netcoreapp2.0\WeddingPlanner2.dll
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\WeddingPlanner2\obj\Debug\netcoreapp2.0\WeddingPlanner2.pdb

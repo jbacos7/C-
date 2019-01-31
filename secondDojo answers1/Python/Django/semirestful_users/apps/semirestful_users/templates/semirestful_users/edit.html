@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Semi-Restful Users</title>
+</head>
+
+<body>
+        <h1> Edit User Information</h1>
+        <form action='/edit' method='POST'>
+            {% csrf_token %}
+            <input type= 'hidden' value= {{id}} name='id'>
+            First Name:
+            <input name='first_name' value= {{first_name}}>
+            Last Name:
+            <input name='last_name' value= {{last_name}}>
+            Email: 
+            <input name='email' value= {{email}}>
+        <input type="submit" value="Update">
+
+        </form>
+        <!-- <a href="/{{i.id}}/show"> Show Information </a> -->
+        <form action='/show' method='POST'></form>
+        <a href="/" > Go Back </a>
+
+
+</body>
+
+</html>
+

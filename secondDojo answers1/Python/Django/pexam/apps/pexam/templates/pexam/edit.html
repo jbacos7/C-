@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Edit Here</title>
+</head>
+
+<body>
+        <h1> Edit Information</h1>
+        Wish to edit: {{wish.item}} <br>
+        Description of wish: {{wish.description}}
+        <form action='/edit' method='GET'>
+            {% csrf_token %}
+            <p> Hi, {{user.first_name}} ! Let's edit your wish! </p>
+            <input type= 'hidden' value= {{id}} name='id'>
+        </form>
+
+        <form action= '/{{wish.id}}/editwish' method= "POST">
+            {% csrf_token %}
+            {% if messages %} 
+                {% for message in messages %}
+                    <h3> {{ message }} </h3>
+                {% endfor %} 
+            {% endif %}
+
+            I wish for:
+            <input type= 'text' name='item' value= '{{wish.item}}'>
+            Description:
+            <input type= 'message' name='description' value= '{{wish.description}}'>
+            <input type='submit' value='Add To List!'></input>
+        </form>
+        <button><a href= '/show'> Cancel </a></button>
+        <button><a href="/" > Log Out </a></button>
+
+
+</body>
+
+</html>
+

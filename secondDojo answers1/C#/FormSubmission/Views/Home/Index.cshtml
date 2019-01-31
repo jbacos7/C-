@@ -1,0 +1,52 @@
+
+@using FormSubmission.Models
+@model SurveyViewModel
+<head>
+        <style>
+            .main
+                {
+                width: 600px;
+                height: 400px;
+                background-color: lightblue;
+                }
+            h1, h2, p {
+                text-align: center;
+                color: purple;
+                background-color: sky
+                }
+            
+        </style>
+    <title> Form </title>
+</head>
+<body>
+<div class='main'>
+
+<h1> Form Submission  </h1>
+<form asp-action="Process" asp-controller="Home" method="POST">
+    <span asp-validation-for="FirstName"> </span>
+    <label asp-for="FirstName">First Name: </label>
+    <input asp-for="FirstName"> <br> 
+
+    <span asp-validation-for="LastName"> </span>
+    <label asp-for="LastName">Last Name: </label>
+    <input asp-for="LastName"> <br> 
+
+    <span asp-validation-for="Age"> </span>
+    <label asp-for="Age"> Age: </label>
+    <input asp-for="Age"> <br> 
+
+    <span asp-validation-for="Email"> </span>
+    <label asp-for="Email"> Email: </label>
+    <input asp-for="Email"> <br> 
+
+    <span asp-validation-for="Password"> </span>
+    <label asp-for="Password"> Password: </label>
+    <input asp-for="Password"> <br> 
+
+
+    
+    <input type='submit' value='Click to submit !'>
+</form>
+</div>
+
+</body>

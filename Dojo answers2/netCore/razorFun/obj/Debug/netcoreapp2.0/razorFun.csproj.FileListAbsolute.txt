@@ -1,0 +1,22 @@
+/Users/bsguardians/Desktop/CodingDojo/DojoAssignments/netCore/razorFun/bin/Debug/netcoreapp2.0/razorFun.deps.json
+/Users/bsguardians/Desktop/CodingDojo/DojoAssignments/netCore/razorFun/bin/Debug/netcoreapp2.0/razorFun.runtimeconfig.json
+/Users/bsguardians/Desktop/CodingDojo/DojoAssignments/netCore/razorFun/bin/Debug/netcoreapp2.0/razorFun.runtimeconfig.dev.json
+/Users/bsguardians/Desktop/CodingDojo/DojoAssignments/netCore/razorFun/bin/Debug/netcoreapp2.0/razorFun.dll
+/Users/bsguardians/Desktop/CodingDojo/DojoAssignments/netCore/razorFun/bin/Debug/netcoreapp2.0/razorFun.pdb
+/Users/bsguardians/Desktop/CodingDojo/DojoAssignments/netCore/razorFun/obj/Debug/netcoreapp2.0/razorFun.csprojResolveAssemblyReference.cache
+/Users/bsguardians/Desktop/CodingDojo/DojoAssignments/netCore/razorFun/obj/Debug/netcoreapp2.0/razorFun.csproj.CoreCompileInputs.cache
+/Users/bsguardians/Desktop/CodingDojo/DojoAssignments/netCore/razorFun/obj/Debug/netcoreapp2.0/razorFun.AssemblyInfoInputs.cache
+/Users/bsguardians/Desktop/CodingDojo/DojoAssignments/netCore/razorFun/obj/Debug/netcoreapp2.0/razorFun.AssemblyInfo.cs
+/Users/bsguardians/Desktop/CodingDojo/DojoAssignments/netCore/razorFun/obj/Debug/netcoreapp2.0/razorFun.dll
+/Users/bsguardians/Desktop/CodingDojo/DojoAssignments/netCore/razorFun/obj/Debug/netcoreapp2.0/razorFun.pdb
+C:\Users\bacos\Desktop\Answers C#\second answers\netCore\razorFun\bin\Debug\netcoreapp2.0\razorFun.deps.json
+C:\Users\bacos\Desktop\Answers C#\second answers\netCore\razorFun\bin\Debug\netcoreapp2.0\razorFun.runtimeconfig.json
+C:\Users\bacos\Desktop\Answers C#\second answers\netCore\razorFun\bin\Debug\netcoreapp2.0\razorFun.runtimeconfig.dev.json
+C:\Users\bacos\Desktop\Answers C#\second answers\netCore\razorFun\bin\Debug\netcoreapp2.0\razorFun.dll
+C:\Users\bacos\Desktop\Answers C#\second answers\netCore\razorFun\bin\Debug\netcoreapp2.0\razorFun.pdb
+C:\Users\bacos\Desktop\Answers C#\second answers\netCore\razorFun\obj\Debug\netcoreapp2.0\razorFun.csprojAssemblyReference.cache
+C:\Users\bacos\Desktop\Answers C#\second answers\netCore\razorFun\obj\Debug\netcoreapp2.0\razorFun.csproj.CoreCompileInputs.cache
+C:\Users\bacos\Desktop\Answers C#\second answers\netCore\razorFun\obj\Debug\netcoreapp2.0\razorFun.AssemblyInfoInputs.cache
+C:\Users\bacos\Desktop\Answers C#\second answers\netCore\razorFun\obj\Debug\netcoreapp2.0\razorFun.AssemblyInfo.cs
+C:\Users\bacos\Desktop\Answers C#\second answers\netCore\razorFun\obj\Debug\netcoreapp2.0\razorFun.dll
+C:\Users\bacos\Desktop\Answers C#\second answers\netCore\razorFun\obj\Debug\netcoreapp2.0\razorFun.pdb

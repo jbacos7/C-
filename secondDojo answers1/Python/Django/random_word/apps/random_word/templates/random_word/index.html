@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Random Word </title>
+      <h1>  ~ Welcome to the Random Word Generator ~  </h1>
+
+    <form action="/create" method="post">
+        {% csrf_token %}
+        
+        <!-- <label for="name">Blog Name:</label>
+        <input type="text" id="name" name="name" placeholder="blog name">
+        <label for="desc">Description:</label>        
+        <textarea id="desc" name="desc" placeholder="description"></textarea> -->
+        <p>{{unique_id}}</p>
+        <button type="submit">  Generate  </button>
+
+    </form>
+      
+      {% load static %}
+      <!-- The line above tells Django to be ready to listen for static files -->
+      <link rel="stylesheet" href="{% static 'ourApp/css/main.css' %}">
+
+    </head>
+    <body>
+    </body>
+  </html>

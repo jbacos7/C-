@@ -1,0 +1,11 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/CExam/bin/Debug/netcoreapp2.0/CExam.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/CExam/bin/Debug/netcoreapp2.0/CExam.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/CExam/bin/Debug/netcoreapp2.0/CExam.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/CExam/bin/Debug/netcoreapp2.0/CExam.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/CExam/bin/Debug/netcoreapp2.0/CExam.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/CExam/obj/Debug/netcoreapp2.0/CExam.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/CExam/obj/Debug/netcoreapp2.0/CExam.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/CExam/obj/Debug/netcoreapp2.0/CExam.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/CExam/obj/Debug/netcoreapp2.0/CExam.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/CExam/obj/Debug/netcoreapp2.0/CExam.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/CExam/obj/Debug/netcoreapp2.0/CExam.csprojResolveAssemblyReference.cache

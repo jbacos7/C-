@@ -1,0 +1,11 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/Restaurant/bin/Debug/netcoreapp2.0/Restaurant.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Restaurant/bin/Debug/netcoreapp2.0/Restaurant.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Restaurant/bin/Debug/netcoreapp2.0/Restaurant.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Restaurant/bin/Debug/netcoreapp2.0/Restaurant.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/Restaurant/bin/Debug/netcoreapp2.0/Restaurant.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/Restaurant/obj/Debug/netcoreapp2.0/Restaurant.csprojResolveAssemblyReference.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/Restaurant/obj/Debug/netcoreapp2.0/Restaurant.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/Restaurant/obj/Debug/netcoreapp2.0/Restaurant.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/Restaurant/obj/Debug/netcoreapp2.0/Restaurant.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/Restaurant/obj/Debug/netcoreapp2.0/Restaurant.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/Restaurant/obj/Debug/netcoreapp2.0/Restaurant.pdb

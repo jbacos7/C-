@@ -1,0 +1,26 @@
+
+@using ViewModelFun.Models;
+@model Index;
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Hello!</title>
+
+    </head>
+    
+    <body>
+    <div class="top">        
+        <h1>Welcome ! </h1>
+        <h2>  Here is a message:  </h2>
+        @Model.message 
+        <br>
+        <p> <a href= "number"> Go to Numbers </a> </p> 
+        <p> <a href= "/user"> User page </a> </p>
+        <p> <a href= "/users"> Users page </a> </p>
+
+
+    </div>
+    </body>
+</html>

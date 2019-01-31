@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        p{
+            color: blueviolet;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;; 
+        }
+        </style>
+        <meta charset='utf-8'>
+        <title>Hello!</title>
+    </head>
+    <body>
+        <h2> Here are some delicious foods... </h2>
+        @{
+        var StringList = new List <string> {
+                                "Sushi",
+                                "Pasta",
+                                "Pineapple",
+                                "Ice Cream",
+                                "Pizza",
+
+                            };
+        
+        foreach(var word in StringList)
+        {
+            // We can render HTML from within C# code!
+            <p>@word</p>
+        }
+        }
+    </body>
+</html>

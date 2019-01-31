@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style> 
+        h1, h2, p{
+            text-align: center;
+            color: purple;
+        }
+    
+    </style>
+    <title>Created and Finished Dojo Survey</title>
+</head>
+
+<body>
+    <div class='main'>
+        <h1> Thanks for taking the survey! </h1>
+        <p> Name: {{ session['name'] }}</p>
+        <p> Location: {{ session['Dojo_Location'] }} </p>
+        <p> Language: {{ session['Favorite_Language'] }} </p>
+        <p> Comment: {{ session['message'] }}</p>
+    </div>
+</body>
+
+</html>

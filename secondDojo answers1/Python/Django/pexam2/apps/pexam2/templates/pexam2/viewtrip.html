@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    h1, body {
+        text-align: center;
+        color: purple;
+    }
+
+</style>
+<head>
+    <title>View Trips</title>
+</head>
+
+<body>
+        <h1> Trip Information</h1>
+        <form action='/view' method='POST'>
+        <tr>
+            {% csrf_token %}
+            <th>Created by: {{ trip.created_by.first_name }}</th> <br>
+            <th>Trip destination: {{ trip.dest }} </th> <br>
+            <th>Trip description: {{ trip.description }} </th> <br>
+            <th>Trip start date: {{ trip.start_date }} </th> <br>
+            <th>Trip end date: {{ trip.end_date }} </th> <br>
+            
+            <p> Travelers joining: </p>
+            {% for join in trip.Joining.all %}
+            {{ join.user.first_name }}
+            <!-- #this is from context (the trip before Joining) -->
+
+            {% endfor %}
+
+        </tr>
+
+        <button>
+            <a href='/show'> Back to Dashboard </a>
+        </button>
+
+        <form action="/", method="POST">
+            {% csrf_token %}
+            <button>
+                <a href='/logout'> Log Out</a>
+            </button>
+        </form>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+@using ProductsCategories.Models
+@model CatProd
+
+<h1> Category Page for @ViewBag.catinfo.CatName </h1>
+<form asp-controller="Home" asp-action="AddProductToCategory" method="GET">
+
+
+
+@{foreach (var x in @ViewBag.Categoryzz.AddProdtoCat)
+  {
+    <li>@x.Category.CatName Name : @x.Category.CategoryId</li>
+  }
+}
+
+
+<p> This category name is: @ViewBag.catinfo.CatName .</p>
+<input type= "hidden" value= "@ViewBag.catinfo.CategoryId"asp-for= "CategoryId"> </input> 
+@{
+    for(var i=0; i<ViewBag.Products.Count; i++)
+    {
+        <p> @ViewBag.catinfo.CatName</p>
+    }
+}
+
+<!-- productid refers back to the catprod model!!!!! -->
+<select asp-for="ProductId"> 
+    @{
+        for(var i=0; i<ViewBag.Products.Count; i++)
+        {
+            <option value="@ViewBag.Products[i].ProductId"> @ViewBag.Products[i].Name </option> 
+        }
+    }
+    
+</select>
+
+    <input type="submit" value="SUBMIT" ></input>
+</form>
+
+    <p> <button> <a href= "/ShowAllCategories"> View all Categories </a> </button> </p>
+    <p> <button> <a href= "/"> Homepage  </a> </button> </p>

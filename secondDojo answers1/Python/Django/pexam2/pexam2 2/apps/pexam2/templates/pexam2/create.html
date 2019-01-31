@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>~ Create New ~</title>
+</head>
+
+<body>
+    <form action='/createtrip' method='POST'>
+        {% csrf_token %} 
+            {% if messages %} 
+                {% for message in messages %}
+                    <h3> {{ message }} </h3>
+                {% endfor %} 
+            {% endif %}
+
+        <h1>Hi, {{first_name}} !</h1>
+        <h2> Let's add a new trip! </h2>
+
+        Add A New Trip:
+        <input type="text" name="dest">
+        <br> Trip Description:
+        <input type="message" name="description">
+        <br> Start date:
+        <input type="date" name="start_date">
+        <br>End date:
+        <input type="date" name="end_date">
+        <br>
+        <input type="submit" value="ADD TO LIST">
+    </form>
+    <button>
+        <a href='/show'> Cancel </a>
+    </button>
+
+    <!-- <input type="submit" name="" value="Log Off"> -->
+
+    <form action="/" , method="POST">
+        <button>
+            <a href='/logout'> Log Out</a>
+        </button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+@model WeddingPlanner2.Models.WeddingViewModel
+
+<html lang="en">
+<style>
+    body{
+        background-color: palegoldenrod;
+        color: darkblue;
+        text-align: center;
+    }
+
+    button {
+        background-color: darkseagreen;
+        color: white;
+        margin: 10px;
+        padding: 10px;
+    }
+    
+</style>
+<head>
+    <title> Wedding </title>
+</head>
+    <body>
+        <form asp-controller="User" asp-action="Dashboard" method="GET"></form>
+    <h2> Wedding Homepage </h2>
+    Welcome, @ViewBag.Loggedinuser
+    <p>Welcome to the wedding page. </p> 
+
+    <table> 
+        <thead>
+            <tr>
+                <th> Wedding</th>
+                <th> Date</th>
+                <th> Guest Count</th>
+                <th> Address </th>
+                <th> Action </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            @{
+                foreach (var wedding in @ViewBag.Weddings)
+                {
+                    bool GuestLoggedIn = false;
+                    foreach (var rsvp in wedding.Guests)
+                    {
+                        if(@ViewBag.loginuser.Guests.IndexOf(rsvp) != -1)
+                        {
+                            GuestLoggedIn = true;
+                        };
+                    }
+
+                    @if(GuestLoggedIn == true)
+                    {
+                        <td> <a href= "/wedding/unrsvp/@wedding.WeddingId"> UNRSVP </a></td>;
+                    }
+                    else{
+                        <td> <a href= "/wedding/rsvp/@wedding.WeddingId"> RSVP </a></td>;
+                    }
+                    @if(@wedding.UserId ==  @ViewBag.UserId)
+                    {
+                        <td> <a href="/wedding/cancel/@wedding.WeddingId"> Delete </a> </td>
+                    }
+                    System.Console.WriteLine("***********************************");
+                    System.Console.WriteLine(GuestLoggedIn);
+                    <tr>
+                        <td> <a href= "wedding/show/@wedding.WeddingId">
+                        @wedding.WedderOne  &  @wedding.WedderTwo </a> </td>
+                        <td> @wedding.Date.ToString("MMMM dd, yyyy")</td>
+                        <td> @wedding.Guests.Count </td>
+                        <td> @wedding.Address </td>
+                        
+                    </tr>
+                } 
+            }
+            <p>  </p>
+        </tbody>
+    </table> 
+
+<a href="Logout">Logout</a>
+
+<a href="AddNew">Add New </a>
+
+    </body>
+

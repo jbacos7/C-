@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\bacos\\Desktop\\Answers C#\\Dojo answers2\\netCore\\DojoSurvey_Model\\DojoSurvey_Model.csproj",
+  "TargetFramework": "netcoreapp2.0",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "MVC-2.0",
+    "LanguageVersion": "2.0",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.0"
+      }
+    ]
+  }
+}

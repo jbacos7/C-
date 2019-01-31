@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Login and Registration </title>
+</head>
+<style>
+   
+</style>
+
+<body>
+    <form action='/submit' method='POST'>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <h3> {{ message }} </h3>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <div id="main">
+            <h1> Please enter your registration or login information. </h1>
+            <h2> Registration: </h2>
+            <p>First name: </p><br>
+            <input type="text" id="first_name" name="first_name" >
+            <p> Last name: </p><br>
+            <input type="text" id="last_name" name="last_name" >
+            <p> Email: </p><br>
+            <input type="text" id="email" name="email" >
+            <p> Password: </p><br>
+            <input type="text" id="password1" name="password1" >
+            <p> Password confirmation: </p><br>
+            <input type="text" id="password2" name="password2" ><br>
+            <input type='submit' value='Click to register.'>
+        </div>  
+    </form>
+
+    <form action='/validlogin' method='POST'>
+        <div id= "lower">
+            <h3> Login: </h3>
+            <p> Email: </p><br>
+            <input type="text" id="email" name="email" >
+            <p> Password: </p><br>
+            <input type="text" id="password1" name="password1" >
+
+            <h4> <p>
+            <input type='submit' value='Click to login.'>
+            </p>
+            </h4>
+        </div>
+    </form>
+
+</body>
+
+
+
+
+</html>

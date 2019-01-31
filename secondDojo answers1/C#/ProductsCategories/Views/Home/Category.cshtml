@@ -1,0 +1,20 @@
+@model CatViewModels
+
+<form asp-controller="Home" asp-action="categoryaction" method="POST">
+    <h1>New Categories</h1>
+    <h2> Enter new category here. </h2>
+    <p>
+        <span asp-validation-for="CatName"></span>
+        <label asp-for="CatName"> Name : </label><input asp-for="CatName"><br><br>
+    </p>
+    <button>SUBMIT</button>
+</form>
+
+    <p> <button> <a href= "/"> Go to Homepage </a> </button> </p>
+
+
+@if (ViewBag.message != null)
+{
+    <p>@ViewBag.message</p>
+}
+

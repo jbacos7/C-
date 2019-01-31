@@ -1,0 +1,24 @@
+
+@using ViewModelFun.Models;
+@model Numbers;
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Hello!</title>
+
+    </head>
+    
+    <body>
+        <h1>This is the number page.</h1>
+
+        @foreach (var i in @Model.nums)
+        
+        { <h4>@i</h4>}
+        <a href= "/"> Home page </a> <br> 
+        <a href= "/user"> User page </a> <br> 
+        <a href= "/users"> Users page </a>
+
+    </body>
+</html>

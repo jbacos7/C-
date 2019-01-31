@@ -1,0 +1,11 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/Portfolio2/bin/Debug/netcoreapp2.0/Portfolio2.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Portfolio2/bin/Debug/netcoreapp2.0/Portfolio2.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Portfolio2/bin/Debug/netcoreapp2.0/Portfolio2.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Portfolio2/bin/Debug/netcoreapp2.0/Portfolio2.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/Portfolio2/bin/Debug/netcoreapp2.0/Portfolio2.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/Portfolio2/obj/Debug/netcoreapp2.0/Portfolio2.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/Portfolio2/obj/Debug/netcoreapp2.0/Portfolio2.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/Portfolio2/obj/Debug/netcoreapp2.0/Portfolio2.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/Portfolio2/obj/Debug/netcoreapp2.0/Portfolio2.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/Portfolio2/obj/Debug/netcoreapp2.0/Portfolio2.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/Portfolio2/obj/Debug/netcoreapp2.0/Portfolio2.csprojResolveAssemblyReference.cache

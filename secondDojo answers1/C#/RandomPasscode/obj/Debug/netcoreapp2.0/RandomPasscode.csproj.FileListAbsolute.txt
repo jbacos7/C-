@@ -1,0 +1,22 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/RandomPasscode/bin/Debug/netcoreapp2.0/RandomPasscode.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/RandomPasscode/bin/Debug/netcoreapp2.0/RandomPasscode.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/RandomPasscode/bin/Debug/netcoreapp2.0/RandomPasscode.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/RandomPasscode/bin/Debug/netcoreapp2.0/RandomPasscode.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/RandomPasscode/bin/Debug/netcoreapp2.0/RandomPasscode.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/RandomPasscode/obj/Debug/netcoreapp2.0/RandomPasscode.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/RandomPasscode/obj/Debug/netcoreapp2.0/RandomPasscode.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/RandomPasscode/obj/Debug/netcoreapp2.0/RandomPasscode.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/RandomPasscode/obj/Debug/netcoreapp2.0/RandomPasscode.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/RandomPasscode/obj/Debug/netcoreapp2.0/RandomPasscode.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/RandomPasscode/obj/Debug/netcoreapp2.0/RandomPasscode.csprojResolveAssemblyReference.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\RandomPasscode\bin\Debug\netcoreapp2.0\RandomPasscode.deps.json
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\RandomPasscode\bin\Debug\netcoreapp2.0\RandomPasscode.runtimeconfig.json
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\RandomPasscode\bin\Debug\netcoreapp2.0\RandomPasscode.runtimeconfig.dev.json
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\RandomPasscode\bin\Debug\netcoreapp2.0\RandomPasscode.dll
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\RandomPasscode\bin\Debug\netcoreapp2.0\RandomPasscode.pdb
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\RandomPasscode\obj\Debug\netcoreapp2.0\RandomPasscode.csprojAssemblyReference.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\RandomPasscode\obj\Debug\netcoreapp2.0\RandomPasscode.csproj.CoreCompileInputs.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\RandomPasscode\obj\Debug\netcoreapp2.0\RandomPasscode.AssemblyInfoInputs.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\RandomPasscode\obj\Debug\netcoreapp2.0\RandomPasscode.AssemblyInfo.cs
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\RandomPasscode\obj\Debug\netcoreapp2.0\RandomPasscode.dll
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\RandomPasscode\obj\Debug\netcoreapp2.0\RandomPasscode.pdb

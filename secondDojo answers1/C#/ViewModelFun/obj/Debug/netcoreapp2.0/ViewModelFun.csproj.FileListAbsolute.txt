@@ -1,0 +1,11 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/ViewModelFun/bin/Debug/netcoreapp2.0/ViewModelFun.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/ViewModelFun/bin/Debug/netcoreapp2.0/ViewModelFun.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/ViewModelFun/bin/Debug/netcoreapp2.0/ViewModelFun.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/ViewModelFun/bin/Debug/netcoreapp2.0/ViewModelFun.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/ViewModelFun/bin/Debug/netcoreapp2.0/ViewModelFun.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/ViewModelFun/obj/Debug/netcoreapp2.0/ViewModelFun.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/ViewModelFun/obj/Debug/netcoreapp2.0/ViewModelFun.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/ViewModelFun/obj/Debug/netcoreapp2.0/ViewModelFun.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/ViewModelFun/obj/Debug/netcoreapp2.0/ViewModelFun.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/ViewModelFun/obj/Debug/netcoreapp2.0/ViewModelFun.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/ViewModelFun/obj/Debug/netcoreapp2.0/ViewModelFun.csprojResolveAssemblyReference.cache

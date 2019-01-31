@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    h1, h2, h3 {
+        text-align: center;
+        color: darkblue;
+    }
+
+    table {
+        color: purple;
+        text-align: center;
+        margin-left: 100px;
+    }
+    button {
+        background-color: darkseagreen;
+        color: white;
+        margin: 10px;
+        padding: 10px;
+        margin-left: 45%;
+    }
+</style>
+
+<head>
+    <title> Trips </title>
+</head>
+
+<body>
+    <h1> Trip Dashboard</h1>
+    <h2> Welcome, {{ user.first_name}} ! Let's go on a trip! </h2>
+    <!-- {{ alltrips }} -->
+    <form action='/show' method='GET'>
+        {% csrf_token %} 
+        {% if messages %} 
+                {% for message in messages %}
+                    <h3> {{ message }} </h3>
+                {% endfor %} 
+            {% endif %}
+        <input type='hidden' value= {{id}} name='id'>
+        <button>
+            <a href="/add"> ADD A NEW TRIP HERE </a>
+        </button>
+        <!-- {{exclude}} -->
+        <h3> Your trips: </h3>
+
+        <tr>
+            <table>
+                    <th> Destination </th>
+                    <th> Description </th>
+                    <th> Created By </th>
+                    <!-- <th> Trip ID </th> -->
+                    <th> Start Date </th>
+                    <th> End Date </th>
+                    <th> Show Full Info </th>
+                    <th> Delete </th>
+                    <th> Cancel  </th>
+
+                </tr>
+                {% for mytrip in mytrips %}
+                <tr>
+                    <th> {{mytrip.trip.dest}}</th>
+                    <th> {{mytrip.trip.description}}</th>
+                    <th> {{mytrip.trip.created_by.first_name}} </th>
+                    <th> {{mytrip.trip.start_date}} </th>
+                    <th> {{mytrip.trip.end_date}} </th>
+                    <td><a href="{{mytrip.trip.id}}/viewtrip"> Show Trip Info</a></td>
+                    <td>
+                        {% if mytrip.trip.created_by.id == request.session.user_id %}
+                        <a href='{{mytrip.trip.id}}/delete'> Delete Trip</a>
+                        {% endif %}
+                    </td>
+                    <td><a href='{{mytrip.trip.id}}/canceltrip'> Cancel Trip</a></td>
+
+                </tr>
+                {% endfor %}
+                <!-- {{exclude}} -->
+                
+                <tr>
+                    <table>
+                        <h3> All upcoming trips : </h3>
+                        <tr>
+                            <th> Trip </th>
+                            <th> Description </th>
+                            <th> Start Date </th>
+                            <th> End Date </th>
+                            <th> Created By </th>
+                            <th> <br> </th>
+                            <th> Actions </th>
+                            <th> <br> </th>
+                        </tr>
+                        {% for trip in trips %} 
+                        <tr>
+                            <th> {{trip.dest}}</th>
+                            <th> {{trip.description}}</th>
+                            <th> {{trip.start_date}} </th>
+                            <th> {{trip.end_date}} </th>
+                            <th> {{trip.created_by.first_name }}</th>
+                            <th> {{trip.id}} </th>
+                            <th><a href='{{trip.id}}/delete'> Delete Trip</a></th>
+                            <th><a href="{{trip.id}}/viewtrip"> Show Trip Info</a></th>
+                            <th><a href="{{trip.id}}/jointrip"> Join Trip </a></th>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    
+            </table>
+            <form action='/delete' method='POST'></form>
+            <input type='hidden' value={{id}} name='id'>
+
+
+        </tr>
+        <form action="/" , method="POST">
+            {% csrf_token %}
+            <button>
+                <a href='/logout'> Log Out</a>
+            </button>
+        </form>
+    </form>
+</body>
+
+</html>

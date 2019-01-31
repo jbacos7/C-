@@ -1,0 +1,22 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/LoginRegistration/bin/Debug/netcoreapp2.0/LoginRegistration.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/LoginRegistration/bin/Debug/netcoreapp2.0/LoginRegistration.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/LoginRegistration/bin/Debug/netcoreapp2.0/LoginRegistration.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/LoginRegistration/bin/Debug/netcoreapp2.0/LoginRegistration.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/LoginRegistration/bin/Debug/netcoreapp2.0/LoginRegistration.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/LoginRegistration/obj/Debug/netcoreapp2.0/LoginRegistration.csprojResolveAssemblyReference.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/LoginRegistration/obj/Debug/netcoreapp2.0/LoginRegistration.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/LoginRegistration/obj/Debug/netcoreapp2.0/LoginRegistration.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/LoginRegistration/obj/Debug/netcoreapp2.0/LoginRegistration.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/LoginRegistration/obj/Debug/netcoreapp2.0/LoginRegistration.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/LoginRegistration/obj/Debug/netcoreapp2.0/LoginRegistration.pdb
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\LoginRegistration\bin\Debug\netcoreapp2.0\LoginRegistration.deps.json
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\LoginRegistration\bin\Debug\netcoreapp2.0\LoginRegistration.runtimeconfig.json
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\LoginRegistration\bin\Debug\netcoreapp2.0\LoginRegistration.runtimeconfig.dev.json
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\LoginRegistration\bin\Debug\netcoreapp2.0\LoginRegistration.dll
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\LoginRegistration\bin\Debug\netcoreapp2.0\LoginRegistration.pdb
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\LoginRegistration\obj\Debug\netcoreapp2.0\LoginRegistration.csprojAssemblyReference.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\LoginRegistration\obj\Debug\netcoreapp2.0\LoginRegistration.csproj.CoreCompileInputs.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\LoginRegistration\obj\Debug\netcoreapp2.0\LoginRegistration.AssemblyInfoInputs.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\LoginRegistration\obj\Debug\netcoreapp2.0\LoginRegistration.AssemblyInfo.cs
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\LoginRegistration\obj\Debug\netcoreapp2.0\LoginRegistration.dll
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\LoginRegistration\obj\Debug\netcoreapp2.0\LoginRegistration.pdb

@@ -1,0 +1,92 @@
+@model CExam.Models.User
+
+<style>
+    
+        body{
+            background-color: palegoldenrod;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: darkblue;
+            margin: 15px;
+        }
+        button{
+            background-color: palevioletred;
+            padding: 10px;
+        }
+    
+
+</style>
+
+<head>
+    <title> Welcome </title>
+</head>
+
+    <body>
+
+        <form asp-controller="User" asp-action="Dashboard" method="GET"></form>
+        <h2> Welcome to the Dojo Activity Center!   </h2>
+        <p><a asp-controller="User" asp-action="Logout">Log out</a></p>
+
+        <h3>Welcome, @ViewBag.Loggedinuser!</h3>
+        <a href="AddNew">Add New Activity Here </a>
+
+
+        <table> 
+        <thead>
+            <tr>
+                <th> Activity </th>
+                <th> Coordinator </th>
+                <th> Date</th>
+                <th> Begin Time  </th>
+                <th> Duration  </th>
+                <th> Participants  </th>
+                <th> Description  </th>
+                <th> Actions  </th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+    
+            @{
+                foreach (var act in @ViewBag.Acts)
+                {
+                    bool JoinLoggedIn = false;
+                    foreach (var join in act.Joins)
+                    {
+                        if(@ViewBag.loginuser.Joins.IndexOf(join) != -1)
+                        {
+                            JoinLoggedIn = true;
+                        };
+                    }
+                    @if(JoinLoggedIn == true)
+                    {
+                        <td> <a href= "/act/remove/@act.ActId"> Remove myself from event </a></td>;
+                    }
+                    else{
+                        <td> <a href= "/act/join/@act.ActId"> Join event</a></td>;
+                    }
+                    @if(@act.UserId ==  @ViewBag.UserId)
+                    {
+                        <td> <a href="/act/delete/@act.ActId"> Delete event </a> </td>
+                    }
+
+                    <tr>
+                        <td> <a href= "act/show/@act.ActId">
+                        @act.ActName </a> </td>
+                        <td> @act.UserId </td>
+                        <td> @act.Date.ToString("MMMM dd, yyyy")</td>
+                        <td> @act.ActTime </td>
+                        <td> @act.ActDuration </td>
+                        <td> @act.Joins.Count </td>
+                        <td> @act.Description </td>
+                        
+                    </tr>
+
+                }
+            }
+            
+        
+        </tbody>
+
+
+    </body>

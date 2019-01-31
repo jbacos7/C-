@@ -1,0 +1,11 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/FirstCSharp/bin/Debug/netcoreapp2.0/FirstCSharp.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/FirstCSharp/bin/Debug/netcoreapp2.0/FirstCSharp.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/FirstCSharp/bin/Debug/netcoreapp2.0/FirstCSharp.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/FirstCSharp/bin/Debug/netcoreapp2.0/FirstCSharp.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/FirstCSharp/bin/Debug/netcoreapp2.0/FirstCSharp.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/FirstCSharp/obj/Debug/netcoreapp2.0/FirstCSharp.csprojResolveAssemblyReference.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/FirstCSharp/obj/Debug/netcoreapp2.0/FirstCSharp.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/FirstCSharp/obj/Debug/netcoreapp2.0/FirstCSharp.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/FirstCSharp/obj/Debug/netcoreapp2.0/FirstCSharp.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/FirstCSharp/obj/Debug/netcoreapp2.0/FirstCSharp.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/FirstCSharp/obj/Debug/netcoreapp2.0/FirstCSharp.pdb

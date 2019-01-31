@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Welcome! </title>
+</head>
+<style>
+    .top{
+        text-align: left;
+        color: purple;
+        
+    }
+   .bottom{
+       margin-top: -500px;
+       margin-left: 400px;
+       vertical-align: top;
+       color: purple;
+   }
+</style>
+
+<body>
+    <div class= top>
+    <form action='/register' method='POST'>
+        {% csrf_token %}
+            {% if messages %}
+                {% for message in messages %}
+                    <h3> {{ message }} </h3>
+                {% endfor %}
+            {% endif %}
+            <h1> Welcome! Sign in to make a wish! </h1>
+            <h2> Register Here: </h2>
+            <p>First name: </p><br>
+            <input type="text" id="first_name" name="first_name" >
+            <p> Last name: </p><br>
+            <input type="text" id="last_name" name="last_name" >
+            <p> Email: </p><br>
+            <input type="text" id="email" name="email" >
+            <p> Password: </p><br>
+            <input type="text" id="password" name="password" >
+            <p> Password confirmation: </p><br>
+            <input type="text" id="pwconf" name="pwconf" ><br>
+            <input type='submit' value='Click to register.'>
+
+    </form>
+    </div>
+    <div class= bottom>
+    <form action='/login' method='POST'>
+            {% csrf_token %}
+            <h2> Login Here: </h2>
+            <p> Email: </p><br>
+            <input type="text" id="email" name="email" >
+            <p> Password: </p><br>
+            <input type="text" id="password" name="password" >
+
+            <h4> <p>
+            <input type='submit' value='Click to login.'>
+            </p>
+            </h4>
+    </div>
+    </form>
+
+</body>
+</html>

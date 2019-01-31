@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    h1, body {
+        text-align: center;
+        color: purple;
+        background-color: palegoldenrod;
+    }
+
+</style>
+<head>
+    <title>View Quote</title>
+</head>
+<body>
+        <form action='/viewquotes' method='POST'>
+        <tr> 
+            {% csrf_token %}
+            {% for quote in quotes %}
+            <h3> {{quote.created_by.first_name}}'s Quote: </h3>
+            <th>Author: {{ quote.author }} </th> <br>
+            <th>Quote: {{ quote.quote }} </th> <br>
+            {% endfor %}
+        </tr>
+        <button>
+            <a href='/show'> Back to Dashboard </a>
+        </button>
+
+        <form action="/", method="POST">
+            {% csrf_token %}
+            <button>
+                <a href='/logout'> Log Out</a>
+            </button>
+        </form>
+</body>
+</html>

@@ -1,0 +1,11 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/SecondCS/bin/Debug/netcoreapp2.0/SecondCS.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/SecondCS/bin/Debug/netcoreapp2.0/SecondCS.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/SecondCS/bin/Debug/netcoreapp2.0/SecondCS.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/SecondCS/bin/Debug/netcoreapp2.0/SecondCS.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/SecondCS/bin/Debug/netcoreapp2.0/SecondCS.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/SecondCS/obj/Debug/netcoreapp2.0/SecondCS.csprojResolveAssemblyReference.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/SecondCS/obj/Debug/netcoreapp2.0/SecondCS.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/SecondCS/obj/Debug/netcoreapp2.0/SecondCS.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/SecondCS/obj/Debug/netcoreapp2.0/SecondCS.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/SecondCS/obj/Debug/netcoreapp2.0/SecondCS.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/SecondCS/obj/Debug/netcoreapp2.0/SecondCS.pdb

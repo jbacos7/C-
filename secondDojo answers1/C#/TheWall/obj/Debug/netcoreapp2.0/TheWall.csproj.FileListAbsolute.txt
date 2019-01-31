@@ -1,0 +1,22 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/TheWall/obj/Debug/netcoreapp2.0/TheWall.csprojResolveAssemblyReference.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/TheWall/obj/Debug/netcoreapp2.0/TheWall.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/TheWall/obj/Debug/netcoreapp2.0/TheWall.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/TheWall/obj/Debug/netcoreapp2.0/TheWall.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/TheWall/bin/Debug/netcoreapp2.0/TheWall.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/TheWall/bin/Debug/netcoreapp2.0/TheWall.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/TheWall/bin/Debug/netcoreapp2.0/TheWall.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/TheWall/bin/Debug/netcoreapp2.0/TheWall.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/TheWall/bin/Debug/netcoreapp2.0/TheWall.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/TheWall/obj/Debug/netcoreapp2.0/TheWall.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/TheWall/obj/Debug/netcoreapp2.0/TheWall.pdb
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\TheWall\bin\Debug\netcoreapp2.0\TheWall.deps.json
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\TheWall\bin\Debug\netcoreapp2.0\TheWall.runtimeconfig.json
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\TheWall\bin\Debug\netcoreapp2.0\TheWall.runtimeconfig.dev.json
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\TheWall\bin\Debug\netcoreapp2.0\TheWall.dll
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\TheWall\bin\Debug\netcoreapp2.0\TheWall.pdb
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\TheWall\obj\Debug\netcoreapp2.0\TheWall.csprojAssemblyReference.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\TheWall\obj\Debug\netcoreapp2.0\TheWall.csproj.CoreCompileInputs.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\TheWall\obj\Debug\netcoreapp2.0\TheWall.AssemblyInfoInputs.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\TheWall\obj\Debug\netcoreapp2.0\TheWall.AssemblyInfo.cs
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\TheWall\obj\Debug\netcoreapp2.0\TheWall.dll
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\TheWall\obj\Debug\netcoreapp2.0\TheWall.pdb

@@ -1,0 +1,21 @@
+/Users/maryjones/Desktop/github/coding_dojo/c_sharp/basic13/bin/Debug/netcoreapp2.0/basic13.deps.json
+/Users/maryjones/Desktop/github/coding_dojo/c_sharp/basic13/bin/Debug/netcoreapp2.0/basic13.runtimeconfig.json
+/Users/maryjones/Desktop/github/coding_dojo/c_sharp/basic13/bin/Debug/netcoreapp2.0/basic13.runtimeconfig.dev.json
+/Users/maryjones/Desktop/github/coding_dojo/c_sharp/basic13/bin/Debug/netcoreapp2.0/basic13.dll
+/Users/maryjones/Desktop/github/coding_dojo/c_sharp/basic13/bin/Debug/netcoreapp2.0/basic13.pdb
+/Users/maryjones/Desktop/github/coding_dojo/c_sharp/basic13/obj/Debug/netcoreapp2.0/basic13.csproj.CoreCompileInputs.cache
+/Users/maryjones/Desktop/github/coding_dojo/c_sharp/basic13/obj/Debug/netcoreapp2.0/basic13.AssemblyInfoInputs.cache
+/Users/maryjones/Desktop/github/coding_dojo/c_sharp/basic13/obj/Debug/netcoreapp2.0/basic13.AssemblyInfo.cs
+/Users/maryjones/Desktop/github/coding_dojo/c_sharp/basic13/obj/Debug/netcoreapp2.0/basic13.dll
+/Users/maryjones/Desktop/github/coding_dojo/c_sharp/basic13/obj/Debug/netcoreapp2.0/basic13.pdb
+C:\Users\bacos\Desktop\Answers C#\coding_dojo_assignments-master\coding_dojo\c_sharp\basic13\bin\Debug\netcoreapp2.0\basic13.deps.json
+C:\Users\bacos\Desktop\Answers C#\coding_dojo_assignments-master\coding_dojo\c_sharp\basic13\bin\Debug\netcoreapp2.0\basic13.runtimeconfig.json
+C:\Users\bacos\Desktop\Answers C#\coding_dojo_assignments-master\coding_dojo\c_sharp\basic13\bin\Debug\netcoreapp2.0\basic13.runtimeconfig.dev.json
+C:\Users\bacos\Desktop\Answers C#\coding_dojo_assignments-master\coding_dojo\c_sharp\basic13\bin\Debug\netcoreapp2.0\basic13.dll
+C:\Users\bacos\Desktop\Answers C#\coding_dojo_assignments-master\coding_dojo\c_sharp\basic13\bin\Debug\netcoreapp2.0\basic13.pdb
+C:\Users\bacos\Desktop\Answers C#\coding_dojo_assignments-master\coding_dojo\c_sharp\basic13\obj\Debug\netcoreapp2.0\basic13.csprojAssemblyReference.cache
+C:\Users\bacos\Desktop\Answers C#\coding_dojo_assignments-master\coding_dojo\c_sharp\basic13\obj\Debug\netcoreapp2.0\basic13.csproj.CoreCompileInputs.cache
+C:\Users\bacos\Desktop\Answers C#\coding_dojo_assignments-master\coding_dojo\c_sharp\basic13\obj\Debug\netcoreapp2.0\basic13.AssemblyInfoInputs.cache
+C:\Users\bacos\Desktop\Answers C#\coding_dojo_assignments-master\coding_dojo\c_sharp\basic13\obj\Debug\netcoreapp2.0\basic13.AssemblyInfo.cs
+C:\Users\bacos\Desktop\Answers C#\coding_dojo_assignments-master\coding_dojo\c_sharp\basic13\obj\Debug\netcoreapp2.0\basic13.dll
+C:\Users\bacos\Desktop\Answers C#\coding_dojo_assignments-master\coding_dojo\c_sharp\basic13\obj\Debug\netcoreapp2.0\basic13.pdb

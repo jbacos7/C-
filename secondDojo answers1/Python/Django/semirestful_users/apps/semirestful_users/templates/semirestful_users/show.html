@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .main h1 {
+        text-align: center;
+        color: darkblue;
+    }
+
+</style>
+<head>
+    <title>Semi-Restful Users</title>
+</head>
+
+<body>
+        <h1> User Information</h1>
+        <form action='/show' method='POST'>
+        <tr>
+            {% csrf_token %}
+            <th>First Name: {{first_name}} </th>
+            <th>Last Name: {{last_name}} </th>
+            <th>Email: {{email}} </th>
+        </tr>
+        <form action="/edit" method="POST">
+        <button> <a href= "/{{id}}/edit"> Edit User </a></button><br><br>
+        <form action='/destroy' method='POST'></form>
+        
+        </form>
+</body>
+
+</html>

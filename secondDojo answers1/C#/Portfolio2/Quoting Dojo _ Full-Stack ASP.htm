@@ -1,0 +1,2245 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://learn.codingdojo.com/m/25/5672/37621 -->
+<html lang="en" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Quoting Dojo  | Full-Stack ASP</title>
+    <link href="http://learn.codingdojo.com/assets/black_ninja-db2fe4f1051012ab89c235cc9bf3cd5a.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <link href="./Quoting Dojo _ Full-Stack ASP_files/chapter_modules_layout-b7a60ee31394a8f66a0954a7dad3196b.css" media="all" rel="stylesheet">
+    <link href="./Quoting Dojo _ Full-Stack ASP_files/modules_layout-b55a981b5e7bcfee89d6f5bcaf7cb362.css" media="all" rel="stylesheet">
+
+
+    <script type="text/javascript" id="www-widgetapi-script" src="./Quoting Dojo _ Full-Stack ASP_files/www-widgetapi.js" async=""></script><script id="iframe-demo" src="./Quoting Dojo _ Full-Stack ASP_files/iframe_api"></script><script async="" src="./Quoting Dojo _ Full-Stack ASP_files/analytics.js"></script><script src="./Quoting Dojo _ Full-Stack ASP_files/chapter_modules_scripts-93ff0682a210126c3313214c471c8dbe.js"></script><style></style>
+    <script src="./Quoting Dojo _ Full-Stack ASP_files/modules_scripts-6a066ec7e484cc2c087b16deb6cbf06d.js"></script>
+
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="77jANNDekDhD7jO7+oiFpIrDOwpPS7nu9MyZVjN+Gyw=" name="csrf-token">
+    <script>
+//<![CDATA[
+var AUTH_TOKEN = '77jANNDekDhD7jO7+oiFpIrDOwpPS7nu9MyZVjN+Gyw=';
+//]]>
+</script>
+    
+      <script src="./Quoting Dojo _ Full-Stack ASP_files/socket.io.js" type="text/javascript"></script>
+
+    <script src="./Quoting Dojo _ Full-Stack ASP_files/player.js"></script>
+
+        <!-- Google Analytics -->
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', "UA-115891107-1", 'auto');
+
+			ga('set', 'userId', 50969); 
+			
+            ga('send', 'pageview');
+        </script>
+
+    <!-- GA EVENT TRACKING -->
+    <script type="text/javascript"> 	
+		function send_ga_event(category, action, label) {
+			if(typeof ga != "undefined") {
+				ga('send', 'event', category, action, label);
+			}
+		}
+    </script>
+
+    <!-- USER TRACKING -->
+	    <script type="text/javascript">
+	var on_download = false;
+	var yt_videos   = []; 
+	var params_data = get_page_subdata_params();
+	var user_session_page_id;
+
+	$(document).on('ready', function(){
+
+		var yt_count = 0;
+		$('#module_container iframe').each(function(){
+		    src = this.src;
+		    this.src = src+'?enablejsapi=1'
+		    yt_count += 1;
+
+		    $(this).attr("id", "yt_video_" + yt_count);
+		    yt_videos.push("yt_video_" + yt_count);
+		});
+
+		// USER PAGE VIEWS TRACKING
+		$.post('/create_new_session_page', params_data, function(result) {
+			user_session_page_id = result.user_session_page_id;
+
+			window.onbeforeunload = function() {
+				$.ajax({
+					url:   '/update_user_session_page',
+					type:  'POST',
+					async: false,
+					data:  {"user_session_page_id" : user_session_page_id },
+					success: function() {
+
+					}
+				});
+			}
+		}, "json");
+
+		// USER ACTIVITY TRACKING ON CHAPTER MODULES
+	
+			setTimeout(function(){
+				if ( ($('iframe').attr('src').toLowerCase().indexOf("vimeo")) != -1 ) {
+					var iframe = document.querySelector('iframe');
+				    var player = new Vimeo.Player(iframe);
+
+				    player.on('play', function() {
+				        save_activity_log(1.1, null);
+				    });
+
+				    player.on('pause', function() {
+				        save_activity_log(1.2, null);
+				    });
+				}
+			}, 1000);
+
+			$('body').on('click', '#copy-toolbar', function(){
+				save_activity_log(1.4, null);
+			});
+
+			$('body').on('click', '.show_checklist_btn', function(){
+				save_activity_log(4.1, null);
+			});
+
+			$('.module_description').on('click', 'a', function(){
+				// save_activity_log(1.3, $(this).attr("href"));
+				save_activity_log(1.3, null);
+			});
+
+			$("#start_working_modal").on("click", "#discontinue_task_btn", function(){
+				if($(this).attr("href") != "#") {
+					// save_activity_log(1.3, $(this).attr("href"));
+					save_activity_log(1.3, null);
+				}
+			});
+			
+			$("body").on("click", "#checklist_body .download_link_btn", function(){
+				if($(this).attr("href") != "#") {
+					on_download = true;
+					save_activity_log(4.2, null);
+					// save_activity_log(4.2, $(this).attr("href"));
+				}
+			});
+
+			$("body").on("click", "#checklist_body .github_link_btn", function(){
+				if($(this).attr("href") != "#") {
+					// save_activity_log(4.3, $(this).attr("href"));
+					save_activity_log(4.3, null);
+				}
+			});
+
+			$("body").on("click", "#module_container #answersheet", function(){
+				save_activity_log(2.3, null);
+			});
+    });
+
+	
+	function save_activity_log(activity_log_id, link) {
+
+		$.post('/create_activity_log', { 
+			activity_log_id : activity_log_id, 
+			params_data : params_data, 
+			link : link, 
+			user_session_page_id: user_session_page_id }, 
+		function(result) {
+			on_download = false;
+		}, "json");
+	}
+
+	function get_page_subdata_params() {
+		var params_data = {
+			"page_title" 	  : document.title, 
+			"page_url"   	  : window.location.pathname,
+			"page_type_id" 	  : 1,
+		}
+
+			params_data = {
+				"page_title"  	  : document.title, 
+				"page_url"    	  : window.location.pathname,
+				"track_id"	  	  : 25,
+				"course_id"	 	  : 1826,
+				"chapter_id"	  : 5672,
+				"module_id"	 	  : 37621,
+				"page_type_id" 	  : 2
+			}
+
+		return params_data;
+	}
+</script>
+
+	
+<style type="text/css">.fancybox-margin{margin-right:0px;}</style></head>
+<body>
+<script type="text/javascript">
+	var io;
+</script>
+
+<input type="checkbox" id="activate_menu_checkbox" class="hidden" checked="checked">
+
+<div id="menu_button">
+		<label for="activate_menu_checkbox" class="glyphicon glyphicon-menu-hamburger"></label>
+		<a href="http://learn.codingdojo.com/dashboard#tracks_container" class="button_text unload_link">
+			<div class="track_button">
+				Back to Tracks
+			</div>
+		</a>
+	<!-- <label label for="activate_menu_checkbox" class="glyphicon menu_indicator"></label> -->
+</div>  
+
+<div class="hidden_chapter_title">
+
+				
+				
+				<a class="chapter_title unload_link" data-chapter-module="37859" href="http://learn.codingdojo.com/m/25/5672">
+
+				<!-- -->	
+					<h3><span class="chapter-title"> 2. Full-Stack ASP </span></h3>
+					<!--  -->
+						<div class="progress_container">
+							<span class="chapter_item_progress">
+								83%
+							</span>
+						</div>
+				</a>
+				<ul class="tab_list  module-list" id="module_list_5672" data-chapter-id="5672">
+
+
+
+							<li class="text completed_tab " data-module-type="text" data-module-id="37859" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37859">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37859">
+										<h4>Models Intro   </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="text completed_tab " data-module-type="text" data-module-id="37868" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37868">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37868">
+										<h4>ViewModels   </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="to_do completed_tab " data-module-type="to_do" data-module-id="37869" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37869">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37869">
+										<h4>ViewModel Fun  </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="text completed_tab " data-module-type="text" data-module-id="37860" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37860">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37860">
+										<h4>Models with Forms    </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="to_do completed_tab " data-module-type="to_do" data-module-id="38294" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/38294">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_38294">
+										<h4>Dojo Survey with Model    </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="text completed_tab " data-module-type="text" data-module-id="37866" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37866">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37866">
+										<h4>Validating Models - Initial Setup   </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="text completed_tab " data-module-type="text" data-module-id="38996" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/38996">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_38996">
+										<h4>Validating Models - Model Setup  </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="text completed_tab " data-module-type="text" data-module-id="38997" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/38997">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_38997">
+										<h4>Validating Models - View Setup    </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="text completed_tab " data-module-type="text" data-module-id="38998" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/38998">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_38998">
+										<h4>Validating Models - Controller Setup  </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="text completed_tab " data-module-type="text" data-module-id="38296" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/38296">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_38296">
+										<h4>Custom Validations (Optional)       </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="to_do  " data-module-type="to_do" data-module-id="39190" data-chapter-id="5672" data-is-duplicate="1" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/39190">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_39190">
+										<h4>Date Validator (Optional)  </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="to_do completed_tab " data-module-type="to_do" data-module-id="37867" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37867">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37867">
+										<h4>Dojo Survey with Validation    </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="to_do completed_tab " data-module-type="to_do" data-module-id="37629" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37629">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37629">
+										<h4>Form Submission    </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="text completed_tab " data-module-type="text" data-module-id="37610" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37610">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37610">
+										<h4>Session  </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="to_do completed_tab " data-module-type="to_do" data-module-id="37611" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37611">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37611">
+										<h4>Random Passcode </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="to_do  " data-module-type="to_do" data-module-id="37612" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37612">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37612">
+										<h4>Dojodachi  </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="text completed_tab " data-module-type="text" data-module-id="37620" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37620">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37620">
+										<h4>Connecting to a Database   </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="to_do  current " data-module-type="to_do" data-module-id="37621" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37621">
+
+									<div class="tab_label">
+										<span class="tab_icon sort_tab_icon"></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37621">
+										<h4>Quoting Dojo  </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+								<li class="survey completed_tab " data-module-type="survey" data-module-id="" data-chapter-id="5672" data-is-duplicate="0" data-program-type="">
+									<a id="chapter_survey_link" class="tab_title unload_link" href="javascript:void(0);">
+										<div class="tab_label">
+											<i class="fa fa-pencil-square sort_tab_icon ui-sortable-handle" aria-hidden="true"></i>
+										</div>
+										<span class="tab_details" id="">
+											<h4>Chapter Survey</h4>
+										</span>
+									</a>
+								</li>
+				</ul>
+			</div>
+<div id="sidebar" class="nano " style="height: 100px;">
+	
+	<ul id="chapter_list" class="nano-content  chapter-list" data-track-id="25" data-course-id="1826" tabindex="0">
+			<li class=" ">
+
+				
+				
+				<a class="chapter_title unload_link" data-chapter-module="37592" href="http://learn.codingdojo.com/m/25/5671">
+
+				<!-- -->	
+					<h3><span class="chapter-title"> 1. ASP Essentials </span></h3>
+					<!--  -->
+						<div class="progress_container">
+							<span class="chapter_item_progress">
+								100%
+							</span>
+						</div>
+				</a>
+				<ul class="tab_list  module-list" id="module_list_5671" data-chapter-id="5672">
+
+
+				</ul>
+			</li>
+			<li class=" active">
+
+				
+				
+				<a class="chapter_title unload_link" data-chapter-module="37859" href="http://learn.codingdojo.com/m/25/5672">
+
+				<!-- -->	
+					<h3><span class="chapter-title"> 2. Full-Stack ASP </span></h3>
+					<!--  -->
+						<div class="progress_container">
+							<span class="chapter_item_progress">
+								83%
+							</span>
+						</div>
+				</a>
+				<ul class="tab_list  module-list" id="module_list_5672" data-chapter-id="5672">
+
+
+
+							<li class="text completed_tab " data-module-type="text" data-module-id="37859" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37859">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37859">
+										<h4>Models Intro   </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="text completed_tab " data-module-type="text" data-module-id="37868" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37868">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37868">
+										<h4>ViewModels   </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="to_do completed_tab " data-module-type="to_do" data-module-id="37869" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37869">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37869">
+										<h4>ViewModel Fun  </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="text completed_tab " data-module-type="text" data-module-id="37860" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37860">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37860">
+										<h4>Models with Forms    </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="to_do completed_tab " data-module-type="to_do" data-module-id="38294" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/38294">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_38294">
+										<h4>Dojo Survey with Model    </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="text completed_tab  is_ellipsis" data-module-type="text" data-module-id="37866" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body" title="" data-original-title="Validating Models - Initial Setup   ">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37866">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37866">
+										<h4>Validating Models - Initial Setup   </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="text completed_tab  is_ellipsis" data-module-type="text" data-module-id="38996" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body" title="" data-original-title="Validating Models - Model Setup  ">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/38996">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_38996">
+										<h4>Validating Models - Model Setup  </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="text completed_tab  is_ellipsis" data-module-type="text" data-module-id="38997" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body" title="" data-original-title="Validating Models - View Setup    ">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/38997">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_38997">
+										<h4>Validating Models - View Setup    </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="text completed_tab  is_ellipsis" data-module-type="text" data-module-id="38998" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body" title="" data-original-title="Validating Models - Controller Setup  ">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/38998">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_38998">
+										<h4>Validating Models - Controller Setup  </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="text completed_tab  is_ellipsis" data-module-type="text" data-module-id="38296" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body" title="" data-original-title="Custom Validations (Optional)       ">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/38296">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_38296">
+										<h4>Custom Validations (Optional)       </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="to_do  " data-module-type="to_do" data-module-id="39190" data-chapter-id="5672" data-is-duplicate="1" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/39190">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_39190">
+										<h4>Date Validator (Optional)  </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="to_do completed_tab " data-module-type="to_do" data-module-id="37867" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37867">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37867">
+										<h4>Dojo Survey with Validation    </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="to_do completed_tab " data-module-type="to_do" data-module-id="37629" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37629">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37629">
+										<h4>Form Submission    </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="text completed_tab " data-module-type="text" data-module-id="37610" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37610">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37610">
+										<h4>Session  </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="to_do completed_tab " data-module-type="to_do" data-module-id="37611" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37611">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37611">
+										<h4>Random Passcode </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="to_do  " data-module-type="to_do" data-module-id="37612" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37612">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37612">
+										<h4>Dojodachi  </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="text completed_tab " data-module-type="text" data-module-id="37620" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37620">
+
+									<div class="tab_label">
+										<span class="tab_icon "></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37620">
+										<h4>Connecting to a Database   </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+
+							<li class="to_do  current " data-module-type="to_do" data-module-id="37621" data-chapter-id="5672" data-is-duplicate="0" data-program-type="[1,3]" data-first_module="" data-container="body">
+
+
+
+									<a class="tab_title unload_link" href="http://learn.codingdojo.com/m/25/5672/37621">
+
+									<div class="tab_label">
+										<span class="tab_icon sort_tab_icon"></span>
+									</div>
+
+									<span class="tab_details" id="quiz_id_37621">
+										<h4>Quoting Dojo  </h4> <!-- % if contents["type"] == QUIZ_MODULE % -->
+									</span>
+								</a>
+							</li>							
+								<li class="survey completed_tab " data-module-type="survey" data-module-id="" data-chapter-id="5672" data-is-duplicate="0" data-program-type="">
+									<a id="chapter_survey_link" class="tab_title unload_link" href="javascript:void(0);">
+										<div class="tab_label">
+											<i class="fa fa-pencil-square sort_tab_icon ui-sortable-handle" aria-hidden="true"></i>
+										</div>
+										<span class="tab_details" id="">
+											<h4>Chapter Survey</h4>
+										</span>
+									</a>
+								</li>
+				</ul>
+			</li>
+	</ul>
+<div class="nano-pane" style="display: block;"><div class="nano-slider" style="height: 375px; transform: translate(0px, 209px);"></div></div></div>
+<nav id="main_navigation">
+	<div id="navbar">
+		<ul id="breadcrumbs" class="left_align">
+			<li>C# / .NET Core</li>
+			<li>ASP.NET Core</li>
+			<li id="chapter_title">Full-Stack ASP</li>
+			<li class="module_title">
+				Quoting Dojo  
+			</li>
+		</ul>
+		<div id="profile_block" class="pull-right">
+			<div id="show_search_module_modal">
+				<span>Search</span>
+				<i class="fa fa-search" aria-hidden="true"></i>
+			</div>	
+
+			<img src="./Quoting Dojo _ Full-Stack ASP_files/profile_pic.png" alt="Amanda" class="profile_image">
+			<div class="dropdown">
+				<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					<div id="user_name_block">
+						<div>
+							<span class="decor_text">Hello,  </span> 
+							<span class="user_name">Amanda M</span>
+						</div>
+					</div>
+					<span class="caret"></span>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right" role="menu">
+					<div class="dropdown_content">	
+						<ul>
+							<li>
+								<a href="http://learn.codingdojo.com/dashboard">Dashboard</a>
+								<span class="glyphicon glyphicon-home pull-right" aria-hidden="true"></span>
+							</li>
+							<!-- <li>
+								<a href="/dashboard#tracks_container">Tracks</a>
+								<span class="glyphicon glyphicon-book pull-right" aria-hidden="true"></span>
+							</li> -->
+							<li data-target="#my_account_modal" data-toggle="modal" class="view_user_info">
+								<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="view_user_info">My Account</a>
+								<span class="glyphicon glyphicon-user pull-right" aria-hidden="true"></span>
+							</li>
+							<li class="view_user_info">
+								<a href="https://dojo.news/" target="_blank">Mattermost</a>
+								<span class="glyphicon glyphicon-comment pull-right" aria-hidden="true"></span>
+							</li>
+							<li class="view_user_info hidden">
+								<form action="http://clothing.codingdojo.com/auto_login/" id="clothing_dojo_login" method="post" class="hidden" target="_blank">
+									<input type="hidden" name="email_address" value="sitkoama@gmail.com">
+									<input type="hidden" name="first_name" value="Amanda">
+									<input type="hidden" name="last_name" value="Malamis">
+									<input type="hidden" name="program_type" value="Onsite">
+									<input type="hidden" name="location" value="Chicago">
+									<input type="hidden" name="key" value="7ba534c5d0832e943537ec93b747be2d">
+									<input type="hidden" name="cd_key" value="">
+								</form>
+								<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="clothing_dojo_link">Clothing Dojo</a>
+								<span class="glyphicon glyphicon-shopping-cart pull-right" aria-hidden="true"></span>
+							</li>
+							<li class="dropdown_buttons">
+								<a id="signout_button" class="btn btn-primary btn-lg btn-block unload_link" href="http://learn.codingdojo.com/signout">Log Out</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</nav>
+
+<section id="main_content">
+	<div class="info_container">
+	</div>
+
+    	<div id="content_navigation">
+
+		<div id="return_button" class="right_align">
+			<a href="http://learn.codingdojo.com/dashboard" class="unload_link">
+				<span class="glyphicon glyphicon-th-large"></span><span>Home</span> 
+			</a>
+			<input type="hidden" name="authenticity_token" value="77jANNDekDhD7jO7+oiFpIrDOwpPS7nu9MyZVjN+Gyw=" current-module="37621"> 
+		</div>
+	</div>
+	
+	<div id="section_content">
+
+		<a href="http://learn.codingdojo.com/m/25/5672/37621#" data-track-id="25" data-chapter-id="5672" data-module-id="37621" class="btn btn-primary show_checklist_btn">Checklist</a>
+	<div id="assignment-metadata"><ul class="list-inline information_checklist_list"><li>Mandatory</li><li>Deadline: Monday of Week 2</li><li>Difficulty Level: Intermediate</li><li>Estimated Time: 4-6 hrs</li></ul></div>
+		<div class="content_block">
+			<div id="module_container">
+				<div class="module_content module_content_block">
+							
+
+								<div class="module_description active_lesson_with_video ">
+									<h2>Quoting Dojo</h2>
+<p>You are going to build a simple app that allows users to add quotes to a database and display them on a separate page.</p>
+<p>The <strong>'add my quote'</strong> button should add the user's quote to the database, but the 'skip to quotes' button should take the user directly to the main page.</p>
+<p>Use the following URLs for your project:</p>
+<ul><li><strong>GET '/'</strong> for the new quote form</li><li><strong>POST '/quotes'</strong>&nbsp;for the method of the form to make a new quote</li><li><strong>GET '/quotes'</strong> to display all the quotes</li></ul>
+<p>When creating a new quote, render a view with errors if the submission is invalid, but redirect to the page displaying all quotes if the submission is valid (finally!).</p>
+<p></p>
+<figure><img src="./Quoting Dojo _ Full-Stack ASP_files/APS-QuotingDojo.png"> </figure>
+								</div>
+
+								<div class="appended_module">
+									<div class="todo_content">
+										<ul class="todo_item_parent">
+
+											<form action="http://learn.codingdojo.com/tracks/submit_todo" method="post" id="form_to_do_items">		
+
+									
+												<input type="hidden" name="id" id="task_todo_id" value="2917885">
+												<input type="hidden" name="chapter_module_id" value="37621">
+												<input type="hidden" name="track_id" value="25">
+												<input type="hidden" name="authenticity_token" value="77jANNDekDhD7jO7+oiFpIrDOwpPS7nu9MyZVjN+Gyw=">
+											</form>
+										</ul>
+									</div>
+										<!-- <div id="programs_content" class="hidden"> -->
+
+   <!--  <div id="pair_program" class="programs"  data-target=".pair_program_modal">
+        <span class="glyphicon disable pair_program_disable" aria-hidden="true"></span>
+        <p>Pair Program</p>
+        <span class="time_left" id="pair_program_time_left"><br></span>
+    </div> -->
+
+<!--     <div id="faq" class="programs"  data-target=".faq">
+        <span class="glyphicon disable faq_disable" aria-hidden="true"></span>
+        <p>Discussion</p>
+        <span class="time_left" id="faq_time_left"><br></span>
+    </div> -->
+
+   <!--  <div id="ask_someone" class="programs"  data-target=".ask_someone_modal">
+        <span class="glyphicon disable ask_someone_disable" aria-hidden="true"></span>
+        <p>Ask Someone</p>
+        <span class="time_left" id="ask_someone_time_left"><br></span>
+    </div> -->
+
+<!-- </div> -->
+
+
+
+											<div class="upload_form">
+												<h4>Files</h4>
+												<table class="upload_item_table table">
+													<tbody> 
+
+													
+
+													</tbody>
+												</table>
+
+												<div class="how_container"></div>
+
+												<div class="file_upload_container">
+													<form action="http://learn.codingdojo.com/tracks/upload_file" class="todo_file_upload_form" method="post" enctype="multipart/form-data">
+														<input type="hidden" name="authenticity_token" value="77jANNDekDhD7jO7+oiFpIrDOwpPS7nu9MyZVjN+Gyw=">
+														<label for="todo_file_upload_37621" class="choose_file"><img src="./Quoting Dojo _ Full-Stack ASP_files/add_file.png" alt=""></label>
+														<!-- (For online subscription users only?) Add disable if the user is on the other track -->
+														<input type="file" name="file" id="todo_file_upload_37621" class="file_name">
+
+														<input type="hidden" name="module_id" value="37621">
+														<input type="hidden" name="chapter_id" value="5672">
+														<input type="hidden" name="track_content_id" value="1233">
+														<span class="upload_name">No file chosen</span>
+														<label for="todo_file_upload_37621">
+															<!-- <div class="btn btn-primary upload_file_button" data-toggle="modal" data-target=".switch_primary_track_modal">  -->
+															<div class="btn btn-primary upload_file_button" current-track-id="25"> 
+																<img id="cloud_upload" src="./Quoting Dojo _ Full-Stack ASP_files/cloud.png" alt="">
+																<span class="upload_file_button_text">Upload</span>
+															</div>
+														</label>
+
+
+															<!-- <a href="#" class="btn btn-primary subscription_upload_btn">Upload</a> -->
+
+												</form>
+												<div id="for_upload_file" data-target="#upload_file_modal" data-toggle="modal" style="display:none;"><button>click me</button></div>
+											</div>
+
+											<span class="or">or</span>
+											<div class="github_url_upload_container">
+												<form action="http://learn.codingdojo.com/add_todo_url" id="upload_github_url_form">
+													<input type="hidden" name="authenticity_token" value="77jANNDekDhD7jO7+oiFpIrDOwpPS7nu9MyZVjN+Gyw=">
+													<input type="hidden" name="chapter_module_id" value="37621">
+													<input type="hidden" name="course_id" value="1826">
+													<input type="hidden" name="course_percentage" value="95">
+													<input type="hidden" name="track_id" value="25">
+													<input type="hidden" name="track_content_id" value="1233">
+													<input type="url" name="todo_url" placeholder="Add Github Url"><!-- 
+												 --><input type="submit" class="btn btn-primary" value="Save">
+												</form>
+											</div>
+
+											<!-- Modal for Ask Someone Modal-->
+										
+											<div class="modal fade ask_someone_modal" tabindex="-1" role="dialog" aria-hidden="true">
+												<div class="modal-dialog modal-lg">
+													<div class="modal-content" id="pair_programming_content">
+													<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+														<div class="modal_header">
+															<h4>Ask another student</h4>
+														</div>
+														<div class="modal_body nano">
+															<div class="nano-content" tabindex="0"> 
+																<table class="table remote_student">
+																	<tbody></tbody>
+																</table>
+											                </div>
+											            <div class="nano-pane" style="display: none;"><div class="nano-slider" style="transform: translate(0px, 0px);"></div></div></div>   
+														<div class="modal_header">
+															<h4>Ask a TA</h4>
+														</div>
+														<div class="modal_body nano">
+															<div class="nano-content" tabindex="0">
+																<table class="table remote_ta">
+																	<tbody></tbody>
+																</table>
+											                </div>
+											            <div class="nano-pane" style="display: none;"><div class="nano-slider" style="transform: translate(0px, 0px);"></div></div></div>   
+													</div>	
+												</div>
+											</div>
+											<!-- End of Ask Someone Modal -->
+											
+											<!-- Upload File Modal -->
+											<div class="modal fade info_modal" id="upload_file_modal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+												<div class="modal-dialog" style="margin-top: 175.2px;">
+													<div class="modal-content">
+														<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+														<div class="modal_header"><h4>Assignment Upload</h4></div>
+														<div class="modal_body">
+															<p>Great Job! Are you willing to help someone who's struggling with this assignment?</p>
+															<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="btn btn-default cancel_btn" data-dismiss="modal" target="_blank">MAYBE NEXT TIME.</a>
+															<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="btn btn-primary submit_btn absolutely_btn" data-dismiss="modal" target="_blank">ABSOLUTELY!</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- end of Upload File Modal -->
+
+											<!-- Modal of Pair Program -->
+											<div class="modal fade pair_program_modal" tabindex="-1" role="dialog" aria-hidden="true">
+												<div class="modal-dialog modal-lg">
+													<div class="modal-content" id="pair_programming_content">
+														<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+														<div class="modal_header">
+															<h4>Pair program with someone else.</h4>
+														</div>
+														<div class="modal_body nano">
+															<div class="nano-content" tabindex="0">
+																<button style="display:none" class="close_pair_program_modal" data-dismiss="modal"></button><table class="table">
+																	<tbody class="list_of_pair_programmers">
+																	<!-- Loop the pair programmers -->
+																	
+																	</tbody>
+																</table>
+											                </div>
+											            <div class="nano-pane" style="display: none;"><div class="nano-slider" style="transform: translate(0px, 0px);"></div></div></div>     
+													</div>	
+												</div>
+											</div>
+											<!-- end of Pair Programming Modal -->
+										</div>
+										<!-- start of sample codes for FAQ -->
+										<div class="modal fade faq" tabindex="-1" role="dialog" aria-hidden="true">
+											<div class="modal-dialog modal-lg">
+												<div class="modal-content" id="faq_content">
+													<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+													<h4>Discussion : </h4>
+													<a href="http://learn.codingdojo.com/m/25/5672/37621#" class=" pull-right btn btn-primary" id="create_question" target="_blank">ASK QUESTION</a>
+													<div id="faq_scroll" class="nano">
+														<div class="nano-content" tabindex="0">
+															<div id="question_container">
+																<form id="post_question" class="list-unstyled create_question_container" action="http://learn.codingdojo.com/helps/post_question" method="post">
+																	<img src="./Quoting Dojo _ Full-Stack ASP_files/profile_pic.png" alt="profile_picture" class="profile_image">
+																	<div id="question_form">
+																		<input type="hidden" name="authenticity_token" value="77jANNDekDhD7jO7+oiFpIrDOwpPS7nu9MyZVjN+Gyw=">
+																		<input type="hidden" name="question[module_id]" value="37621">
+																		<textarea id="text_question" class="form-control question_value" name="question[text_question]" rows="2" placeholder="Ask Question"></textarea>
+																		<div class="post_question_buttons">
+																			<button class="btn btn-default cancel_created_question">CANCEL</button>
+																			<button class="btn btn-primary post_created_question">POST QUESTION</button>
+																		</div>
+																	</div> 
+																</form>
+
+																<ul class="list-unstyled list_of_question">
+																	<!-- Loop questions here -->
+																</ul>
+																<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="show_more_question" target="_blank" style="display: none;">Show more questions (<span class="number_of_question"></span>)</a>
+															</div>
+														</div>
+													<div class="nano-pane" style="display: none;"><div class="nano-slider" style="transform: translate(0px, 0px);"></div></div></div>
+												</div>
+											</div>	
+										</div>
+										<!-- end of sample codes for FAQ -->
+								</div>
+
+								<!-- Pair Coding Modal -->
+								<div class="modal fade info_modal" id="pair_coding_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+									<div class="modal-dialog" style="margin-top: 175.2px;">
+										<div class="modal-content">
+											<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+											<div class="modal_header">
+												<h4>Pair Coding</h4>
+											</div>
+											<div class="modal_body">
+												<p>John is calling you.</p>
+												<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="btn btn-default cancel_btn" data-dismiss="modal" target="_blank">DECLINE</a>
+												<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="btn btn-primary submit_btn" data-dismiss="modal" target="_blank">ACCEPT CALL</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- end of Pair Coding Modal -->
+
+								<!-- Start Working on This  Modal -->
+								<div class="modal fade info_modal" id="start_working_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+									<div class="modal-dialog" style="margin-top: 175.2px;">
+										<div class="modal-content">
+											<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+											<div class="modal_header">
+												<h4>Confirm Action</h4>
+											</div>
+											<div class="modal_body">
+												<p>You have already started working on another assignment. Do you want to discontinue working on previous assignment and start working on this one?</p>
+												<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="btn btn-default cancel_btn" data-dismiss="modal" target="_blank">No</a>
+												<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="btn btn-primary submit_btn" id="discontinue_task_btn" data-dismiss="modal" target="_blank">Yes</a>
+											</div>
+										</div>
+									</div>
+									<input type="hidden" id="user_pending_task">
+									<input id="user_pending_task_token" type="hidden" name="authenticity_token" value="77jANNDekDhD7jO7+oiFpIrDOwpPS7nu9MyZVjN+Gyw=">
+								</div>
+								<!-- end of Start Working on This Modal  -->
+
+
+
+
+						
+
+					
+					
+					<!-- Modal Inactivity Notice Modal -->
+					<div class="modal fade info_modal" id="inactivity_notice_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+						<div class="modal-dialog" style="margin-top: 175.2px;">
+							<div class="modal-content">
+								<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+								<div class="modal_header">
+									<h4>Inactivity Notice</h4>
+									<span class="glyphicon glyphicon-question-sign notice_tooltip pull-right" data-toggle="tooltip" data-placement="right" title="" data-original-title="The system keeps track if you are active or not. We are saving the total time you spent on each topic for course improvement and student support purposes."></span>
+								</div>
+								<div class="modal_body">
+									<p>You have been idle for a long time, click the button below if you are you are still there.</p>
+									<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="btn btn-primary continue_btn" data-dismiss="modal" target="_blank">CLICK TO CONTINUE</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end of Modal Inactivity Notice Modal -->
+
+					<!-- Log out from another device modal --> <!-- end of Log out from another device modal -->
+				</div>
+			</div>
+
+
+					<div class="module_footer display_none  hidden" id="start_37621">
+
+
+
+								<span id="start_working">START WORKING ON THIS</span>
+								<input id="task_start_working_token" type="hidden" name="authenticity_token" value="77jANNDekDhD7jO7+oiFpIrDOwpPS7nu9MyZVjN+Gyw=">
+					</div>
+		</div>	
+		<div class="content_footer_block">
+			<a class="site_terms_link" data-target=".privacy_policy_modal" data-toggle="modal">Privacy Policy</a>
+			<div id="report_mistake_label_container" class="pull-right">
+				<span>To report a mistake, highlight the selection you believe is in error.</span>
+			</div>
+		</div>
+	</div>	
+
+
+	<!-- 	<div class="content_footer_block">
+			<a class="site_terms_link" data-target='.privacy_policy_modal' data-toggle='modal'>Privacy Policy</a>
+			<div id="report_mistake_label_container" class="pull-right">
+				<span>To report a mistake, highlight the selection you believe is in error.</span>
+			</div>
+		</div> -->
+
+		<!-- cts warning modal -->
+		<div class="modal fade info_modal cts_warning_modal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog" style="margin-top: 175.2px;">
+				<div class="modal-content">
+					<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+					<form action="http://learn.codingdojo.com/m/25/5672/37621" id="cts_warning_form">
+						<div class="modal_header"><h4>Confirm Action</h4></div>
+						<div class="modal_body">
+							<p>Only <span class="time_passed"></span> had passed since you started this assignment. Are you sure you want to view the Answersheet? The more you code on your own, the more you become a self-sufficient software engineer</p>
+							<a href="javascript:void(0);" class="btn btn-default cancel_btn" data-dismiss="modal">CANCEL</a>
+							<!-- <a href="javascript:void(0);" class="btn btn-primary submit_btn continue_btn" data-dismiss="modal">CONTINUE</a> -->
+							<input type="submit" class="btn btn-primary submit_btn continue_btn" id="view_answersheets" data-dismiss="modal" value="CONTINUE">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	 
+
+	<!-- Reported a mistake popover -->
+	<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="hidden" id="report_mistake_popover" data-placement="bottom"></a>
+	<div class="hidden" id="report_mistake_popover_clone">
+		<span class="report_mistake_label">Report a mistake</span>
+		<form id="report_mistake_container" action="http://learn.codingdojo.com/report_mistake">
+			<h5>Report a mistake</h5>
+			<input type="hidden" name="chapter_module_id" value="37621">
+			<input type="hidden" name="authenticity_token" value="77jANNDekDhD7jO7+oiFpIrDOwpPS7nu9MyZVjN+Gyw=">
+			<input type="hidden" name="course_id" value="1826">
+			<input type="hidden" name="chapter_id" value="5672">
+			<input type="hidden" name="track_id" value="25">
+			<textarea name="report_mistake_textarea" id="report_mistake_textarea" rows="5" placeholder="Tell us what&#39;s wrong"></textarea>
+			<input type="submit" value="SUBMIT" class="btn btn-primary btn-block">
+		</form>
+	</div>
+	<!-- END of Reported a mistake popover -->
+
+	<ul class="create_message_container">
+		<!-- Append the Chat here -->
+		<li class="chat_counter hidden"> 
+			<span class="glyphicon glyphicon-comment"></span> 
+			<span id="number_of_hidden_chat"></span>
+		</li>
+	</ul>
+
+	<div id="content_footer">	
+		<div class="prev_button">  
+			<a href="http://learn.codingdojo.com/m/25/5672/37620" class="btn btn-primary previous_button_link unload_link">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+				Previous
+			</a>
+			<!-- <span class="glyphicon glyphicon-chevron-left"></span>
+			<a href="/m/25/5672/37620" class="previous_button_link unload_link">Prev</a> -->
+		</div>
+		<a href="javascript:void(0);" class="back_button">Back to Track</a>
+		<div class="next_button pull-right">
+				<a href="http://learn.codingdojo.com/m/25/5672/survey" class="btn btn-primary next_button_link unload_link">
+					Next
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+				<!-- <a href="/m/25/5672/survey" class="next_button_link unload_link">Next</a> -->
+				<a href="http://learn.codingdojo.com/m/25/5672/survey" class="real_next_link hidden"></a>
+				<!-- <span class="glyphicon glyphicon-chevron-right"></span> -->
+		</div>
+		
+		<input type="hidden" id="current_module_id" name="authenticity_token" value="77jANNDekDhD7jO7+oiFpIrDOwpPS7nu9MyZVjN+Gyw=" current-module="37621" course-percentage="95" track-content-id="1233"> 
+
+		<div id="linkage" data-target="#inactivity_notice_modal" data-toggle="modal" style="display:none;"></div>
+	</div>
+
+	<!-- Privacy Policy Modal -->
+	<div class="modal fade privacy_policy_modal" tabindex="-1" role="dialog" data-keyboard="">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+				
+				<div id="terms_of_service">
+					<div class="greetings">
+						<p id="thank_you_greeting">Thank you for taking the time to learn about our legal policies.</p>
+						<p id="greeting">Your privacy is important to us.</p>
+					</div>
+					<div class="links">
+						<p id="privacy_policy">
+							<a href="http://www.codingdojo.com/files/Privacy_Policy.pdf" target="_blank">Privacy Policy</a>
+						</p>
+						<p id="acceptable_use">
+							<a href="http://www.codingdojo.com/files/Acceptable_Use_Policy.pdf" target="_blank">Acceptable Use</a>
+						</p>
+						<p id="site_terms">
+							<a href="http://www.codingdojo.com/files/Site_Terms.pdf" target="_blank">Site Terms</a>
+						</p>
+					</div>
+					<a href="javascript:void(0)" class="btn btn-primary" id="close_button" data-dismiss="modal">CLOSE</a>
+				</div>
+			</div>
+		</div>
+	</div> 
+</section>
+
+<!-- My Account Modal -->
+<div id="my_account_modal" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade">
+    <div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<span class=" glyphicon glyphicon-remove-sign" data-dismiss="modal" aria-label="Close"></span>
+			<div class="modal-body">
+				<form action="http://learn.codingdojo.com/upload_profile_pic" id="upload_profile_pic_form" class="profile_pic" enctype="multipart/form-data" method="post">
+					<input type="hidden" name="authenticity_token" value="77jANNDekDhD7jO7+oiFpIrDOwpPS7nu9MyZVjN+Gyw=">
+					<input id="browse_pic" class="browse_profile_pic hidden" type="file">
+					<label for="browse_pic">
+						<span class="profile_preview">
+							<i class="fa fa-spinner fa-spin"></i>
+							<img src="./Quoting Dojo _ Full-Stack ASP_files/profile_pic.png" alt="Amanda"> 
+						</span>
+					</label>
+				</form>
+				<h2 class="name">Amanda Malamis</h2>
+				<h3 class="email">sitkoama@gmail.com</h3>
+
+
+					<ul class="list-unstyled" id="account_details_list">
+			            <li>
+			            	<span class="account_detail_icon"></span>
+			            	<div class="account_detail_content">
+			            		<span>Program Type:</span>
+			            		<span>Onsite Web Development</span>
+			            	</div>
+			            		
+			            </li>
+			            <li>
+			            	<span class="account_detail_icon"></span>
+			            	<div class="account_detail_content">
+			            		<span>Start Date:</span>
+			            		<span>July 16, 2018</span>
+			            	</div>
+			            </li>
+			            <li>
+			            	<span class="account_detail_icon"></span>
+			            	<div class="account_detail_content">
+			            		<span>Location:</span>
+			            		<span>Chicago</span>
+			            	</div>
+			            </li>
+			            <li>
+			            	<span class="account_detail_icon"></span>
+			            	<div class="account_detail_content">
+			            		<span>Access Expiration:</span>
+			            		<span>April 26, 2019</span>
+			            	</div>
+			            </li>
+					</ul>
+
+					<button class="change_password_btn btn btn-primary">Change Password</button>
+
+					<div class="password_changed_container hidden">
+						<img src="./Quoting Dojo _ Full-Stack ASP_files/check.png" alt="Check Mark">
+						<p class="success">Password has been succesfully changed!</p>
+					</div>
+
+					<form id="change_password_form" class="hidden">
+						<span class="error_message hidden"></span>
+						<div class="form-group">
+					      	<input type="password" class="form-control old_password_input match" placeholder="Old Password">
+						</div>
+						<div class="form-group">
+					      	<input type="password" class="form-control new_password_input match" placeholder="New Password">
+						</div>
+						<div class="form-group">
+					      	<input type="password" class="form-control confirm_new_password_input match" placeholder="Confirm New Password">
+						</div>
+					    <button type="button" class="btn btn-default cancel_change_password_btn">Cancel</button>
+					    <button type="button" class="btn btn-primary save_new_password_button">Save</button>
+					</form>
+			</div>
+		</div>
+    </div>
+</div>    
+<!-- end of My Account Modal  -->
+
+<!-- Checklist -->
+<div id="checklist_backdrop"></div>
+<div id="checklist_side_container" class="full_view">
+	<div class="loading_container hidden">
+		<span class="blob blob-0"></span>
+		<span class="blob blob-1"></span>
+		<span class="blob blob-2"></span>
+		<span class="blob blob-3"></span>
+		<span class="blob blob-4"></span>
+		<span class="blob blob-5"></span>
+	</div>
+</div>
+
+<!-- Checklist Feedback Modal -->
+<div class="modal fade" id="checklist_feedback_modal" tabindex="-1" role="dialog" aria-labelledby="">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<form action="http://learn.codingdojo.com/m/25/5672/37621" id="manage_checklist_feedback_form">
+				<input type="hidden" name="assignment_feedback_id" value="">
+				<div class="modal-header">
+					<h4 class="modal-title">Feedback for <span class="assignment_name"></span> assignment.</h4>
+				</div>
+				<div class="modal-body">
+					<textarea name="feedback_description" id="feedback_textarea" class="form-control" placeholder="Type your feedback here."></textarea>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<!-- <button type="submit" class="btn btn-primary">Save</button> -->
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Clone Template -->
+<div id="clone_template_container" class="hidden">
+	<ul id="chat_item">
+		<li data-chat-id="" data-module-id="" class="active_chat chat"> 
+		    <input type="checkbox" class="chat_checkbox" id="" checked="checked"> 
+		    <div class="chat_container"> 	
+		        <div class="chat_header"> 
+		            <label for="chat_checkbox_" class="hide_chat"> 
+		                <span class="glyphicon glyphicon-comment"></span> 
+		                <span class="name"></span> 
+		                <span class="glyphicon glyphicon-triangle-bottom"></span> 
+		                <span class="glyphicon glyphicon-remove remove_chat"></span> 
+		            </label> 
+		        </div>  
+		        <div class="chat_body"> 
+		            <div class="settings"> 
+		                <span class="start_this_call glyphicon glyphicon-facetime-video" title="Video call. Click to start a video call."></span>
+		            </div> 
+		            <div class="conversation_container nano"> 
+		                <ul class="nano-content" tabindex="0"> 
+		                </ul> 
+		            <div class="nano-pane" style="display: none;"><div class="nano-slider" style="transform: translate(0px, 0px);"></div></div></div> 
+		            <div class="hidden_div"></div> 
+		        </div> 
+		        <form class="input_container"> 
+		            <textarea name="" class="form-control enter_message" placeholder="Send a message"></textarea> 
+		            <input type="hidden"> 
+		        </form> 
+		    </div> 
+		</li>
+	</ul>
+
+	<div id="video_walk_through">
+		<a class="how_we_did_video"> 
+	    	<div class="how_we_did_block">
+	        	<div id="video_logo"><img src="./Quoting Dojo _ Full-Stack ASP_files/play_button.png" alt=""></div> 
+	        	<div class="how_we_did_info"> 
+	            	<span class="title">Wanna see how we did it?</span> 
+	            	<span class="video_time_to_unlock"></span> 
+	        	</div> 
+	    	</div> 
+	     </a>
+	</div>
+
+	<ul id="question_clone">
+		<li class="question"> 
+            <img src="http://learn.codingdojo.com/m/25/5672/37621" alt="profile_picture" class="profile_image"> 
+            <div class="right_question_content"> 
+                <div class="question_block">
+                    <span class="name"></span> 
+                    <span class="date"></span> 
+                    <span class="glyphicon glyphicon-remove pull-right remove_question" id=""></span> 
+                    <p class="main_question"></p> 
+                    <a href="http://learn.codingdojo.com/m/25/5672/37621#" class="add_question_answer" id="">Add answer</a> 
+                    <span class="middle_dot">·</span>
+                    <a href="http://learn.codingdojo.com/m/25/5672/37621#" class="number_of_vote" data-value=""></a> 
+                    <button id="" class="vote_up vote_button" value="1"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></button> 
+                    <button id="" class="vote_down vote_button" value="-1"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button> 
+                </div>
+                <form class="list-unstyled create_answer_container" id="post_answer" action="http://learn.codingdojo.com/helps/post_answer" method="post"> 
+                    <img src="http://learn.codingdojo.com/m/25/5672/37621" alt="profile_picture" class="profile_image"> 
+                    <div class="create_answer_form"> 
+                        <input type="hidden" name="authenticity_token" value="77jANNDekDhD7jO7+oiFpIrDOwpPS7nu9MyZVjN+Gyw=">
+                        <input class="answer_id_input" type="hidden" name="answer[question_id]" value="">
+                        <textarea class="form-control answer_value" name="answer[text_answer]" rows="2" placeholder=""></textarea>
+                        <div class="post_answer_buttons">
+                            <button class="btn btn-default cancel_post_answer">CANCEL</button>
+                            <button class="btn btn-primary post_reply_answer">ANSWER</button>
+                        </div>
+                    </div>
+                </form>
+                <ul class="list-unstyled answers_container">
+                </ul> 
+            </div>
+        </li>
+	</ul>
+
+	<ul id="answer_clone">
+		<li> 
+		    <div class="left_answers_block"> 
+		        <img src="http://learn.codingdojo.com/m/25/5672/37621" alt="profile_picture" class="profile_image"> 
+		    </div> 
+		    <div class="right_answers_block"> 
+		        <span class="name"></span> 
+		        <span class="date"></span> 
+		        <span class="glyphicon glyphicon-remove pull-right remove_answer" id=""></span> 
+		        <p></p> 
+		        <a href="http://learn.codingdojo.com/m/25/5672/37621#" class="number_of_vote" data-value=""></a> 
+		        <button id="" class="vote_up vote_button answer_vote" value="1"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></button> 
+		        <button id="" class="vote_down vote_button answer_vote" value="-1"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></button> 
+		    </div> 
+		</li>
+	</ul>
+</div>
+
+<!-- Html5 Videos speed Clone -->
+<div class="hidden html5_video_speed_clone">
+	<div class="btn-group" role="group" aria-label="..."> 
+		<button type="button" class="btn btn-default reduce_video_speed"> <span class="glyphicon glyphicon-minus"></span> </button> 
+		<button type="button" class="btn btn-default current_speed">1.0</button>
+		<button type="button" class="btn btn-default add_video_speed"> <span class="glyphicon glyphicon-plus"></span> </button>
+	</div>
+</div>
+
+<div id="page_info">
+	<input type="hidden" value="http://learn.codingdojo.com/m/25/5672/37621">
+	<input type="hidden" value="25">
+	<input type="hidden" value="1826">
+	<input type="hidden" value="5672">
+	<input type="hidden" id="module_id_current" value="37621">
+	<input type="hidden" value="216.80.4.142">
+	<input type="hidden" value="25240" id="page_current_user" user="Amanda Malamis">
+</div>
+
+
+
+
+
+<div class="quiz_result_details_block" id="quiz_result_details" style="display: none;">
+	<div class="quiz_result_user_image">
+		<img src="./Quoting Dojo _ Full-Stack ASP_files/profile_pic.png" alt="Amanda" class="profile_image">
+	</div>
+	<div class="quiz_result_info">
+		<h3 id="user_name"></h3>
+		<p id="quiz_date"></p>
+	</div>
+	<div class="clear"></div>
+	<p class="quiz_result_score"></p>
+	<div class="quiz_result_content">
+	</div>
+</div>
+		
+
+
+<script>
+	/* for showing of checklist details in chapter module page */
+
+    var checklist_details = JSON.parse('{"is_optional":0,"day":1,"week":2,"difficulty_level":2,"estimated_time":"4-6 hrs"}');
+	
+    if(checklist_details != null){
+
+        if(Object.keys(checklist_details).length > 0){
+            var days = ["", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+            var level = ["", "Basic", "Intermediate", "Advanced", "Hacker"];
+            var details_to_append = '<ul class="list-inline information_checklist_list">';
+
+            	console.log(checklist_details)
+            $.each(checklist_details, function(index, value){
+                switch(index){
+                    case 'is_optional':
+                        status = (value == 1) ? "Optional" : "Mandatory";
+                        details_to_append += '<li>'+status+'</li>';
+                        break;
+                    case 'day':
+                        if(value && checklist_details.week != 0){
+                            details_to_append += "<li>Deadline: "+days[value]+" of Week "+checklist_details.week+"</li>"
+                        }
+                        break;
+                    case 'difficulty_level':
+                        if(value != 0 && value != null)
+                        details_to_append += "<li>Difficulty Level: "+level[value]+"</li>";
+                        break;
+                    case 'estimated_time':
+                        if(value != "" && value != null){
+                            details_to_append += "<li>Estimated Time: "+value+"</li>";
+                        }
+                        break;
+                }
+            });
+
+            details_to_append += "</ul>";  
+			$('#assignment-metadata').html(details_to_append)
+        }
+    }
+</script>
+<script type="text/javascript" src="http://learn.codingdojo.com/m/25/5672/37621"></script>
+
+
+
+<div class="loading_container hidden">
+	<img src="./Quoting Dojo _ Full-Stack ASP_files/loading_white.gif" alt="">
+	<div class="back_ground"></div>
+</div>
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="search_module_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<form action="http://learn.codingdojo.com/search_dashboard" id="search_module_form">
+						<div class="form-group">
+							<input type="text" placeholder="Search" name="search_query" id="search_query">
+							<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Delete Chapter Modal -->
+	<div class="modal fade info_modal delete_chapter_modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" style="margin-top: 175.2px;">
+			<div class="modal-content">
+				<input type="hidden" name="chapter_id" value="">
+
+				<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+				<div class="modal_header"><h4>Delete Chapter?</h4></div>
+				<div class="modal_body">
+					<p>Chapter will be permanently deleted. Are you sure?</p>
+					<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="btn btn-default cancel_btn" data-dismiss="modal">CANCEL</a>
+					<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="btn btn-primary confirm_delete_chapter" data-dismiss="modal">DELETE CHAPTER</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Delete Module Modal -->
+	<div class="modal fade info_modal delete_module_modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" style="margin-top: 175.2px;">
+			<div class="modal-content">
+				<input type="hidden" name="module_id" data-module="37621">
+				<input type="hidden" name="chapter_id" data-chapter="5672">
+				<input type="hidden" name="track_id" data-track="25">
+
+				<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+				<div class="modal_header"><h4>Delete Module?</h4></div>
+				<div class="modal_body">
+					<p>Module will be permanently deleted. Are you sure?</p>
+					<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="btn btn-default cancel_btn" data-dismiss="modal">CANCEL</a>
+					<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="btn btn-primary confirm_delete_module" data-dismiss="modal">DELETE MODULE</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Delete Module Modal -->
+	<div class="modal fade info_modal confirm_delete_rubric_modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" style="margin-top: 175.2px;">
+			<div class="modal-content">
+				<input type="hidden" id="rubric_id">
+				<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+				<div class="modal_header"><h4>Delete Criteria?</h4></div>
+				<div class="modal_body">
+					<p>This will be permanently deleted. Are you sure?</p>
+					<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="btn btn-default cancel_btn" data-dismiss="modal">CANCEL</a>
+					<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="btn btn-primary confirm_delete_criteria_btn" data-dismiss="modal">DELETE</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- copy/move module to Modal -->
+	<div class="modal fade info_modal action_confirm_modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" style="margin-top: 175.2px;">
+			<div class="modal-content">
+				<input type="hidden" name="module_id" data-module="37621">
+				<input type="hidden" name="chapter_id" data-chapter="">
+				<input type="hidden" name="track_id" data-track="25">
+				<input type="hidden" name="current_chapter_id" data-current-chapter="5672">
+
+				<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+				<div class="modal_header"><h4>Copy Module</h4></div>
+				<div class="modal_body">
+					<p>Are you sure you want to <span class="action_name"></span> this module to <span class="chapter_title"></span></p>
+					<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="btn btn-default cancel_btn" data-dismiss="modal">CANCEL</a>
+					<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="btn btn-primary action_btn" data-dismiss="modal"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- chapter_module_modal -->
+	<div class="modal fade info_modal chapter_module_modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" style="margin-top: 175.2px;">
+			<div class="modal-content">
+				<input type="hidden" name="chapter_id" value="">
+
+				<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+				<div class="modal_header"><h4>New Chapter</h4></div>
+				<div class="modal_body">
+					<input id="" type="text" placeholder="Chapter Title" value="">
+					<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="btn btn-primary">SAVE</a>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+	<!-- My files modal -->
+	<div id="myfiles_modal" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade">
+	    <div class="modal-dialog modal-sm">
+	      <div class="modal-content">
+				<h5>My files</h5>
+				<form class="my_files_upload" enctype="multipart/form-data">
+					<input type="file" class="browse_upload_file hidden" name="file_data">
+					<input type="hidden" name="authenticity_token" value="77jANNDekDhD7jO7+oiFpIrDOwpPS7nu9MyZVjN+Gyw=">
+					<span class="upload_my_files"><i class="fa fa-upload" aria-hidden="true"></i> Upload</span>
+				</form>
+				<span class="hide_modal glyphicon glyphicon-remove" data-dismiss="modal" aria-label="Close"></span>
+				<div class="content">
+					<div class="nano has-scrollbar">
+						<ul id="my_files_list" class="nano-content list-unstyled" tabindex="0" style="right: -17px;">
+							<span>Loading . . . . .</span>
+						</ul>
+						<div class="nano-pane" style="display: none;">
+							<div class="nano-slider" style="height: 20px; transform: translate(0px, 0px);"></div>
+						</div>
+					</div>
+				</div>
+	      </div>
+	    </div>
+	</div> 
+	<!-- end of My files modal -->
+
+	<!-- My Account Modal -->
+	<div id="my_account_modal" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade">
+	    <div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<span class=" glyphicon glyphicon-remove-sign" data-dismiss="modal" aria-label="Close"></span>
+				<div class="modal-body">
+					<form action="http://learn.codingdojo.com/upload_profile_pic" id="upload_profile_pic_form" class="profile_pic" enctype="multipart/form-data" method="post">
+						<input type="hidden" name="authenticity_token" value="77jANNDekDhD7jO7+oiFpIrDOwpPS7nu9MyZVjN+Gyw=">
+						<input id="browse_pic" class="browse_profile_pic hidden" type="file">
+						<label for="browse_pic">
+							<span class="profile_preview">
+								<i class="fa fa-spinner fa-spin"></i>
+								<img src="./Quoting Dojo _ Full-Stack ASP_files/profile_pic.png" alt="Amanda"> 
+							</span>
+						</label>
+					</form>
+					<h2 class="name">Amanda Malamis</h2>
+					<h3 class="email">sitkoama@gmail.com</h3>
+
+
+						<ul class="list-unstyled" id="account_details_list">
+				            <li>
+				            	<span class="account_detail_icon"></span>
+				            	<div class="account_detail_content">
+				            		<span>Program Type:</span>
+				            		<span>Onsite Web Development</span>
+				            	</div>
+				            		
+				            </li>
+				            <li>
+				            	<span class="account_detail_icon"></span>
+				            	<div class="account_detail_content">
+				            		<span>Start Date:</span>
+				            		<span>July 16, 2018</span>
+				            	</div>
+				            </li>
+				            <li>
+				            	<span class="account_detail_icon"></span>
+				            	<div class="account_detail_content">
+				            		<span>Location:</span>
+				            		<span>Chicago</span>
+				            	</div>
+				            </li>
+				            <li>
+				            	<span class="account_detail_icon"></span>
+				            	<div class="account_detail_content">
+				            		<span>Access Expiration:</span>
+				            		<span>April 26, 2019</span>
+				            	</div>
+				            </li>
+						</ul>
+
+						<button class="change_password_btn btn btn-primary">Change Password</button>
+
+						<div class="password_changed_container hidden">
+							<img src="./Quoting Dojo _ Full-Stack ASP_files/check.png" alt="Check Mark">
+							<p class="success">Password has been succesfully changed!</p>
+						</div>
+
+						<form id="change_password_form" class="hidden">
+							<span class="error_message hidden"></span>
+							<div class="form-group">
+						      	<input type="password" class="form-control old_password_input match" placeholder="Old Password">
+							</div>
+							<div class="form-group">
+						      	<input type="password" class="form-control new_password_input match" placeholder="New Password">
+							</div>
+							<div class="form-group">
+						      	<input type="password" class="form-control confirm_new_password_input match" placeholder="Confirm New Password">
+							</div>
+						    <button type="button" class="btn btn-default cancel_change_password_btn">Cancel</button>
+						    <button type="button" class="btn btn-primary save_new_password_button">Save</button>
+						</form>
+				</div>
+			</div>
+	    </div>
+	</div>   
+	<!-- end of My Account Modal  -->
+
+	<!-- Manage Module Modal -->
+    <div class="modal fade new_edit_module_modal manage_module_modal " tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal_head">
+                    <h4></h4>
+					<!-- <span class="pull-right">SETTINGS</span> -->
+				</div>
+				<div class="modal_body">
+                    
+	            </div>     
+			</div>	
+		</div>
+	</div>
+
+	<!-- CLONE ITEMS -->
+	<ul class="hidden hidden_module_list">
+		<li class="completed_tab" data-module-type="">
+			<a class="tab_title" href="http://learn.codingdojo.com/m/25/5672/37621#">
+				<div class="tab_label"><span class="tab_icon"></span></div>
+				<span class="tab_details">
+					<h4>Overview</h4>
+				</span>
+			</a>
+
+			<div class="dropdown">
+				<span class="glyphicon glyphicon-menu-down dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></span>
+				<ul class="dropdown-menu dropdown-menu-right" aria-labelledby="">
+					<li><a href="http://learn.codingdojo.com/m/25/5672/37621#" data-toggle="modal" data-target=".new_edit_module_modal" class="dropdown_edit_module_btn">Edit</a></li>
+					<li><a href="http://learn.codingdojo.com/m/25/5672/37621#" class="dropdown_duplicate_module_btn">Duplicate</a></li>
+					<li><a href="http://learn.codingdojo.com/m/25/5672/37621#" class="dropdown_delete_module_btn">Delete</a></li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+
+	<ul class="hidden hidden_question_option_list">
+		<li class="quiz_option_item">
+			<span class="glyphicon glyphicon-th tester"></span>
+			<span class="glyphicon glyphicon-remove-sign delete_quiz_option_item"></span>
+			<input type="radio" name="quiz_radio_option_1" id="quiz_radio_option_1_1" class="quiz_radio_option hidden">
+			<label for="quiz_radio_option_1_1">
+				<span class="radio_marker">
+					<span class="marker"></span>
+				</span>
+			</label>
+
+			<input type="text" name="question_option_input" class="question_option_input">
+		</li>
+	</ul>
+
+	<ul class="hidden hidden_to_do_list">
+		<li class="to_do_item">
+			<span class="glyphicon glyphicon-th"></span>
+			<span class="glyphicon glyphicon-remove-sign delete_to_do_item"></span>
+			<div class="redactor_container">
+				<div class="redactor_click_to_edit">Work on the exercise above.</div>
+			</div>
+		</li>
+	</ul>
+
+	<ul class="hidden hidden_new_question_list">
+		<li class="question_item">
+			<div class="question_container">
+				<span class="glyphicon glyphicon-th"></span>
+				<span class="glyphicon glyphicon-remove-sign delete_question_item"></span>
+				<div class="redactor_container">
+					<div class="redactor_click_to_edit"></div>
+				</div>
+			</div>
+
+			<ul class="list-unstyled quiz_option_list">
+				<li class="add_new_quiz_option_item">
+					<input type="text" placeholder="Add a choice" class="add_new_quiz_choice_input">
+					<span class="glyphicon glyphicon-plus-sign add_new_quiz_choice"></span>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<!--  Lesson Module  -->
+	<div class="lesson_module_clone hidden">
+	    <div class="module_description">
+			<div class="module_redactor">
+		        <h1 class="module_title_content"></h1>
+			</div>
+	    </div>
+	</div>
+
+    <!-- Quiz Module -->
+	<div class="quiz_module_clone hidden">
+		<div class="quiz_description_block">
+			<div class="module_redactor"> 
+				<h1 class="module_title_content">Quiz</h1> 
+
+			</div>
+		</div> 	
+		<div class="quiz_questions_block hidden">
+		 	<div class="quiz_results">
+		 		<h4>Quiz Results</h4>
+		 		<table class="quiz_result_table table">
+		 			<thead>
+		 				<tr> 
+		 					<th class="quiz_result_header">#</th>
+		 					<th class="quiz_result_header">Date Took</th>
+		 					<th class="quiz_result_header">Minutes Spent</th>
+		 					<th class="quiz_result_header">Score</th> 					                 
+		 				</tr> 					               
+		 			</thead> 
+		 			<tbody>
+		 				<tr>
+		 					<td>1</td>
+		 					<td>March 31, 2014 (Monday)</td>
+		 					<td>2</td>
+		 					<td><a href="javascript:void(0);" class="display_quiz_result" data-quiz-title="Quiz" data-id="6121">80.00% (4/5)</a></td>
+		 				</tr>          
+	 				</tbody> 					            
+	 			</table> 
+
+	 			<div id="retake_quiz" class="btn btn-primary">Retake Quiz</div>
+
+	 		</div> 	
+	 		<div class="quiz_instructions">
+	 			<button id="start_quiz" class="btn btn-primary">Start Quiz</button>
+	 		</div>
+
+	 		<form action="http://learn.codingdojo.com/students/submit_quiz" method="post" class="form_submit_quiz">
+	 		 	<h4>Quiz</h4>
+	 		 	<ol>
+	 		 	 	<li class="quiz_item">
+	 		 	 		<span class="question_description">	It is the main markup language for creating web pages and other information that can be displayed in a web browser. </span>
+	 		 	 		<input type="hidden" name="questions[1]" value="It is the main markup language for creating web pages and other information that can be displayed in a web browser.">
+	 		 	 		<ul>
+	 		 	 			<li>
+	 		 	 				<input type="radio" value="0" id="quiz_radio_option_1_1" name="choices[1][is_answer]">
+	 		 	 				<label class="choice" for="quiz_radio_option_1_1">DOCTYPE</label>
+	 		 	 			</li>
+							<li>
+							 	<input type="radio" value="0" id="quiz_radio_option_1_2" name="choices[1][is_answer]">
+							 	<label class="choice" for="quiz_radio_option_1_2">HTML</label>
+							</li>
+							<li>
+								<input type="radio" value="0" id="quiz_radio_option_1_3" name="choices[1][is_answer]">
+								<label class="choice" for="quiz_radio_option_1_3">Web Pages</label>
+							</li>
+						</ul> 
+					</li>
+					<li class="quiz_item">
+						<span class="question_description">Some tags normally come in pairs. But there are some that do not need pairs. Which of the following tag does not need a closing pair tag?</span>
+						<input type="hidden" name="questions[3]" value="Some tags normally come in pairs. But there are some that do not need pairs. Which of the following tag does not need a closing pair tag?">
+						<ul>
+							<li>
+								<input type="radio" value="0" id="quiz_radio_option_2_1" name="choices[2][is_answer]">
+								<label class="choice" for="quiz_radio_option_2_1">head</label>
+							</li>
+							<li>
+								<input type="radio" value="0" id="quiz_radio_option_2_2" name="choices[2][is_answer]">
+								<label class="choice" for="quiz_radio_option_2_2">input</label>
+							</li>
+							<li>
+								<input type="radio" value="0" id="quiz_radio_option_2_3" name="choices[2][is_answer]">
+								<label class="choice" for="quiz_radio_option_2_3">table</label>
+							</li> 
+						</ul>
+					</li>
+				</ol>
+				<input type="submit" class="btn btn-primary" id="submit_quiz_button" value=" Submit ">
+			</form>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+	<div class="dropup language_rainbow_dropup hidden">
+	  <a href="http://learn.codingdojo.com/m/25/5672/37621#" class="selected_rainbow_option html_rainbow_option" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+		<ul class="dropdown-menu list-unstyled language_rainbow_option_list">
+			<li class="language_rainbow_option_item">
+				<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="html_rainbow_option" data-option-language="html"></a>
+			</li>
+			<li class="language_rainbow_option_item">
+				<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="css_rainbow_option" data-option-language="css"></a>
+			</li>
+			<li class="language_rainbow_option_item">
+				<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="javascript_rainbow_option" data-option-language="javascript"></a>
+			</li>
+			<li class="language_rainbow_option_item">
+				<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="python_rainbow_option" data-option-language="python"></a>
+			</li>
+			<li class="language_rainbow_option_item">
+				<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="ruby_rainbow_option" data-option-language="ruby"></a>
+			</li>
+			<li class="language_rainbow_option_item">
+				<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="java_rainbow_option" data-option-language="java"></a>
+			</li>
+			<li class="language_rainbow_option_item">
+				<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="php_rainbow_option" data-option-language="php"></a>
+			</li>
+			<li class="language_rainbow_option_item">
+				<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="coffeescript_rainbow_option" data-option-language="coffeescript"></a>
+			</li>
+			<li class="language_rainbow_option_item">
+				<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="c_sharp_rainbow_option" data-option-language="c_sharp"></a>
+			</li>
+		</ul>
+	</div>
+	<div id="alert_modal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="content save_successfully_content hidden">
+					<span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>
+					<h1>Saving Successfully</h1>
+					<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="btn form-control" data-dismiss="modal">OK</a>
+				</div>
+				<div class="content failed_to_save_content hidden">
+					<span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
+					<h1>Saving Failed</h1>
+					<a href="http://learn.codingdojo.com/m/25/5672/37621#" class="btn form-control" data-dismiss="modal">OK</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<!-- YOUTUBE API -->
+<script type="text/javascript">
+	var tag = document.createElement('script');
+	tag.id = 'iframe-demo';
+	tag.src = 'https://www.youtube.com/iframe_api';
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+	var player;
+	if (($('iframe').attr('src').indexOf("youtube")) != -1) {
+		function onYouTubeIframeAPIReady() {
+		    for(yt_video in yt_videos) {
+				console.log(yt_videos[yt_video])
+			    player = new YT.Player(yt_videos[yt_video], {
+			        events: {
+			        	'onStateChange': onPlayerStateChange
+			        }
+			    });
+			}
+		}
+
+		function onPlayerStateChange(event) {
+			console.log(event.data);
+			if(event.data == 1) {
+				if(typeof save_activity_log == 'function') {
+					save_activity_log(1.1, null);
+				}
+			} else if (event.data == 2) {
+				if(typeof save_activity_log == 'function') {
+					save_activity_log(1.2, null);
+				}
+			}
+		}
+	}
+</script>
+
+    <script type="text/javascript">
+		
+		var last_date_activity;
+		var is_io_request = false;
+
+        var io = io.connect('https://learn.codingdojo.com:8787', {force_connection: true, path: '/app1socket'});
+        var pair_hangout = false;
+        var admin_as_student = "";
+       
+        io.on("error", function(){
+            console.log('Failed connecting to node js server.');
+        });
+       	
+       	// USER ACTIVITY TRACKING
+	        io.emit("connect", { user_activity_session_id: "510264" }, function(){
+	            console.log("Connecting to socket.io");
+	        });
+
+	        io.on("save_last_active_date", function(data){
+	        	last_date_activity = data.last_active_date;
+
+	             $(document).on("mousemove", function() {
+		            var date_now = new Date();
+		            var mouse_move_minute = (date_now.getTime() - last_date_activity) / 1000;
+
+		            // CHECK UPDATING OF LAST DATE ACTIVITY (PING TO NODE)
+		            if(mouse_move_minute >= 60 && is_io_request == false) {
+		            	is_io_request = true;
+		            	io.emit("update_last_active_data", { last_date_activity: date_now.getTime(), mouse_move_minute: mouse_move_minute }, function(data){
+		            		
+		            		if(data.expired == true) {
+		            			last_date_activity = data.last_active_date;
+
+		            			$.post('/update_session', function(session_result) {
+		            				// Refresh Page
+					    			// params_data.end_session_page = 1;
+									// location.reload();
+
+					            	// USER PAGE VIEWS TRACKING
+					    			params_data.end_session_page = 1;
+									params_data.user_session_page_id = user_session_page_id;
+
+									$.post('/create_new_session_page', params_data, function(result) { 
+										is_io_request = false;
+										user_session_page_id = result.user_session_page_id;
+									}, "json");
+									
+					            }, "json");
+		            		} else {
+			            		is_io_request = false;
+			            		last_date_activity = data.last_active_date;
+		            		}
+				        });
+		            }
+
+		            // console.log("check_mouse_move_minute -> ", mouse_move_minute);
+		        });
+	        });
+
+        if(admin_as_student != "true"){
+            io.on('server:logout', function(){
+                io.emit("student:signout");
+
+                $.ajax({
+                    url: "/before_signout/",
+                    type: "get",
+                    success: function(values) {
+                        if(values.status){
+                            window.location.href = "/signout";
+                        }
+                    }
+                });
+            });
+        }
+
+        $(document).on('ready page:load', function (){
+            io.on('need_signin', function(socket_data) {
+            	io.emit('student:signin', {user_information: {"id":25240,"first_name":"Amanda","last_name":"Malamis","email":"sitkoama@gmail.com","image_url":null,"alternate_email":null,"current_stack_id":25,"current_stack_schedule_id":396,"track_access_level_id":1,"created_at":"2018-06-13T21:14:42.000Z","user_level":1,"applicant_id":50969,"is_automated":null,"updated_at":"2018-09-10T19:33:39.000Z","last_visited_url":"/m/25/5672/","last_used_filter":null,"is_course_editor":null,"access_expiration":"2019-04-26T00:00:00.000Z","first_logged_in":null,"graduation_flag":null,"graduation_flag_created_at":null}, ip_address: $("#page_info input:nth-child(6)").val(), device: navigator.userAgent}, function(data){
+            		new_track();
+            	});
+            });
+
+            if(admin_as_student != "true"){
+                io.on('server:warning_duplicate_user', function(data){
+                    console.log("warning!!");
+                    io.emit("track:logout_duplicate", data);
+                });
+            }
+
+            function new_track(){
+            	io.emit('track:new', {
+    	        	url: $("#page_info input:nth-child(1)").val(),
+    	        	track_id: $("#page_info input:nth-child(2)").val(),
+    	        	course_id: $("#page_info input:nth-child(3)").val(),
+    	        	chapter_id: $("#page_info input:nth-child(4)").val(),
+    	        	module_id: $("#page_info input:nth-child(5)").val(),
+    	        	ip_address: $("#page_info input:nth-child(6)").val()
+    	        });
+            }
+
+            new_track();
+
+            $("#logout_button").click(function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                io.emit("student:signout");
+                window.location.href = "/signout";
+            });
+
+            io.on("new_chat_message", function(new_message){
+                display_sent_chat_message(new_message);
+            });
+
+            io.on("send_new_message", function(message){
+                display_received_chat_message(message);
+            });
+
+            io.on('make_user_unavailable', function(call_information){
+                make_user_unavailable(call_information);
+            });
+
+            io.on('make_user_available', function(user){
+                make_user_available(user);
+            });
+
+            io.on("invite_student", function(call_information){
+                display_call_request(call_information);
+            });
+
+        });
+    </script> 
+</body></html>

@@ -1,0 +1,53 @@
+
+@using DojoValidation.Models
+@model SurveyViewModel
+<head>
+        <style>
+            .main
+                {
+                width: 600px;
+                height: 400px;
+                background-color: lightblue;
+                }
+            h1, h2, p {
+                text-align: center;
+                color: purple;
+                background-color: sky
+                }
+            
+        </style>
+    <title> Completed Survey </title>
+</head>
+<body>
+<div class='main'>
+
+<h1> Dojo Survey with Validation  </h1>
+<form asp-action="Process" asp-controller="Home" method="POST">
+    <span asp-validation-for="Name"> </span>
+    <label asp-for="Name">Name </label>
+    <input asp-for="Name"> <br> 
+
+    <span asp-validation-for = "Location"> </span>
+    <label asp-for="Location">Location </label>
+    <select asp-for="Location">
+        <option value=null>Select One:</option>
+        <option value="Paris"> Paris </option>
+        <option value="Santorini"> Santorini </option>
+        <option value="Milkyway"> Milkyway </option>
+        <option value="Rome"> Rome </option>
+        <option value="Marseille"> Marseille </option>
+    </select> <br>
+
+    <span asp-validation-for="Language"> </span>
+    <label asp-for="Language">Favorite Language</label>
+    <input asp-for="Language"> <br>
+
+
+    <span asp-validation-for="Comment"> </span>
+    Comment: <textarea name ="Comment">  </textarea> 
+    
+    <input type='submit' value='Click to submit !'>
+</form>
+</div>
+
+</body>

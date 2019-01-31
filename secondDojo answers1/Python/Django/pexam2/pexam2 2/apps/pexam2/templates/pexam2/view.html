@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .main h1 {
+        text-align: center;
+        color: darkblue;
+    }
+
+</style>
+<head>
+    <title>View Trips</title>
+</head>
+
+<body>
+        <h1> Trip Information</h1>
+        <form action='/show' method='POST'>
+        <tr>
+            {% csrf_token %}
+            <th>Created by: {{user.first_name}} {{user.last_name}}</th> <br>
+            <th>Trip destination: {{ job.dest }} </th> <br>
+            <th>Trip description: {{ job.description }} </th> <br>
+            <th>Trip created at: {{ job.created_at }} </th> <br>
+            <th>Trip updates made at: {{ job.updated_at }} </th> <br>
+            
+            <p> Travelers joining:{{ job.trip_id.first_name }}
+         </p>
+        </tr>
+
+        <button>
+            <a href='/show'> Back to Dashboard </a>
+        </button>
+
+        <form action="/", method="POST">
+            {% csrf_token %}
+            <button>
+                <a href='/logout'> Log Out</a>
+            </button>
+        </form>
+</body>
+
+</html>

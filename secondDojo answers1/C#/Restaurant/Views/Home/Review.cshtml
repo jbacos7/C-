@@ -1,0 +1,47 @@
+
+@using Restaurant.Models
+@model User
+
+<head>
+        <style>
+            .main
+                {
+                width: 100%;
+                background-color: darkslategrey;
+                text-align: center;
+                color: white;
+
+                }
+            h1, p {
+                text-align: 35%;
+                color: navajowhite;
+                }
+            h5{
+                text-align: 35%;
+                color: lightcyan;
+            }
+            h6{
+                text-align: 35%;
+                color: lavender;
+            }
+            input {
+                color: green;
+                text-align: 35%;
+            }
+        
+        </style>
+    <title> Reviews </title>
+</head>
+
+<div class= main> 
+<h1> All Restaurant Reviews:  </h1>
+
+<br> @foreach(var i in ViewBag.userreviews)
+{
+    <h5>Restaurant: @i.RestaurantName - Rating: @i.Stars Stars</h5>
+    <h6>Reviewed by: @i.ReviewerName , Visited on: @i.Date</h6>
+    <h6>Review: @i.Review</h6>
+    <p> ******************************* </p>
+}
+
+</div>

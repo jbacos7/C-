@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <form action='/' method='POST'>
+        {% csrf_token %}
+        <style>
+            .main
+                {
+                width: 600px;
+                height: 400px;
+                background-color: lightblue;
+                }
+            h1, h2, p {
+                text-align: center;
+                color: purple;
+                background-color: sky
+            }
+        </style>
+        <title>Created and Finished Dojo Survey</title>
+</head>
+
+<body>
+    <div class='main'>
+        <h1> Thanks for taking the survey! </h1>
+        <p> Name: {{ request.session.name }} </p>
+        <p> Location: {{ request.session.location }} </p>
+        <p> Language: {{ request.session.language }} </p>
+        <p> Comment: {{ request.session.message }}<br>
+        <input type='submit' value='Return to previous page!'></p>
+    </div>
+</body>
+</form>
+
+</html>

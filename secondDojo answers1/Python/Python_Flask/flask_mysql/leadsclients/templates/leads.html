@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title> Leads and Clients </title>
+</head>
+<body>
+    <style> 
+        #style{
+            background-color: green;
+            margin-left: 500px;
+        }
+        h1{
+            color: blue;
+        }
+        p{
+            color: grey;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    
+    </style>
+        <!-- <script>
+            <div id= style>
+                window.onload = function () {
+                var options = {
+                    title: {
+                        text: "Pie Chart"}
+                    },
+                    animationEnabled: true,
+                    data: [{
+                        type: "pie",
+                        startAngle: 40,
+                        toolTipContent: "<b>{label}</b>: {y}%",
+                        showInLegend: "true",
+                        legendText: "{label}",
+                        indexLabelFontSize: 16,
+                        indexLabel: "{label} - {y}%",
+                        dataPoints: [
+                            { y: 7, label: "MC" },
+                            { y: 7, label: "JS" },
+                            { y: 4, label: "MF" },
+                            { y: 6, label: "RO" }
+                        ]
+                    }]
+                };
+                $("#chartContainer").CanvasJSChart(options);
+                }
+                </script> -->
+            </div>
+        <div id= "main">
+        <h1> Leads and Clients' information </h1>
+        <tr>
+            {% for i in customers %}
+                <p>  <td> Name: {{i["name"]}} </td>
+                    <td> Leads: {{i["leads"]}}</td> 
+                </p>
+            {% endfor %}
+            <div class= "table"> 
+        </tr>
+            <tr>
+            <td>Name: 
+            <input type="text" id="first_name" name="first_name" ></td>
+            <td>Leads:
+            <input type="text" id="last_name" name="last_name"></td>
+
+            <input type='submit' value='Click this button!'>
+            </tr>
+        </div>
+      
+        
+</body>
+
+</html>

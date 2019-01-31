@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            table {
+                height: min-content;
+                width: 400px;
+                margin: 25px 25px;
+                margin-bottom: 25px;
+    
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                color: black;
+            }
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 3px;
+            }
+    
+            th:nth-child(even) {
+                width: 100px;
+                border: 1px solid #dddddd;
+                text-align: center;
+                padding: 3px;
+            }
+            th:nth-child(odd) {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 3px;
+            }
+            tr:nth-child(even) {
+                background-color: #eeeeee;
+            }
+            tr:nth-child(odd) {
+                background-color: #ffffff;
+            }
+            #wrapper{
+                height: 750px;
+                width: 1000px;
+                margin: 0 auto;
+                border: solid black;
+                background-color: rgb(90, 90, 90);
+                color: white;
+            }
+            #header{
+                height: 75px;
+                width: 1000px;
+                padding-top: 45px;
+                margin-top: 0px;
+                border-bottom: solid black;
+                background-color: rgb(142, 0, 0);
+                color: white;
+            }
+            h1, h2{
+                height: min-content;
+                width: max-content;
+                margin: auto 0;
+                margin-left: 25px;
+            }
+            h1{margin-top: -15px;}
+            h2{margin-bottom: 5px;}
+            .a{
+                margin-left: 950px;
+                margin-top: 0px;
+                text-decoration: none;
+                color: white;
+            }
+            .button{
+                margin-left: 25px;
+                margin-bottom: 25px;
+            }
+            .theButtons1{
+                margin-left: 25px;
+            }
+            .ru{width: 175px;}
+            /* h1{margin-top: 25px;} */
+        </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+                <a class="a" href="/logout">Logout</a>
+            <h1 class="h1">Hello {{ users.fn }}!</h1><br>
+        </div>
+        <div id="theBody">
+            <br><h2>Add a Job</h2>
+            <form action="/addTrip" method="POST">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <th><label for="dest">Destination</label></th>
+                        <th><input type="input" name="dest"></th>
+                    </tr>
+                    <tr>
+                        <th><label for="desc">Description</label></th>
+                        <th><input type="input" name="desc"></th>
+                    </tr>
+                    <tr>
+                        <th><label for="dtf">Date Travel, From</label></th>
+                        <th><input type="date" name="dtf"></th>
+                    </tr>
+                    <tr>
+                        <th><label for="dtt">Date Travel, To</label></th>
+                        <th><input type="date" name="dtt"></th>
+                    </tr>
+                </table>
+                <input class="theButtons1" type="submit" value="Submit" formaction="/addTrip">
+                <input class="theButtons2" type="submit" value="Cancel" formaction="/">
+            </form>
+            <div class="link">
+                
+            </div>
+            
+            {% if messages %}
+                <ul class="messages">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

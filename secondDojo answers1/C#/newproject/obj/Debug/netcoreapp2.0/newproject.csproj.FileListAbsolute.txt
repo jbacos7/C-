@@ -1,0 +1,11 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/newproject/bin/Debug/netcoreapp2.0/newproject.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/newproject/bin/Debug/netcoreapp2.0/newproject.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/newproject/bin/Debug/netcoreapp2.0/newproject.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/newproject/bin/Debug/netcoreapp2.0/newproject.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/newproject/bin/Debug/netcoreapp2.0/newproject.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/newproject/obj/Debug/netcoreapp2.0/newproject.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/newproject/obj/Debug/netcoreapp2.0/newproject.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/newproject/obj/Debug/netcoreapp2.0/newproject.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/newproject/obj/Debug/netcoreapp2.0/newproject.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/newproject/obj/Debug/netcoreapp2.0/newproject.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/newproject/obj/Debug/netcoreapp2.0/newproject.csprojResolveAssemblyReference.cache

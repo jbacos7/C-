@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>~ Success ~</title>
+</head>
+
+<body>
+    <form action='/createwish' method='POST'>
+        {% csrf_token %} 
+            {% if messages %} 
+                {% for message in messages %}
+                    <h3> {{ message }} </h3>
+                {% endfor %} 
+            {% endif %}
+
+        <h1>Hi, {{first_name}} !</h1>
+        <h2> Let's make a new wish! </h2>
+
+        Add A New Wish:
+        <input type="text" name="item">
+        <br> Wish Description:
+        <input type="message" name="description">
+        <br>
+        <input type="submit" value="MAKE A WISH">
+    </form>
+    <button>
+        <a href='/show'> Cancel </a>
+    </button>
+
+    <!-- <input type="submit" name="" value="Log Off"> -->
+
+    <form action="/" , method="POST">
+        <button>
+            <a href='/logout'> Log Out</a>
+        </button>
+    </form>
+</body>
+
+</html>

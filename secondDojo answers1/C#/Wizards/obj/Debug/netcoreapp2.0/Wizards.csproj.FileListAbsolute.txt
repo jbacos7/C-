@@ -1,0 +1,11 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/Wizards/bin/Debug/netcoreapp2.0/Wizards.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Wizards/bin/Debug/netcoreapp2.0/Wizards.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Wizards/bin/Debug/netcoreapp2.0/Wizards.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Wizards/bin/Debug/netcoreapp2.0/Wizards.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/Wizards/bin/Debug/netcoreapp2.0/Wizards.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/Wizards/obj/Debug/netcoreapp2.0/Wizards.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/Wizards/obj/Debug/netcoreapp2.0/Wizards.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/Wizards/obj/Debug/netcoreapp2.0/Wizards.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/Wizards/obj/Debug/netcoreapp2.0/Wizards.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/Wizards/obj/Debug/netcoreapp2.0/Wizards.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/Wizards/obj/Debug/netcoreapp2.0/Wizards.csprojResolveAssemblyReference.cache

@@ -1,0 +1,47 @@
+@using DojoLeague.Models
+@model Dojo
+
+<head>
+        <style>
+            .main
+                {
+                width: 100%;
+                height: 100%;
+                background-color: burlywood;
+                }
+            h1, h2, p {
+                text-align: 35%;
+                color: brown;
+                }
+            input {
+                color: brown;
+                text-align: 35%;
+            }
+        
+        </style>
+    <title> New Dojo </title>
+</head>
+
+<body>
+    
+    <div class='main'> 
+    <form asp-controller="Home" asp-action="newdojoadd" method="POST">
+
+        <h1> Register A Dojo:  </h1>
+        <span asp-validation-for="DojoName"></span>
+        Dojo Name: <input asp-for="DojoName"><br>
+
+        <span asp-validation-for="DojoLocation"></span>
+        Dojo Location: <input asp-for="DojoLocation"><br>
+
+        <span asp-validation-for="DojoDescription"></span>
+        Additional Dojo Information: <input asp-for="DojoDescription"><br>
+
+
+        <input type='submit' value='Add my Dojo !'>
+
+    </form> 
+    <p> <button> <a href='/'> Back to Ninjas </a> </button> </p>
+    </div>
+
+</body>

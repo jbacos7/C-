@@ -1,0 +1,22 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/ProductsCategories/bin/Debug/netcoreapp2.0/ProductsCategories.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/ProductsCategories/bin/Debug/netcoreapp2.0/ProductsCategories.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/ProductsCategories/bin/Debug/netcoreapp2.0/ProductsCategories.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/ProductsCategories/bin/Debug/netcoreapp2.0/ProductsCategories.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/ProductsCategories/bin/Debug/netcoreapp2.0/ProductsCategories.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/ProductsCategories/obj/Debug/netcoreapp2.0/ProductsCategories.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/ProductsCategories/obj/Debug/netcoreapp2.0/ProductsCategories.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/ProductsCategories/obj/Debug/netcoreapp2.0/ProductsCategories.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/ProductsCategories/obj/Debug/netcoreapp2.0/ProductsCategories.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/ProductsCategories/obj/Debug/netcoreapp2.0/ProductsCategories.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/ProductsCategories/obj/Debug/netcoreapp2.0/ProductsCategories.csprojResolveAssemblyReference.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\ProductsCategories\bin\Debug\netcoreapp2.0\ProductsCategories.deps.json
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\ProductsCategories\bin\Debug\netcoreapp2.0\ProductsCategories.runtimeconfig.json
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\ProductsCategories\bin\Debug\netcoreapp2.0\ProductsCategories.runtimeconfig.dev.json
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\ProductsCategories\bin\Debug\netcoreapp2.0\ProductsCategories.dll
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\ProductsCategories\bin\Debug\netcoreapp2.0\ProductsCategories.pdb
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\ProductsCategories\obj\Debug\netcoreapp2.0\ProductsCategories.csprojAssemblyReference.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\ProductsCategories\obj\Debug\netcoreapp2.0\ProductsCategories.csproj.CoreCompileInputs.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\ProductsCategories\obj\Debug\netcoreapp2.0\ProductsCategories.AssemblyInfoInputs.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\ProductsCategories\obj\Debug\netcoreapp2.0\ProductsCategories.AssemblyInfo.cs
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\ProductsCategories\obj\Debug\netcoreapp2.0\ProductsCategories.dll
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\ProductsCategories\obj\Debug\netcoreapp2.0\ProductsCategories.pdb

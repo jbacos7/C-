@@ -1,0 +1,38 @@
+
+@using LostWoods.Models
+@model Woods
+
+
+<head>
+        <style>
+            .main
+                {
+                width: 100%;
+                background-color: burlywood;
+                }
+            h1, h2, p {
+                text-align: center;
+                color: saddlebrown;
+                }
+            a {
+                margin: 40%;
+           }
+        
+        </style>
+    <title> Lost in the Woods </title>
+</head>
+<body>
+    <div class='main'>
+    <h1> Lost in the Woods   </h1>
+    <h2> List of local trails :</h2>
+    <a href="/new_trail"> Add New Trail</a>    
+        @foreach (var i in @ViewBag.Woods)
+        {   
+            <p>Name of trail: @i.Name</p>
+            <p>Trail length: @i.Length miles, Trail elevation: @i.Elevation feet</p>
+            <p>Trail description: @i.Description </p>
+            <p>Trail latitude: @i.Latitude degrees, Trail longitude: @i.Longitude degrees</p>
+            <p>~~~~~~~~~~~~~~~~~~~~~~</p>
+        }
+    </div>
+</body>

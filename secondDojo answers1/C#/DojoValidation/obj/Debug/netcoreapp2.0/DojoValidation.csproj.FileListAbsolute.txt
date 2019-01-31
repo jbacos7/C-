@@ -1,0 +1,22 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoValidation/bin/Debug/netcoreapp2.0/DojoValidation.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoValidation/bin/Debug/netcoreapp2.0/DojoValidation.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoValidation/bin/Debug/netcoreapp2.0/DojoValidation.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoValidation/bin/Debug/netcoreapp2.0/DojoValidation.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoValidation/bin/Debug/netcoreapp2.0/DojoValidation.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoValidation/obj/Debug/netcoreapp2.0/DojoValidation.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoValidation/obj/Debug/netcoreapp2.0/DojoValidation.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoValidation/obj/Debug/netcoreapp2.0/DojoValidation.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoValidation/obj/Debug/netcoreapp2.0/DojoValidation.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoValidation/obj/Debug/netcoreapp2.0/DojoValidation.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoValidation/obj/Debug/netcoreapp2.0/DojoValidation.csprojResolveAssemblyReference.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\DojoValidation\bin\Debug\netcoreapp2.0\DojoValidation.deps.json
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\DojoValidation\bin\Debug\netcoreapp2.0\DojoValidation.runtimeconfig.json
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\DojoValidation\bin\Debug\netcoreapp2.0\DojoValidation.runtimeconfig.dev.json
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\DojoValidation\bin\Debug\netcoreapp2.0\DojoValidation.dll
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\DojoValidation\bin\Debug\netcoreapp2.0\DojoValidation.pdb
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\DojoValidation\obj\Debug\netcoreapp2.0\DojoValidation.csprojAssemblyReference.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\DojoValidation\obj\Debug\netcoreapp2.0\DojoValidation.csproj.CoreCompileInputs.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\DojoValidation\obj\Debug\netcoreapp2.0\DojoValidation.AssemblyInfoInputs.cache
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\DojoValidation\obj\Debug\netcoreapp2.0\DojoValidation.AssemblyInfo.cs
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\DojoValidation\obj\Debug\netcoreapp2.0\DojoValidation.dll
+C:\Users\bacos\Desktop\Answers C#\secondDojo answers1\C#\DojoValidation\obj\Debug\netcoreapp2.0\DojoValidation.pdb

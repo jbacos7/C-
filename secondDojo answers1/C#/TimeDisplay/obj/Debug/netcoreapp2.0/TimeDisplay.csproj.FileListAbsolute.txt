@@ -1,0 +1,11 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/TimeDisplay/bin/Debug/netcoreapp2.0/TimeDisplay.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/TimeDisplay/bin/Debug/netcoreapp2.0/TimeDisplay.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/TimeDisplay/bin/Debug/netcoreapp2.0/TimeDisplay.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/TimeDisplay/bin/Debug/netcoreapp2.0/TimeDisplay.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/TimeDisplay/bin/Debug/netcoreapp2.0/TimeDisplay.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/TimeDisplay/obj/Debug/netcoreapp2.0/TimeDisplay.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/TimeDisplay/obj/Debug/netcoreapp2.0/TimeDisplay.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/TimeDisplay/obj/Debug/netcoreapp2.0/TimeDisplay.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/TimeDisplay/obj/Debug/netcoreapp2.0/TimeDisplay.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/TimeDisplay/obj/Debug/netcoreapp2.0/TimeDisplay.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/TimeDisplay/obj/Debug/netcoreapp2.0/TimeDisplay.csprojResolveAssemblyReference.cache

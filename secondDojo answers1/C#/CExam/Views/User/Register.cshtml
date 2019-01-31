@@ -1,0 +1,67 @@
+
+@model CExam.Models.RegisterViewModel
+
+<html lang="en">
+<style>
+    h1, h2, h3, p
+    {
+        color: darkblue;
+        text-align: center;
+        padding: 5px;
+        vertical-align: top;
+    }
+
+    body{
+        background-color: palegoldenrod;
+    }
+
+    table, form {
+        color: purple;
+        text-align: center;
+    }
+
+    button {
+        background-color: darkseagreen;
+        color: white;
+        margin: 10px;
+        padding: 10px;
+    }
+    
+</style>
+<head>
+    <title> Login / Registration </title>
+</head>
+
+
+<form asp-controller="User" asp-action="Register" method="POST">
+    <h1>Registration</h1>
+    <h2> New User? Register Here. </h2>
+    <p>
+        <span asp-validation-for="FirstName"></span>
+        <label asp-for="FirstName"> First Name : </label><input asp-for="FirstName"><br><br>
+    </p>
+    <p>
+        <span asp-validation-for="LastName"></span>
+        <label asp-for="LastName"> Last Name : </label><input asp-for="LastName"><br><br>
+    </p>
+    <p>
+        <span asp-validation-for="Email"></span>
+        <label asp-for="Email"></label>  Email: <input asp-for="Email"><br><br>
+    </p>
+    <p>
+        <span asp-validation-for="Password"></span>
+        <label asp-for="Password">Password : </label><input asp-for="Password"><br><br>
+    </p>
+    <p>
+        <span asp-validation-for="ConfirmPassword"></span>
+        <label asp-for="ConfirmPassword">Confirm Password : </label><input asp-for="ConfirmPassword"><br><br>
+    </p>
+
+    <p><button><a asp-controller="User" asp-action="Login"> Already have an account? Login here. </a></button></p>
+        <button>SUBMIT</button>
+</form>
+
+@if (ViewBag.message != null)
+{
+    <p>@ViewBag.message</p>
+}

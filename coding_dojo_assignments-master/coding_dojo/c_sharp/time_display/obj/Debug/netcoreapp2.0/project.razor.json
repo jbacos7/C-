@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\bacos\\Desktop\\Answers C#\\coding_dojo_assignments-master\\coding_dojo\\c_sharp\\time_display\\time_display.csproj",
+  "TargetFramework": "netcoreapp2.0",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "MVC-2.0",
+    "LanguageVersion": "2.0",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.0"
+      }
+    ]
+  }
+}

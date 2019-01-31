@@ -1,0 +1,46 @@
+
+@using QuotingDojo.Models
+@model SurveyViewModel
+
+
+<head>
+        <style>
+            .main
+                {
+                width: 80%;
+                height: 100%;
+                background-color: lightblue;
+                }
+            h1, h2, p {
+                text-align: center;
+                color: purple;
+                background-color: sky
+                }
+            input {
+                color: orange;
+                text-align: center;
+                margin-left: 35%;
+
+            }
+            
+        </style>
+    <title> Quoting Dojo </title>
+</head>
+<body>
+<div class='main'>
+
+<h1> Welcome to Quoting Dojo!   </h1>
+<form asp-action="Process" asp-controller="Home" method="POST">
+    <p> Name : <input type="text" name="nameinput"> </p>
+    <p> Quote : <input type="text" name="quoteinput"> </p>
+
+    <input type='submit'value='Add my quote !'>
+    
+
+</form>
+    <p><button><a href='/quotes'>Skip to Quotes</a></button></p>
+
+
+</div>
+
+</body>

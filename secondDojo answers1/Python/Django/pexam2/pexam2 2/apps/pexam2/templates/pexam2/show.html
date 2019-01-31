@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    h1, h2, h3 {
+        text-align: center;
+        color: darkblue;
+    }
+</style>
+
+<head>
+    <title> Trips </title>
+</head>
+
+<body>
+    <h1> Trip Dashboard</h1>
+    <h2> Welcome, {{user.first_name}} ! Let's go on a trip! </h2>
+    <h3> All upcoming trip schedules: </h3>
+    <!-- {{ alljobs }} -->
+    <form action='/show' method='GET'>
+        <input type='hidden' value= {{id}} name='id'>
+               <button>
+            <a href="/add"> ADD A NEW TRIP HERE </a> 
+        </button>
+        <tr>
+                <table>
+                        <tr>
+                            <th> Destination </th>
+                            <th> Description </th>
+                            <th> Organizer </th>
+                            <!-- <th> Trip ID </th> -->
+                            <th> Start Date </th>
+                            <th> End Date </th>
+                            <th> Show Full Info </th>
+                            <th> Delete </th>
+                            
+                        </tr>
+    
+                        {% for job in alljobs %}
+                        {% if job.granted == True %}
+                            <tr>
+                                <th> {{job.dest}}</th>
+                                <th> {{job.description}}</th>
+                                <th> {{job.trip_id.first_name}} </th>
+                                <th> {{job.created_at}} </th>
+                                <th> {{job.updated_at}} </th>
+
+                                <th> <a href= "{{job.id}}/view"> Show Trip Info</a></th>
+    
+    
+                                <td>
+                                    <a href='{{job.id}}/destroy'> Delete Trip</a>
+                                </td>
+                                
+                                <!-- <td>
+                                    <a href='{{job.id}}/granttrip'> Join Trip </a>
+                                </td> -->
+                                <!-- <th> {{ job.item_id.id }}</th> -->
+                            </tr>
+                        {% endif %}
+                        {% endfor %}
+                    </table>
+                <form action='/destroy' method='POST'></form>
+                <input type='hidden' value={{id}} name='id'>
+    
+
+                <h3> Your trips : </h3>
+                <table>
+                        <tr>
+                            <th> Trip </th>
+                            <th> Description </th>
+                            <th> Created at  </th>
+                            <th> Updated at </th>
+                            <!-- <th> Trip ID </th>
+                            <th> Person ID  </th> -->
+        
+                        </tr>
+                        {% csrf_token %}
+                        {% for job in jobs %}
+                            {% if job.granted == False %}
+                                <tr>
+                                    <th> {{job.dest}}</th>
+                                    <th> {{job.description}}</th>
+                                    <th> {{job.created_at}} </th>
+                                    <th> {{job.updated_at}} </th>
+        
+                                    <td>
+                                        <a href='{{job.id}}/destroy'> Delete Trip</a>
+                                    </td>
+                                   
+                                    <td>
+                                        <a href='{{job.id}}/granttrip'> Join Trip ~ Add to Trip Dashboard</a>
+                                        <!-- <input type=submit value="Join!"> -->
+                                        </a>
+                                    </td>
+                                    <!-- <th> {{ job.id }}</th>
+                                    <th> {{ job.trip_id.id }}</th> -->
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                        </table>
+
+        </tr>
+        <form action="/", method="POST">
+            {% csrf_token %}
+            <button>
+                <a href='/logout'> Log Out</a>
+            </button>
+        </form>
+    </form>
+</body>
+
+</html>

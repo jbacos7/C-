@@ -1,0 +1,11 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/Collections/bin/Debug/netcoreapp2.0/Collections.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Collections/bin/Debug/netcoreapp2.0/Collections.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Collections/bin/Debug/netcoreapp2.0/Collections.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Collections/bin/Debug/netcoreapp2.0/Collections.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/Collections/bin/Debug/netcoreapp2.0/Collections.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/Collections/obj/Debug/netcoreapp2.0/Collections.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/Collections/obj/Debug/netcoreapp2.0/Collections.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/Collections/obj/Debug/netcoreapp2.0/Collections.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/Collections/obj/Debug/netcoreapp2.0/Collections.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/Collections/obj/Debug/netcoreapp2.0/Collections.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/Collections/obj/Debug/netcoreapp2.0/Collections.csprojResolveAssemblyReference.cache

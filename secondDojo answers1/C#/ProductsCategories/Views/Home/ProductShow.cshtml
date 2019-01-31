@@ -1,0 +1,31 @@
+@using ProductsCategories.Models
+@model CatProd
+
+
+
+<h1> Show for one product page </h1>
+<form asp-controller="Home" asp-action="AddCatToProd" method="GET">
+
+<p> This product name is: @ViewBag.prodinfo.Name.</p>
+<p> The price is: @ViewBag.prodinfo.Price </p>
+<p> Description: @ViewBag.prodinfo.Description </p>
+
+
+<p> @ViewBag.Products </p>
+
+<select asp-for="CategoryId"> 
+    @{
+        for(var i=0; i<ViewBag.Categories.Count; i++)
+        {
+            <option value="@ViewBag.Categories[i].CategoryId"> @ViewBag.Categories[i].CatName </option> 
+        }
+    }
+    
+</select>
+
+    <input type="submit" value="SUBMIT" ></input>
+</form>
+
+
+    <p> <button> <a href= "/ShowAllCategories"> View all Categories </a> </button> </p>
+    <p> <button> <a href= "/"> Go to Homepage  </a> </button> </p>

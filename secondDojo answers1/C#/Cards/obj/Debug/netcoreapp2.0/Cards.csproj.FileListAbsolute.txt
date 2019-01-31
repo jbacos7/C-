@@ -1,0 +1,11 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/Cards/bin/Debug/netcoreapp2.0/Cards.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Cards/bin/Debug/netcoreapp2.0/Cards.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Cards/bin/Debug/netcoreapp2.0/Cards.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/Cards/bin/Debug/netcoreapp2.0/Cards.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/Cards/bin/Debug/netcoreapp2.0/Cards.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/Cards/obj/Debug/netcoreapp2.0/Cards.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/Cards/obj/Debug/netcoreapp2.0/Cards.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/Cards/obj/Debug/netcoreapp2.0/Cards.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/Cards/obj/Debug/netcoreapp2.0/Cards.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/Cards/obj/Debug/netcoreapp2.0/Cards.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/Cards/obj/Debug/netcoreapp2.0/Cards.csprojResolveAssemblyReference.cache

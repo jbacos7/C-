@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dojo Survey</title>
+
+    <style>
+        #main {
+            width: 600px;
+            height: 400px;
+            background-color: lightblue;
+        } 
+        h1, h2,{
+            text-align: center;
+        }
+        .boxes{
+            color: purple;
+            font-size: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+        <div id= main>
+        <h1> Coding Dojo Survey</h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                <h3> {{ message }} </h3>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form action='/create' method='POST'>
+                <h2>Take this super cool survey!!</h2>
+                <div class= boxes>
+                Your Name:
+                <textarea name='name'></textarea>
+                <br>
+            
+                Dojo Location: 
+                <select name='Dojo_Location'>
+                     <option value='Paris'>Paris</option>
+                     <option value='MilkyWay'>MilkyWay</option>
+                     <option value='Chicago'>Chicago</option>
+                     <option value='Santorini'>Santorini</option>
+                     <option value='USA'>USA</option>
+                     <option value='NewYork'>NewYork</option>
+                     <option value='Milan'>Milan</option>
+                     <option value='Orlando'>Orlando</option>
+                </select><br>
+
+                Favorite Language:
+                <select name='Favorite_Language'>
+                        <option value='Python'>Python</option>
+                        <option value='JavaScript'>JavaScript</option>
+                        <option value='C#'>C#</option>
+                        <option value='C++'>C++</option>
+                        <option value='MEAN'>MEAN</option>
+                        <option value='Ruby'>Ruby</option>
+                        <option value='HTML'>HTML</option>
+                        <option value='CSS'>CSS</option>
+                </select>
+                </div>
+
+                Comment : <br>
+                <textarea name='message'></textarea>
+                <br>
+                <input type='submit' value='Click this button!'>
+               
+        </form>
+        </div>
+      
+        
+</body>
+
+</html>

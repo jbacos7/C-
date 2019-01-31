@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Session Words</title>
+
+    <style>
+        #main {
+            width: 100%;
+            height: 500px;
+            background-color: lavender;
+            text-align: center;
+            columns: 2;
+        } 
+        .main h1{
+            text-align: center;
+
+        }
+        p, h2,{
+            text-align: center;
+            font-size: 16px;
+        }
+        .showbig 0{
+            font-size: 8px;
+        }
+        .showbig 1{
+            font-size: 30px;
+        }
+        .blue{
+            color: blue;
+        }
+        .green{
+            color: green;
+        }
+        .red{
+            color: red;
+        }
+        .purple{
+            color: purple;
+        }
+    </style>
+</head>
+
+<body>
+        <div id= main>
+        <h1> Session Words</h1>
+        <form action="/createword" method='POST'>
+            {% csrf_token %}
+                <p> Enter your word here : </p>
+                <input type="text" name="saved"><br>
+                <br>
+                <label for="color">Choose your color :</label><br>
+                <input type="hidden" name="color" value="blue"><br>
+                <input type="radio" name="color" value="red">Red<br>
+                <input type="radio" name="color" value="green">Green<br>
+                <input type="radio" name="color" value="purple">Purple<br><br>
+                <label for="bigwriting">Show in BIG font!</label>
+                <input type="hidden" name="showbig" value="0">
+                <input type="checkbox" name="showbig" value="1"><br>
+                <input type="submit" value="Add to List"><br>
+                <br> <br> <br><br> <br> <br>
+        </form>
+        <br> <br> <br> <br> <br> <br>
+        <form action="/delete" method='POST'>
+            {% csrf_token %}
+                <p> Word history: </p>
+                <input type="submit" value="Clear List">
+                {% for word in request.session.words%}
+                Added to the list: 
+                <p><span class='{{word.color}} {{word.showbig}}'>{{word.word}}</span>
+                <span class='mini'> <br>
+                at: {{word.time}}</p></span>
+                {%endfor%}
+        </form>
+        </div>
+   
+</body>
+</html>

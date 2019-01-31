@@ -1,0 +1,11 @@
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoLeague/bin/Debug/netcoreapp2.0/DojoLeague.deps.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoLeague/bin/Debug/netcoreapp2.0/DojoLeague.runtimeconfig.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoLeague/bin/Debug/netcoreapp2.0/DojoLeague.runtimeconfig.dev.json
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoLeague/bin/Debug/netcoreapp2.0/DojoLeague.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoLeague/bin/Debug/netcoreapp2.0/DojoLeague.pdb
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoLeague/obj/Debug/netcoreapp2.0/DojoLeague.csprojResolveAssemblyReference.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoLeague/obj/Debug/netcoreapp2.0/DojoLeague.csproj.CoreCompileInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoLeague/obj/Debug/netcoreapp2.0/DojoLeague.AssemblyInfoInputs.cache
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoLeague/obj/Debug/netcoreapp2.0/DojoLeague.AssemblyInfo.cs
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoLeague/obj/Debug/netcoreapp2.0/DojoLeague.dll
+/Users/amandasitko/Desktop/CD_Assignments/C#/DojoLeague/obj/Debug/netcoreapp2.0/DojoLeague.pdb

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    h1, h2, h3 {
+        text-align: center;
+        color: darkblue;
+    }
+    body{
+        background-color: palegoldenrod;
+    }
+    table, form {
+        color: purple;
+        text-align: center;
+        margin-left: 80px;
+    }
+
+    button {
+        background-color: darkseagreen;
+        color: white;
+        margin: 10px;
+        padding: 10px;
+        margin-left: 45%;
+    }
+</style>
+<head>
+    <title> Quotes </title>
+</head>
+<body>
+    <h1> Quote Dashboard</h1>
+    <h2> Welcome, {{ user.first_name}} !  </h2>
+    <form action="/edit" , method="POST">
+        {% csrf_token %}
+        <a href="{{user.id}}/edit">Edit Account Info </a>
+    </form>
+    <form action='/show' method='GET'>
+        {% csrf_token %} 
+        <input type='hidden' value={{id}} name='id'>
+        <h3> Quotes: </h3>
+    </form>
+    <form action='/createquote' method='POST'>
+        {% csrf_token %} 
+        {% if messages %} 
+        {% for message in messages %}
+        <h3> {{ message }} </h3>
+        {% endfor %} 
+        {% endif %}
+        <h2>Hi, {{user.first_name}} !</h2>
+        <h3> Add a new quote! </h3>
+            Author:
+            <input type="text" name="author">
+                <br> Quote:
+            <input type="message" name="quote">
+                <br>
+            <input type="submit" value="ADD TO LIST">
+    </form>
+            <tr>
+                <table>
+                    <h3> All User Quotes : </h3>
+                    <tr>
+                        <th> Author: <br> </th> 
+                        <th> Quote: <br> </th>
+                        <th> Posted By: <br> </th>
+                        <th> Delete: </th>
+                    </tr>
+                    {% for allquote in allquotes %}
+                    <tr>
+                        <th> {{allquote.author}}</th>
+                        <th> {{allquote.quote}}</th>
+                        <td><a href="/{{allquote.created_by.id}}/viewquotes"> {{allquote.created_by.first_name}}</a></td>
+                        <td>{% if allquote.created_by.id == request.session.user_id %}
+                            <a href='{{allquote.id}}/delete'> Delete Quote</a>
+                    {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            <form action='/delete' method='POST'>
+            </form>
+                <input type='hidden' value={{id}} name='id'>
+            </tr>
+
+            <form action="/" , method="POST">
+                {% csrf_token %}
+                <button>
+                    <a href='/logout'> Log Out</a>
+                </button>
+            </form>
+    </form>
+</body>
+
+</html>

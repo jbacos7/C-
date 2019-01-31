@@ -1,0 +1,45 @@
+@model CExam.Models.ActViewModel
+
+
+
+    <h1>Add a New Activity </h1> 
+    <form asp-controller="User" asp-action="CreateActivity" method="POST">
+        <input type= "hidden" value= "@TempData["UserId"]" name= "UserId">
+        
+        <label asp-for="ActName"> Activity Name: </label>
+        <input asp-for="ActName">
+        <span asp-validation-for="ActName"> </span>
+        <br>
+        
+        <label asp-for="ActTime"> Time: </label>
+        <input asp-for="ActTime">
+        <span asp-validation-for="ActTime"> </span>
+        <br>
+
+        <label asp-for="Date"> Date: </label>
+        <input type= "date" asp-for="Date"> 
+        <span asp-validation-for="Date"> </span>
+        <br>
+
+        <label asp-for="ActDuration"> Duration: </label>
+        <input type= "select" asp-for="ActDuration"> 
+        <span asp-validation-for="ActDuration"> </span>
+        <select asp-for="ActDuration"> 
+            <option value= "Days"> Days </option>
+            <option value= "Hours"> Hours </option>
+            <option value= "Minutes"> Minutes </option>
+        </select> <br> 
+
+        <label asp-for="Description"> </label>
+        <input asp-for="Description">
+        <span asp-validation-for="Description"> </span>
+        <br>
+
+        <input type= "submit" value= "SUBMIT">
+    </form>
+
+
+
+<a href="Logout">Logout</a>
+<a href="/dashboard"> Back to Dashboard </a>
+

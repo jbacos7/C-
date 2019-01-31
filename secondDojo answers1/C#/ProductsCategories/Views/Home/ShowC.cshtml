@@ -1,0 +1,20 @@
+@using ProductsCategories.Models
+
+
+
+<h1>View All Categories </h1>
+
+<h3> List of current products and categories: </h3>
+
+@{for(int i=0; i<ViewBag.Categories.Count; i++)
+    {
+        <p> ******************** </p>
+        <li><a href="category/@ViewBag.Categories[i].CategoryId"> @ViewBag.Categories[i].CatName </a> </li> 
+        <p> ******************** </p>
+
+
+        
+    }
+}
+    <p> <button> <a href= "/ShowAllProducts"> View all Products </a> </button> </p>
+    <p> <button> <a href= "/"> Go to Homepage  </a> </button> </p>

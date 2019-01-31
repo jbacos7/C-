@@ -1,0 +1,24 @@
+
+
+
+<h2>Welcome to the wedding of : @ViewBag.ThisWedding.WedderOne 
+    and @ViewBag.ThisWedding.WedderTwo </h2>
+
+<h3>Date : @ViewBag.ThisWedding.Date</h3>
+<h3>Location : @ViewBag.ThisWedding.Address</h3>
+
+
+<h4>Guests attending :</h4>
+
+<ul>
+
+  @foreach (var x in @ViewBag.ThisWedding.Guests)
+  {
+    <li>@x.User.FirstName @x.User.LastName</li>
+  }
+
+</ul>
+
+
+<a asp-controller="User" asp-action="Dashboard">Back to Dashboard</a>
+<a asp-controller="User" asp-action="Logout">Logout</a>

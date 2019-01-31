@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table {
+            height: min-content;
+            width: 400px;
+            margin: 0 25px;
+            margin-bottom: 25px;
+
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            color: black;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 3px;
+        }
+
+        th:nth-child(even) {
+            width: 100px;
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 3px;
+        }
+        th:nth-child(odd) {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 3px;
+        }
+        tr:nth-child(even) {
+            background-color: #eeeeee;
+        }
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        #wrapper{
+            height: 750px;
+            width: 1000px;
+            margin: 0 auto;
+            border: solid black;
+            background-color: rgb(90, 90, 90);
+            color: white;
+        }
+        #header{
+            height: 75px;
+            width: 1000px;
+            padding-top: 45px;
+            margin-top: 0px;
+            border-bottom: solid black;
+            background-color: rgb(142, 0, 0);
+            color: white;
+        }
+        h1, h2{
+            height: min-content;
+            width: min-content;
+            margin: auto 0;
+            margin-left: 25px;
+        }
+        h2{margin-bottom: 5px;}
+        .button{
+            margin-left: 25px;
+            margin-bottom: 25px;
+        }
+        .ru{width: 175px;}
+        /* h1{margin-top: 25px;} */
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1>Welcome!</h1>
+        </div>
+        <div id="body">
+            <div id="addForm">
+                <h2>Registration</h2>
+                <form action="/addUser" method="POST">
+                    {% csrf_token %}
+                    <table>
+                        <tr>
+                            <th><label>First name:</label></th>
+                            <th><input name="fn"></th>
+                        </tr>
+                        <tr>
+                            <th><label>Last name:</label></th>
+                            <th><input name="ln"></th>
+                        </tr>
+                        <tr>
+                            <th><label>Email:</label></th>
+                            <th><input name="email"></th>
+                        </tr>
+                        <tr>
+                            <th><label>Password:</label></th>
+                            <th><input type="password" name="password"></th>
+                        </tr>
+                        <tr>
+                            <th><label>Confirm password:</label></th>
+                            <th><input type="password" name="cpass"></th>
+                        </tr>
+                    </table>
+                    <div class="link">
+                        <input class="button" type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+
+            <div id="login">
+                    <h2>Login</h2>
+                    <form action="/login" method="POST">
+                        {% csrf_token %}
+                        <table>
+                            <tr>
+                                <th><label>Email:</label></th>
+                                <th><input name="email"></th>
+                            </tr>
+                            <tr>
+                                <th><label>Password:</label></th>
+                                <th><input type="password" name="password"></th>
+                            </tr>
+                        </table>
+                        <div class="link">
+                            <input class="button" type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+                <br>
+                <table>
+                    <h2 class="ru">Registered Users</h2>
+                    <tr>
+                        <th><label>ID:</label></th>
+                        <th><label>Names:</label></th>
+                        <th><label>Emails:</label></th>
+                        <th><label>Action:</label></th>
+                    </tr>
+                    {% for user in users %}
+                        {% csrf_token %}
+                        <tr>
+                            <th>{{ user.id }}</th>
+                            <th>{{ user.fn }} {{ user.ln }}</th>
+                            <th>{{ user.email }}</th>
+                            <th><a href="/deleteUser/{{ user.id }}">Delete</a></th>
+                        </tr>
+                    {% endfor %}
+                </table>
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+        </div>
+    </div>
+    
+</body>
+</html>
